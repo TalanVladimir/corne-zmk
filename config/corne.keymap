@@ -14,20 +14,20 @@
                 compatible = "zmk,keymap";
 
                 qwerty_layer {
-//  ┌─────────┬───┬───┬───┬───┬───┐      ┌───┬───┬───┬───┬───┬───────┐
-//  │NUMBR/TAB│ Q │ W │ E │ R │ T │      │ Y │ U │ I │ O │ P │  GUI  │
-//  ├─────────┼───┼───┼───┼───┼───┤      ├───┼───┼───┼───┼───┼───────┤
-//  │ ESC/CTL │ A │ S │ D │ F │ G │      │ H │ J │ K │ L │ : │       │
-//  ├─────────┼───┼───┼───┼───┼───┤      ├───┼───┼───┼───┼───┼───────┤
-//  │  SHIFT  │ Z │ X │ C │ V │ B │      │ N │ M │ , │ . │ / │       │
-//  └─────────┴┬──┴──┬┴───┴─┬─┴───┴┐   ┌─┴───┼───┴──┬┴──┬┴───┴───────┘
-//             │ CTRL│ SPC  │ BSPC │   │ENTER│ DEL  │ALT│
-//             └─────┴──────┴──────┘   └─────┴──────┴───┘
+//  ┌─────────┬───┬───┬───┬───┬───┐      ┌───┬───┬───┬───┬───┬─────────┐
+//  │ ESC/CTL │ Q │ W │ E │ R │ T │      │ Y │ U │ I │ O │ P │ ESC/CTL │
+//  ├─────────┼───┼───┼───┼───┼───┤      ├───┼───┼───┼───┼───┼─────────┤
+//  │NUMBR/TAB│ A │ S │ D │ F │ G │      │ H │ J │ K │ L │ : │NUMBR/TAB│
+//  ├─────────┼───┼───┼───┼───┼───┤      ├───┼───┼───┼───┼───┼─────────┤
+//  │  SHIFT  │ Z │ X │ C │ V │ B │      │ N │ M │ , │ . │ / │   GUI   │
+//  └─────────┴┬──┴──┬┴───┴─┬─┴───┴┐    ┌┴───┴┬──┴───┼───┼───┴─────────┘
+//             │ CTRL│ SPC  │ BSPC │    │ENTER│ DEL  │ALT│
+//             └─────┴──────┴──────┘    └─────┴──────┴───┘
                         bindings = <
-   &lt NUMBER TAB  &kp Q &kp W &kp E   &kp R            &kp T          &kp Y      &kp U          &kp I      &kp O    &kp P     &kp LGUI
-   &mt LCTRL ESC   &kp A &kp S &kp D   &kp F            &kp G          &kp H      &kp J          &kp K      &kp L    &kp SEMI  &none
-   &kp LSHFT       &kp Z &kp X &kp C   &kp V            &kp B          &kp N      &kp M          &kp COMMA  &kp DOT  &kp FSLH  &none
-                             &kp LCTRL &lt SYMBOL SPACE &kp BACKSPACE  &kp ENTER  &lt SYSCTL DEL &kp LALT
+   &mt LCTRL ESC   &kp Q     &kp W  &kp E     &kp R            &kp T          &kp Y      &kp U          &kp I      &kp O    &kp P     &mt LCTRL ESC
+   &lt NUMBER TAB  &kp A     &kp S  &kp D     &kp F            &kp G          &kp H      &kp J          &kp K      &kp L    &kp SEMI  &lt NUMBER TAB
+   &kp LSHFT       &kp Z     &kp X  &kp C     &kp V            &kp B          &kp N      &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp LEFT_GUI
+                                    &kp LCTRL &lt SYMBOL SPACE &kp BACKSPACE  &kp ENTER  &lt SYSCTL DEL &kp LALT
                         >;
                 };
 
