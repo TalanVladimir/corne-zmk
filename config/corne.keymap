@@ -53,9 +53,9 @@
                                 // #$()- =&'"|
                                 // %^[]+ *~<>/
                         bindings = <
-   &bt BT_SEL 0  &kp EXCL   &kp AT     &kp LBRC  &kp RBRC  &kp UNDER    &kp BSLH   &none      &kp GRAVE  &none    &none     &none
-   &bt BT_SEL 1  &kp HASH   &kp DLLR   &kp LPAR  &kp RPAR  &kp MINUS    &kp EQUAL  &kp AMPS   &kp SQT    &kp DQT  &kp PIPE  &none
-   &bt BT_CLR    &kp PRCNT  &kp CARET  &kp LBKT  &kp RBKT  &kp PLUS     &kp ASTRK  &kp TILDE  &kp LT     &kp GT   &kp FSLH  &none
+   &bt BT_CLR    &kp EXCL   &kp AT     &kp LBRC  &kp RBRC  &kp UNDER    &kp BSLH   &none      &kp GRAVE  &none    &none     &bt BT_SEL 0
+   &bt BT_CLR    &kp HASH   &kp DLLR   &kp LPAR  &kp RPAR  &kp MINUS    &kp EQUAL  &kp AMPS   &kp SQT    &kp DQT  &kp PIPE  &bt BT_SEL 1
+   &bt BT_CLR    &kp PRCNT  &kp CARET  &kp LBKT  &kp RBKT  &kp PLUS     &kp ASTRK  &kp TILDE  &kp LT     &kp GT   &kp FSLH  &bt BT_SEL 2
                           	       &none     &trans    &none        &none      &trans     &none
                         >;
                 };
