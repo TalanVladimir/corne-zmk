@@ -23,7 +23,7 @@
 //                      | CTRL|LOWER|BSPC |   |ENTER|RAISE| ALT |
 
                         bindings = <
-   &lt CONNECT ESC  &kp Q     &kp W  &kp E     &kp R            &kp T          &kp Y      &kp U          &kp I      &kp O    &kp P     &lt BACKSPACE
+   &lt CONNECT ESC  &kp Q     &kp W  &kp E     &kp R            &kp T          &kp Y      &kp U          &kp I      &kp O    &kp P     &kp BACKSPACE
    &lt NUMBER TAB   &kp A     &kp S  &kp D     &kp F            &kp G          &kp H      &kp J          &kp K      &kp L    &kp SEMI  &kp SQT
    &kp LSHFT        &kp Z     &kp X  &kp C     &kp V            &kp B          &kp N      &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp LEFT_GUI
                                      &kp LCTRL &mo LOWER        &kp SPACE      &kp ENTER  &mo RAISE      &kp LALT
