@@ -20,7 +20,7 @@
                         #binding-cells = <0>;
                         bindings
                                 = <&macro_press &kp LCTRL>
-                                , <&macro_tap &kp PAGE_DOWN>
+                                , <&macro_tap &kp PAGE_UP>
                                 , <&macro_release &kp LCTRL>
                                 ;
                 };
@@ -31,7 +31,7 @@
                         #binding-cells = <0>;
                         bindings
                                 = <&macro_press &kp LCTRL>
-                                , <&macro_tap &kp PAGE_UP>
+                                , <&macro_tap &kp PAGE_DOWN>
                                 , <&macro_release &kp LCTRL>
                                 ;
                 };
