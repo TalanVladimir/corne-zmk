@@ -16,39 +16,42 @@
                 compatible = "zmk,keymap";
 
                 qwerty_layer {
-// |ESC/BT  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  | ESC/BT |
+
+// |ESC/BT  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  |  BSPC  |
 // |NUMB/TAB|  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  :  |   '    |
 // | SHIFT  |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  |  GUI   |
-//                      | CTRL| SPC |BSPC |   |ENTER| DEL | ALT |
+//                      | CTRL|LOWER|BSPC |   |ENTER|RAISE| ALT |
 
                         bindings = <
-   &lt CONNECT ESC  &kp Q     &kp W  &kp E     &kp R            &kp T          &kp Y      &kp U          &kp I      &kp O    &kp P     &lt CONNECT ESC
+   &lt CONNECT ESC  &kp Q     &kp W  &kp E     &kp R            &kp T          &kp Y      &kp U          &kp I      &kp O    &kp P     &lt BACKSPACE
    &lt NUMBER TAB   &kp A     &kp S  &kp D     &kp F            &kp G          &kp H      &kp J          &kp K      &kp L    &kp SEMI  &kp SQT
    &kp LSHFT        &kp Z     &kp X  &kp C     &kp V            &kp B          &kp N      &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp LEFT_GUI
-                                     &kp LCTRL &lt LOWER SPACE  &kp BACKSPACE  &kp ENTER  &lt RAISE DEL  &kp LALT
+                                     &kp LCTRL &mo LOWER        &kp SPACE      &kp ENTER  &mo RAISE      &kp LALT
                         >;
                 };
 
                 lower_layer {
-// -----------------------------------------------------------------------------------------
-// |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |      |
-// |      |     |     |     |     |     |   |     | HOME| UP  | END |     |      |
+
+// |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
+// |      |     |     |     |     |     |   |     | HOME| UP  | END |     |  DEL |
 // |      | PREV| NEXT| PLAY| VDN | VUP |   |     | LEFT| DN  |RIGHT|     |      |
 //                    |     |     |     |   |     |     |     |
+
                         bindings = <
-   &trans      &kp N1      &kp N2       &kp N3             &kp N4         &kp N5        &kp N6   &kp N7   &kp N8        &kp N9    &kp N0    &trans
-   &trans      &none       &none        &none              &none          &none         &none    &kp HOME &kp UP        &kp END   &none     &trans
+   &trans      &kp N1      &kp N2       &kp N3             &kp N4         &kp N5        &kp N6   &kp N7   &kp N8        &kp N9    &kp N0    &kp BACKSPACE
+   &trans      &none       &none        &none              &none          &none         &none    &kp HOME &kp UP        &kp END   &none     &kp DELETE
    &trans      &kp C_PREV  &kp C_NEXT   &kp C_PLAY_PAUSE   &kp C_VOL_DN   &kp C_VOL_UP  &none    &kp LEFT &kp DOWN      &kp RIGHT &none     &trans
                                         &trans             &trans         &trans        &trans   &trans   &trans
                         >;
                 };
 
                 raise_layer {
-// -----------------------------------------------------------------------------------------
+                        
 // |      |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |      |
 // |      |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
 // |      |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                    |     |     |     |   |     |     |     |
+
                         bindings = <
    &trans  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &trans
    &trans  &none    &none  &none    &none    &none       &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
@@ -57,53 +60,28 @@
                         >;
                 };
 
-
-
-//                 LOWER_layer { // ERROR
-// // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-// //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-//                         bindings = <
-//    &none    &kp EXCL   &kp AT     &kp LBRC  &kp RBRC  &kp UNDER    &kp BSLH   &none      &kp GRAVE  &none    &none     &none
-//    &none    &kp HASH   &kp DLLR   &kp LPAR  &kp RPAR  &kp MINUS    &kp EQUAL  &kp AMPS   &kp SQT    &kp DQT  &kp PIPE  &none
-//    &none    &kp PRCNT  &kp CARET  &kp LBKT  &kp RBKT  &kp PLUS     &kp ASTRK  &kp TILDE  &kp LT     &kp GT   &kp FSLH  &none
-//                           	  &none     &trans    &none        &none      &trans     &none
-//                         >;
-//                 };
-
-//                 RAISE_layer {
-// // |      | F1  | F2  | F3  | F7  |     |   | MUTE| HOME| UP  |END  |SLEEP|      |
-// // |      | F5  | F6  | F7  | F8  |     |   | VUP | LEFT| DN  |RIGHT|SCRN |      |
-// // |      | F9  | F10 | F11 | F12 |     |   | VDN | PREV| PLAY|NEXT |LOCK |      |
-// //                    | CTR |     |     |   |     |     |     |
-//                         bindings = <
-//    &trans  &kp F1   &kp F2   &kp F3    &kp F4  &none        &kp C_MUTE    &kp HOME    &kp UP            &kp END     &kp C_SLEEP           &trans
-//    &trans  &kp F5   &kp F6   &kp F7    &kp F8  &none        &kp C_VOL_UP  &kp LEFT    &kp DOWN          &kp RIGHT   &kp C_AL_SCREENSAVER  &trans
-//    &trans  &kp F9   &kp F10  &kp F11   &kp F12 &none        &kp C_VOL_DN  &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &kp C_AL_LOCK         &trans
-//                              &kp LCTRL &trans  &trans       &trans        &trans      &trans
-//                         >;
-//                 };
-
                 number_layer {
-// |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |      |
-// |      |     |     |     |     |     |   |  -  |  4  |  5  |  6  |  /  |      |
+
+// |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
+// |      |     |     |     |     |     |   |  -  |  4  |  5  |  6  |  /  |  DEL |
 // |      |     |     |     |     |     |   |  +  |  1  |  2  |  3  |  *  |      |
 //                    |     |     |     |   |  .  |  ,  |  0  |
+
                         bindings = <
-   &none  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5      &kp KP_NUMBER_6   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &none
-   &none  &none            &none            &none            &none            &none                &kp KP_MINUS      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DIVIDE    &none
+   &none  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5      &kp KP_NUMBER_6   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &kp BACKSPACE
+   &none  &none            &none            &none            &none            &none                &kp KP_MINUS      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DIVIDE    &kp DELETE
    &none  &none            &none            &none            &none            &none                &kp KP_PLUS       &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MULTIPLY  &none
                              	            &none            &trans           &none                &kp KP_DOT        &kp KP_COMMA     &kp KP_NUMBER_0
                         >;
                 };
 
                 connect_layer {
+
 // |      | BT0 | BT1 | BT2 | BT3 | BT4 |   | BT0 | BT1 | BT2 | BT3 | BT4 |      |
 // | BCLR |     |     |     |     |     |   |     |     |     |     |     | BCLR |
 // | BCLR |     |     |     |BOOTL|     |   |     |BOOTL|     |     |     | BCLR |
 //                    |     |     |     |   |     |     |     |
+
                         bindings = <
    &none       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none
    &bt BT_CLR  &none         &none         &none         &none         &none         &none         &none         &none         &none         &none         &bt BT_CLR
