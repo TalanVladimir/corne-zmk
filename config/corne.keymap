@@ -59,6 +59,17 @@
                                 ;
                 };
                 
+                tab_close: tab_close {
+                        label = "ZM_tab_close";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp LCTRL>
+                                , <&macro_tap &kp F4>
+                                , <&macro_release &kp LCTRL>
+                                ;
+                };
+                
                 lng_eng: lng_eng {
                         label = "ZM_lng_eng";
                         compatible = "zmk,behavior-macro";
