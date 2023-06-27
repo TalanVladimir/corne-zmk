@@ -59,14 +59,36 @@
                                 ;
                 };
                 
-                tab_close: tab_close {
-                        label = "ZM_tab_close";
+                lng_eng: lng_eng {
+                        label = "ZM_lng_eng";
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings
-                                = <&macro_press &kp LCTRL>
-                                , <&macro_tap &kp F4>
-                                , <&macro_release &kp LCTRL>
+                                = <&macro_press &kp LCTRL &kp LSHFT>
+                                , <&macro_tap &kp N1>
+                                , <&macro_release &kp LCTRL &kp LSHFT>
+                                ;
+                };
+
+                lng_lt: lng_lt {
+                        label = "ZM_lng_lt";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp LCTRL &kp LSHFT>
+                                , <&macro_tap &kp N2>
+                                , <&macro_release &kp LCTRL &kp LSHFT>
+                                ;
+                };
+                
+                lng_ru: lng_ru {
+                        label = "ZM_lng_ru";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp LCTRL &kp LSHFT>
+                                , <&macro_tap &kp N3>
+                                , <&macro_release &kp LCTRL &kp LSHFT>
                                 ;
                 };
         };
@@ -107,15 +129,15 @@
                 raise_layer {
                         
 // |      |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |      |
-// |      |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
+// |      | ENG | LT  | RU  |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
 // |      |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                    |     |     |     |   |     |     |     |
 
                         bindings = <
-   &trans  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &trans
-   &trans  &none    &none  &none    &none    &none       &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &trans  &none    &none  &none    &none    &none       &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                           &trans   &trans   &trans      &trans    &trans    &trans
+   &trans  &kp EXCL &kp AT  &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &trans
+   &trans  &lng_eng &lng_lt &lng_ru  &none    &none       &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
+   &trans  &none    &none   &none    &none    &none       &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
+                            &trans   &trans   &trans      &trans    &trans    &trans
                         >;
                 };
 
