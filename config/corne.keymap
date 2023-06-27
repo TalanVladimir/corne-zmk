@@ -15,19 +15,19 @@
 
                 qwerty_layer {
 //  ┌─────────┬───┬───┬───┬───┬───┐      ┌───┬───┬───┬───┬───┬───────┐
-//  │NUMBR/TAB│ Q │ W │ E │ R │ T │      │ Y │ U │ I │ O │ P │ BKSP  │
+//  │NUMBR/TAB│ Q │ W │ E │ R │ T │      │ Y │ U │ I │ O │ P │  GUI  │
 //  ├─────────┼───┼───┼───┼───┼───┤      ├───┼───┼───┼───┼───┼───────┤
-//  │ ESC/CTL │ A │ S │ D │ F │ G │      │ H │ J │ K │ L │ : │  GUI  │
+//  │ ESC/CTL │ A │ S │ D │ F │ G │      │ H │ J │ K │ L │ : │       │
 //  ├─────────┼───┼───┼───┼───┼───┤      ├───┼───┼───┼───┼───┼───────┤
 //  │  SHIFT  │ Z │ X │ C │ V │ B │      │ N │ M │ , │ . │ / │  ALT  │
 //  └─────────┴┬──┴──┬┴───┴─┬─┴───┴┐   ┌─┴───┼───┴──┬┴──┬┴───┴───────┘
-//             │ CTRL│ SMBL │ SPACE│   │ENTER│ SYSC │DEL│
+//             │ CTRL│ SPC  │ BSPC │   │ENTER│ BSPC │DEL│
 //             └─────┴──────┴──────┘   └─────┴──────┴───┘
                         bindings = <
-   &lt NUMBER TAB  &kp Q &kp W &kp E   &kp R      &kp T       &kp Y      &kp U      &kp I      &kp O    &kp P     &kp BACKSPACE
-   &mt LCTRL ESC   &kp A &kp S &kp D   &kp F      &kp G       &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp LGUI
-   &kp LSHFT       &kp Z &kp X &kp C   &kp V      &kp B       &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp LALT
-                             &kp LCTRL &mo SYMBOL &kp SPACE   &kp ENTER  &mo SYSCTL &kp DEL
+   &lt NUMBER TAB  &kp Q &kp W &kp E   &kp R            &kp T       &kp Y      &kp U                &kp I      &kp O    &kp P     &kp LGUI
+   &mt LCTRL ESC   &kp A &kp S &kp D   &kp F            &kp G       &kp H      &kp J                &kp K      &kp L    &kp SEMI  &none
+   &kp LSHFT       &kp Z &kp X &kp C   &kp V            &kp B       &kp N      &kp M                &kp COMMA  &kp DOT  &kp FSLH  &kp LALT
+                             &kp LCTRL &mo SPACE SYMBOL &kp BSPC    &kp ENTER  &mo BACKSPACE SYSCTL &kp DEL
                         >;
                 };
 
