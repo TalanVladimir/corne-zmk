@@ -7,7 +7,6 @@
 #define RAISE 2
 #define ADJUST 3
 #define NUMBER 3
-#define CONNECT  4
 
 / {
         macros {
@@ -114,16 +113,16 @@
 
                 qwerty_layer {
 
-// |ESC/BT  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  |  BSPC  |
-// |NUMB/TAB|  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  :  |   '    |
+// |ESC/ALT |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  |  BSPC  |
+// |TAB/NUMB|  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  :  |   '    |
 // | SHIFT  |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  |  DEL   |
-//                      | CTRL|LOWER|BSPC |   |ENTER|RAISE| ALT |
+//                      | CTRL|LOWER|BSPC |   |ENTER|RAISE| GUI |
 
                         bindings = <
-&lt CONNECT ESC  &kp Q     &kp W  &kp E      &kp R      &kp T      &kp Y      &kp U      &kp I      &kp O    &kp P     &kp BACKSPACE
-&lt NUMBER TAB   &kp A     &kp S  &kp D      &kp F      &kp G      &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT        &kp Z     &kp X  &kp C      &kp V      &kp B      &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp DELETE
-                                  &kp LCTRL  &mo LOWER  &kp SPACE  &kp ENTER  &mo RAISE  &kp LALT
+&kp LALT ESC    &kp Q     &kp W  &kp E      &kp R      &kp T      &kp Y      &kp U      &kp I      &kp O    &kp P     &kp BACKSPACE
+&lt NUMBER TAB  &kp A     &kp S  &kp D      &kp F      &kp G      &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT       &kp Z     &kp X  &kp C      &kp V      &kp B      &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp DELETE
+                                 &kp LCTRL  &mo LOWER  &kp SPACE  &kp ENTER  &mo RAISE  &kp LGUI
                         >;
                 };
 
@@ -160,15 +159,15 @@
                 adjust_layer {
                         
 // |  F1  | F2  | F3  | F4  | F5  |  F6 |   |  F7 |  F8 |  F9 | F10 | F11 |  F12 |
-// |      | ENG | LT  | RU  |     |     |   |     |     |     |     |     |      |
+// |      | ENG | LT  | RU  |     |     |   | BT0 | BT1 | BT2 | BT3 | BT4 | BCLR |
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    |     |     |     |   |     |     |     |
 
                         bindings = <
-&kp F1  &kp F2    &kp F3   &kp F4   &kp F5  &kp F6    &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&trans  &lng_eng  &lng_lt  &lng_ru  &none   &none     &none   &none   &none   &none    &none    &none
-&trans  &none     &none    &none    &none   &none     &none   &none   &none   &none    &none    &trans
-                           &trans   &trans  &trans    &trans  &trans  &trans
+&kp F1  &kp F2    &kp F3   &kp F4   &kp F5  &kp F6    &kp F7        &kp F8        &kp F9        &kp F10       &kp F11       &kp F12
+&trans  &lng_eng  &lng_lt  &lng_ru  &none   &none     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
+&trans  &none     &none    &none    &none   &none     &none         &none         &none         &none         &none         &trans
+                           &trans   &trans  &trans    &trans        &trans        &trans
                         >;
                 };
 
@@ -184,21 +183,6 @@
 &none &none           &none           &none           &none           &none           &kp KP_MINUS    &kp KP_NUMBER_4 &kp KP_NUMBER_5 &kp KP_NUMBER_6 &kp KP_DIVIDE   &kp DELETE
 &none &none           &none           &none           &none           &none           &kp KP_PLUS     &kp KP_NUMBER_1 &kp KP_NUMBER_2 &kp KP_NUMBER_3 &kp KP_MULTIPLY &none
                           	      &none           &trans          &none           &trans          &kp KP_DOT      &kp KP_NUMBER_0
-                        >;
-                };
-
-                connect_layer {
-
-// |      | BT0 | BT1 | BT2 | BT3 | BT4 |   |     |     |     |     |     |      |
-// | BCLR |     |     |     |     |     |   |     |     |     |     |     |      |
-// | BCLR |     |     |     |     |BOOTL|   |     |     |     |     |     |      |
-//                    |     |     |     |   |     |     |     |
-
-                        bindings = <
-&none       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none  &none  &none  &none  &none  &none
-&bt BT_CLR  &none         &none         &none         &none         &none         &none  &none  &none  &none  &none  &none
-&bt BT_CLR  &none         &none         &none         &none         &bootloader   &none  &none  &none  &none  &none  &none
-                                        &none         &none         &none         &none  &none  &none
                         >;
                 };
         };
