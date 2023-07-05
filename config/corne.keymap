@@ -192,8 +192,8 @@
                         bindings = <
 &none &kp KP_NUMBER_1 &kp KP_NUMBER_2 &kp KP_NUMBER_3 &kp KP_NUMBER_4 &kp KP_NUMBER_5 &kp KP_NUMBER_6 &kp KP_NUMBER_7 &kp KP_NUMBER_8 &kp KP_NUMBER_9 &kp KP_NUMBER_0 &kp BACKSPACE
 &none &none           &none           &none           &none           &none           &kp KP_MINUS    &kp KP_NUMBER_4 &kp KP_NUMBER_5 &kp KP_NUMBER_6 &kp KP_DIVIDE   &key_summary
-&none &none           &none           &none           &none           &none           &kp KP_PLUS     &kp KP_NUMBER_1 &kp KP_NUMBER_2 &kp KP_NUMBER_3 &kp KP_MULTIPLY &kp DELETE
-                          	      &none           &none           &none           &trans          &kp KP_DOT      &kp KP_NUMBER_0
+&none &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &kp KP_PLUS     &kp KP_NUMBER_1 &kp KP_NUMBER_2 &kp KP_NUMBER_3 &kp KP_MULTIPLY &kp DELETE
+                          	      &none           &none           &bt BT_CLR      &trans          &kp KP_DOT      &kp KP_NUMBER_0
                         >;
                 };
         };
