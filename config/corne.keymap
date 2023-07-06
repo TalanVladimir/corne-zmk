@@ -196,7 +196,6 @@
                           	      &none           &none           &none           &trans          &kp KP_DOT      &kp KP_NUMBER_0
                         >;
                 };
-        };
 
 // TODO need to complete
                 connect_layer {
