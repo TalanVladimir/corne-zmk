@@ -176,10 +176,10 @@
 //                    | CTRL|LOWER|BSPC/ALT| ___ |ENTER/ALT|RAISE| GUI |
 
                         bindings = <
-&trans  &lng_eng      &lng_lt         &lng_ru              &none   &none   &kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &kp F6    
-&trans  &kp C_AL_WWW  &kp C_AL_EMAIL  &kp C_AL_CALCULATOR  &none   &none   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&trans  &none         &none           &none                &none   &none   &none   &none   &none   &none    &none    &none
-                                      &trans               &trans  &trans  &trans  &trans  &trans
+&trans  &lng_eng   &lng_lt         &lng_ru              &none   &none   &kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &kp F6    
+&trans  &kp K_WWW  &kp C_AL_EMAIL  &kp C_AL_CALCULATOR  &none   &none   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&trans  &none      &none           &none                &none   &none   &none   &none   &none   &none    &none    &none
+                                   &trans               &trans  &trans  &trans  &trans  &trans
                         >;
                 };
 
