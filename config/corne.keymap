@@ -134,7 +134,7 @@
 &lt CONNECT ESC  &kp Q     &kp W  &kp E      &kp R      &kp T           &kp Y           &kp U      &kp I      &kp O    &kp P     &kp BACKSPACE
 &lt NUMBER TAB   &kp A     &kp S  &kp D      &kp F      &kp G           &kp H           &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LSHFT        &kp Z     &kp X  &kp C      &kp V      &kp B           &kp N           &kp M      &kp COMMA  &kp DOT  &kp FSLH  &mt LSHIFT DELETE
-                                  &kp LCTRL  &mo LOWER  &mt LALT SPACE  &mt LALT ENTER  &mo RAISE  &kp LGUI
+                                  &kp LCTRL  &mo LOWER  &mt LALT SPACE  &mt RALT ENTER  &mo RAISE  &kp LGUI
                         >;
                 };
 
