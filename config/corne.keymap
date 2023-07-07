@@ -170,16 +170,16 @@
 
                 adjust_layer {
                         
-// | ESC   | ENG | LT   | RU   |       |      | ___ |  F1   |  F2   |  F3 |  F4 |  F5 |  F6 |   
-// | TAB   | WWW | MAIL | CALC |       |      | ___ |  F7   |  F8   |  F9 | F10 | F11 | F12 |
-// | SHIFT |     |      |      |       |      | ___ |       |       |     |     |     |     |
-//                      | CTRL | LOWER | BSPC | ___ | ENTER | RAISE | GUI |
+// | ESC   | ENG  | LT   | RU     |       |      | ___ |  F1   |  F2   |  F3 |  F4 |  F5 |  F6 |   
+// | TAB   | WWW  | MAIL | CALC   |       |      | ___ |  F7   |  F8   |  F9 | F10 | F11 | F12 |
+// | SHIFT | NUMB | CAPS | SCROLL |       |      | ___ |       |       |     |     |     |     |
+//                       | CTRL   | LOWER | BSPC | ___ | ENTER | RAISE | GUI |
 
                         bindings = <
-&trans  &lng_eng       &lng_lt         &lng_ru              &none   &none   &kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &kp F6    
-&trans  &kp C_AC_HOME  &kp C_AL_EMAIL  &kp C_AL_CALCULATOR  &none   &none   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&trans  &none          &none           &none                &none   &none   &none   &none   &none   &none    &none    &none
-                                       &trans               &trans  &trans  &trans  &trans  &trans
+&trans  &lng_eng        &lng_lt         &lng_ru              &none   &none   &kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &kp F6    
+&trans  &kp C_AC_HOME   &kp C_AL_EMAIL  &kp C_AL_CALCULATOR  &none   &none   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&trans  &kp KP_NUMLOCK  &kp CAPSLOCK    &kp SCROLLLOCK       &none   &none   &none   &none   &none   &none    &none    &none
+                                        &trans               &trans  &trans  &trans  &trans  &trans
                         >;
                 };
 
