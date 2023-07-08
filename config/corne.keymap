@@ -125,24 +125,24 @@
 
                 qwerty_layer {
 
-// | CONN/ESC |  Q  |  W  |  E   |  R   |   T      | ___ |   Y   |   U   |  I  |  O  |  P  | BSPC  |
-// | TAB/NUMB |  A  |  S  |  D   |  F   |   G      | ___ |   H   |   J   |  K  |  L  |  :  |  '    |
-// | SHIFT    |  Z  |  X  |  C   |  V   |   B      | ___ |   N   |   M   |  ,  |  .  |  /  | SHIFT |
-//                        | CTRL |LOWER | BSPC/ALT | ___ | ENTER | RAISE | GUI |
+// | CONN/ESC |  Q  |  W  |  E   |  R   |   T      | ___ |   Y       |   U   |  I  |  O  |  P  | BSPC         |
+// | TAB/NUMB |  A  |  S  |  D   |  F   |   G      | ___ |   H       |   J   |  K  |  L  |  :  |  '           |
+// | SHIFT    |  Z  |  X  |  C   |  V   |   B      | ___ |   N       |   M   |  ,  |  .  |  /  | SHIFT/INSERT |
+//                        | CTRL |LOWER | BSPC/ALT | ___ | ENTER/ALT | RAISE | GUI |
 
                         bindings = <
-&lt CONNECT ESC  &kp Q     &kp W  &kp E      &kp R      &kp T           &kp Y      &kp U      &kp I      &kp O    &kp P     &kp BACKSPACE
-&lt NUMBER TAB   &kp A     &kp S  &kp D      &kp F      &kp G           &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT        &kp Z     &kp X  &kp C      &kp V      &kp B           &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &mt RSHFT
-                                  &kp LCTRL  &mo LOWER  &mt LALT SPACE  &mt ENTER  &mo RAISE  &kp LGUI
+&lt CONNECT ESC  &kp Q     &kp W  &kp E      &kp R      &kp T           &kp Y           &kp U      &kp I      &kp O    &kp P     &kp BACKSPACE
+&lt NUMBER TAB   &kp A     &kp S  &kp D      &kp F      &kp G           &kp H           &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT        &kp Z     &kp X  &kp C      &kp V      &kp B           &kp N           &kp M      &kp COMMA  &kp DOT  &kp FSLH  &mt RSHIFT INSERT
+                                  &kp LCTRL  &mo LOWER  &mt LALT SPACE  &mt LALT ENTER  &mo RAISE  &kp LGUI
                         >;
                 };
 
                 lower_layer {
 
-// | `     |   1   |  2   |  3   |   4   | 5    | ___ |   6   |   7   |  8   | 9  |   0   | BSPC  |
-// | DEL   | TABCL | TABP | TABN | TABR  | TABN | ___ |       |   -   |  =   | [  |   ]   |  \    |
-// | SHIFT | PREV  | NEXT | PLAY | VDN   | VUP  | ___ |       | LEFT  | DOWN | UP | RIGHT | SHIFT |
+// | `     |   1   |  2   |  3   |   4   | 5    | ___ |   6   |   7   |  8   | 9  |   0   | BSPC         |
+// | DEL   | TABCL | TABP | TABN | TABR  | TABN | ___ |       |   -   |  =   | [  |   ]   |  \           |
+// | SHIFT | PREV  | NEXT | PLAY | VDN   | VUP  | ___ |       | LEFT  | DOWN | UP | RIGHT | SHIFT/INSERT |
 //                        | CTRL | LOWER | BSPC | ___ | ENTER | RAISE | GUI  |
 
                         bindings = <
@@ -155,9 +155,9 @@
 
                 raise_layer {
                         
-// | ~     |  !  |  @  |  #   |   $   |  %   | ___ |   ^   |   &   |  *   |  (   |  )  | BSPC  |
-// | DEL   |  F1 |  F2 |  F3  |   F4  |  F5  | ___ |   F6  |   _   |  +   |  {   |  }  | "|"   |
-// | SHIFT |  F7 |  F8 |  F9  |  F10  |  F11 | ___ |   F12 | HOME  | PGDN | PGUP | END | SHIFT |
+// | ~     |  !  |  @  |  #   |   $   |  %   | ___ |   ^   |   &   |  *   |  (   |  )  | BSPC         |
+// | DEL   |  F1 |  F2 |  F3  |   F4  |  F5  | ___ |   F6  |   _   |  +   |  {   |  }  | "|"          |
+// | SHIFT |  F7 |  F8 |  F9  |  F10  |  F11 | ___ |   F12 | HOME  | PGDN | PGUP | END | SHIFT/INSERT |
 //                     | CTRL | LOWER | BSPC | ___ | ENTER | RAISE | GUI  |
 
                         bindings = <
