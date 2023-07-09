@@ -125,45 +125,45 @@
 
                 qwerty_layer {
 
-// | CONN/ESC |  Q  |  W  |  E   |  R   |   T      | ___ |   Y       |   U   |  I  |  O  |  P  | BSPC         |
-// | TAB/NUMB |  A  |  S  |  D   |  F   |   G      | ___ |   H       |   J   |  K  |  L  |  :  |  '           |
-// | SHIFT    |  Z  |  X  |  C   |  V   |   B      | ___ |   N       |   M   |  ,  |  .  |  /  | SHIFT/INSERT |
-//                        | CTRL |LOWER | BSPC/ALT | ___ | ENTER/ALT | RAISE | GUI |SS
+// | CONN/ESC |  Q  |  W  |  E   |  R   |   T      | ___ |   Y       |   U   |  I  |  O  |  P  | BSPC      |
+// | TAB/NUMB |  A  |  S  |  D   |  F   |   G      | ___ |   H       |   J   |  K  |  L  |  :  |  '        |
+// | SHIFT    |  Z  |  X  |  C   |  V   |   B      | ___ |   N       |   M   |  ,  |  .  |  /  | SHIFT/TAB |
+//                        | CTRL |LOWER | BSPC/ALT | ___ | ENTER/ALT | RAISE | GUI |
 
                         bindings = <
 &lt CONNECT ESC  &kp Q     &kp W  &kp E      &kp R      &kp T           &kp Y           &kp U      &kp I      &kp O    &kp P     &kp BACKSPACE
 &lt NUMBER TAB   &kp A     &kp S  &kp D      &kp F      &kp G           &kp H           &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT        &kp Z     &kp X  &kp C      &kp V      &kp B           &kp N           &kp M      &kp COMMA  &kp DOT  &kp FSLH  &mt RSHIFT INSERT
+&kp LSHFT        &kp Z     &kp X  &kp C      &kp V      &kp B           &kp N           &kp M      &kp COMMA  &kp DOT  &kp FSLH  &mt RSHIFT TAB
                                   &kp LCTRL  &mo LOWER  &mt LALT SPACE  &mt RALT ENTER  &mo RAISE  &kp LGUI
                         >;
                 };
 
                 lower_layer {
 
-// | `     |   1   |  2   |  3   |   4   | 5    | ___ |   6   |   7   |  8   | 9  |   0   | BSPC         |
-// | DEL   | TABCL | TABP | TABN | TABR  | TABN | ___ |       |   -   |  =   | [  |   ]   |  \           |
-// | SHIFT | PREV  | NEXT | PLAY | VDN   | VUP  | ___ |       | LEFT  | DOWN | UP | RIGHT | SHIFT/INSERT |
+// | `     |   1   |  2   |  3   |   4   | 5    | ___ |   6   |   7   |  8   | 9  |   0   | BSPC   |
+// | DEL   | TABCL | TABP | TABN | TABR  | TABN | ___ |       |   -   |  =   | [  |   ]   |  \     |
+// | SHIFT | PREV  | NEXT | PLAY | VDN   | VUP  | ___ |       | LEFT  | DOWN | UP | RIGHT | INSERT |
 //                        | CTRL | LOWER | BSPC | ___ | ENTER | RAISE | GUI  |
 
                         bindings = <
 &kp GRAVE  &kp N1      &kp N2      &kp N3            &kp N4         &kp N5        &kp N6     &kp N7     &kp N8     &kp N9    &kp N0     &trans
 &kp DEL    &tab_close  &tab_prev   &tab_next         &tab_reload    &tab_new      &none      &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH   
-&trans     &kp C_PREV  &kp C_NEXT  &kp C_PLAY_PAUSE  &kp C_VOL_DN   &kp C_VOL_UP  &none      &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &trans
+&trans     &kp C_PREV  &kp C_NEXT  &kp C_PLAY_PAUSE  &kp C_VOL_DN   &kp C_VOL_UP  &none      &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &kp INSERT
                                    &trans            &trans         &trans        &trans     &trans     &trans
                         >;
                 };
 
                 raise_layer {
                         
-// | ~     |  !  |  @  |  #   |   $   |  %   | ___ |   ^   |   &   |  *   |  (   |  )  | BSPC         |
-// | DEL   |  F1 |  F2 |  F3  |   F4  |  F5  | ___ |   F6  |   _   |  +   |  {   |  }  | "|"          |
-// | SHIFT |  F7 |  F8 |  F9  |  F10  |  F11 | ___ |   F12 | HOME  | PGDN | PGUP | END | SHIFT/INSERT |
+// | ~     |  !  |  @  |  #   |   $   |  %   | ___ |   ^   |   &   |  *   |  (   |  )  | BSPC   |
+// | DEL   |  F1 |  F2 |  F3  |   F4  |  F5  | ___ |   F6  |   _   |  +   |  {   |  }  | "|"    |
+// | SHIFT |  F7 |  F8 |  F9  |  F10  |  F11 | ___ |   F12 | HOME  | PGDN | PGUP | END | INSERT |
 //                     | CTRL | LOWER | BSPC | ___ | ENTER | RAISE | GUI  |
 
                         bindings = <
 &kp TILDE  &kp EXCL  &kp AT   &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR     &kp RPAR  &trans
 &kp DEL    &kp F1    &kp F2   &kp F3    &kp F4    &kp F5     &kp F6     &kp UNDER  &kp PLUS         &kp LBRC     &kp RBRC  &kp PIPE  
-&trans     &kp F7    &kp F8   &kp F9    &kp F10   &kp F11    &kp F12    &kp HOME   &kp PAGE_DOWN    &kp PAGE_UP  &kp END   &trans
+&trans     &kp F7    &kp F8   &kp F9    &kp F10   &kp F11    &kp F12    &kp HOME   &kp PAGE_DOWN    &kp PAGE_UP  &kp END   &kp INSERT
                               &trans    &trans    &trans     &trans     &trans     &trans
                         >;
                 };
@@ -185,16 +185,16 @@
 
                 number_layer {
 
-// |      |  1  |  2  |  3  |  4  |  5  | ___ |   6   |  7  |  8  |  9  |  0  | BSPC |
-// | DEL  |     |     |     |     |     | ___ |   -   |  4  |  5  |  6  |  /  |  =   |
-// |      |     |     |     |     |     | ___ |   +   |  1  |  2  |  3  |  *  | RALT |
-//                    |     |     |     | ___ | ENTER |  ,  |  0  |
+// |      |  1  |  2  |  3  |  4  |  5   | ___ |   6   |  7  |  8  |  9  |  0  | BSPC |
+// | DEL  |     |     |     |     |      | ___ |   -   |  4  |  5  |  6  |  /  |  =   |
+// |      |     |     |     |     |      | ___ |   +   |  1  |  2  |  3  |  *  |      |
+//                    |     |     | RALT | ___ | ENTER |  ,  |  0  |
 
                         bindings = <
 &none   &kp KP_NUMBER_1 &kp KP_NUMBER_2 &kp KP_NUMBER_3 &kp KP_NUMBER_4 &kp KP_NUMBER_5 &kp KP_NUMBER_6 &kp KP_NUMBER_7 &kp KP_NUMBER_8 &kp KP_NUMBER_9 &kp KP_NUMBER_0 &kp BACKSPACE
 &kp DEL &none           &none           &none           &none           &none           &kp KP_MINUS    &kp KP_NUMBER_4 &kp KP_NUMBER_5 &kp KP_NUMBER_6 &kp KP_DIVIDE   &key_summary
-&none   &none           &none           &none           &none           &none           &kp KP_PLUS     &kp KP_NUMBER_1 &kp KP_NUMBER_2 &kp KP_NUMBER_3 &kp KP_MULTIPLY &kp RALT
-                                        &none           &none           &none           &trans          &kp KP_DOT      &kp KP_NUMBER_0
+&none   &none           &none           &none           &none           &none           &kp KP_PLUS     &kp KP_NUMBER_1 &kp KP_NUMBER_2 &kp KP_NUMBER_3 &kp KP_MULTIPLY &none
+                                        &none           &none           &kp RALT        &trans          &kp KP_DOT      &kp KP_NUMBER_0
                         >;
                 };
 
