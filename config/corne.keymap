@@ -10,12 +10,12 @@
 #define CONNECT 5
 
 #define COMBO(NAME, BINDINGS, KEYPOS) \
-  combo_##NAME { \
-    timeout-ms = <50>; \
-    bindings = <BINDINGS>; \
-    key-positions = <KEYPOS>; \
-    layers = <0>; \
-  };
+        combo_##NAME { \
+                timeout-ms = <50>; \
+                bindings = <BINDINGS>; \
+                key-positions = <KEYPOS>; \
+                layers = <0>; \
+        };
 
 / {
         macros {
@@ -130,11 +130,23 @@
 
         combos {
                 compatible = "zmk,combos";
+
                 combo_esc {
                         timeout-ms = <50>;
                         key-positions = <0 1>;
                         bindings = <&kp ESC>;
                 };
+                
+                COMBO(one, &kp N1, 0 10)
+                COMBO(two, &kp N2, 1 11)
+                COMBO(three, &kp N3, 2 12)
+                COMBO(four, &kp N4, 3 13)
+                COMBO(five, &kp N5, 4 14)
+                COMBO(six, &kp N6, 5 15)
+                COMBO(seven, &kp N7, 6 16)
+                COMBO(eight, &kp N8, 7 17)
+                COMBO(nine, &kp N9, 8 18)
+                COMBO(zero, &kp N0, 9 19)
         };
 
         keymap {
