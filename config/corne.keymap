@@ -54,7 +54,7 @@
                                 , <&macro_release &kp LCTRL>
                                 ;
                 };
-                
+
                 tab_new: tab_new {
                         label = "ZM_tab_new";
                         compatible = "zmk,behavior-macro";
@@ -66,7 +66,7 @@
                                 , <&macro_release &kp LCTRL>
                                 ;
                 };
-                
+
                 tab_close: tab_close {
                         label = "ZM_tab_close";
                         compatible = "zmk,behavior-macro";
@@ -78,7 +78,7 @@
                                 , <&macro_release &kp LCTRL>
                                 ;
                 };
-                
+
                 lng_eng: lng_eng {
                         label = "ZM_lng_eng";
                         compatible = "zmk,behavior-macro";
@@ -102,7 +102,7 @@
                                 , <&macro_release &kp LCTRL &kp LSHFT>
                                 ;
                 };
-                
+
                 lng_ru: lng_ru {
                         label = "ZM_lng_ru";
                         compatible = "zmk,behavior-macro";
@@ -114,7 +114,7 @@
                                 , <&macro_release &kp LCTRL &kp LSHFT>
                                 ;
                 };
-                
+
                 key_summary: key_summary {
                         label = "ZM_key_summary";
                         compatible = "zmk,behavior-macro";
@@ -125,6 +125,17 @@
                                 , <&macro_tap &kp KP_NUMBER_6 &kp KP_NUMBER_1>
                                 , <&macro_release &kp LALT>
                                 ;
+                };
+        };
+
+        behaviors {
+                td0: tap_dance_0 {
+                        label = "TAP_DANCE_0";
+                        compatible = "zmk,behavior-tap-dance";
+
+                        #binding-cells = <0>;
+                        tapping-term-ms = <200>;
+                        bindings = <&kp N1>, <&kp N2>, <&kp N3>;
                 };
         };
 
@@ -139,7 +150,7 @@
 
         combos {
                 compatible = "zmk,combos";
-                
+
                 COMBO(one, &kp ESC, 1 2)
                 COMBO(two, &kp N2, 1 11)
                 COMBO(three, &kp N3, 2 12)
@@ -155,10 +166,10 @@
         keymap {
                 compatible = "zmk,keymap";
 
-// | CONN/ESC |  Q  |  W  |  E   |  R   |   T      | ___ |   Y       |   U   |  I  |  O  |  P  | BSPC      |
-// | TAB/NUMB |  A  |  S  |  D   |  F   |   G      | ___ |   H       |   J   |  K  |  L  |  :  |  '        |
-// | SHIFT    |  Z  |  X  |  C   |  V   |   B      | ___ |   N       |   M   |  ,  |  .  |  /  | SHIFT/TAB |
-//                        | CTRL |LOWER | BSPC/ALT | ___ | ENTER/ALT | RAISE | GUI |
+// | ESC      |  Q  |  W  |  E   |   R   |   T      | ___ |   Y       |   U   |  I  |  O  |  P  | BSPC      |
+// | TAB/NUMB |  A  |  S  |  D   |   F   |   G      | ___ |   H       |   J   |  K  |  L  |  :  |  '        |
+// | SHIFT    |  Z  |  X  |  C   |   V   |   B      | ___ |   N       |   M   |  ,  |  .  |  /  | SHIFT/TAB |
+//                        | CTRL | LOWER | BSPC/ALT | ___ | ENTER/ALT | RAISE | GUI |
 
                 base_layer {
                         label = "BASE";
@@ -179,7 +190,7 @@
                         label = "LOWER";
                         bindings = <
 &kp GRAVE  &kp N1      &kp N2      &kp N3            &kp N4         &kp N5        &kp N6     &kp N7     &kp N8     &kp N9    &kp N0     &trans
-&kp DEL    &tab_close  &tab_prev   &tab_next         &tab_reload    &tab_new      &none      &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH   
+&kp DEL    &tab_close  &tab_prev   &tab_next         &tab_reload    &tab_new      &none      &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH
 &trans     &kp C_PREV  &kp C_NEXT  &kp C_PLAY_PAUSE  &kp C_VOL_DN   &kp C_VOL_UP  &none      &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &kp INSERT
                                    &trans            &trans         &trans        &trans     &trans     &trans
                         >;
@@ -194,13 +205,13 @@
                         label = "RAISE";
                         bindings = <
 &kp TILDE  &kp EXCL  &kp AT   &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR     &kp RPAR  &trans
-&kp DEL    &kp F1    &kp F2   &kp F3    &kp F4    &kp F5     &kp F6     &kp UNDER  &kp PLUS         &kp LBRC     &kp RBRC  &kp PIPE  
+&kp DEL    &kp F1    &kp F2   &kp F3    &kp F4    &kp F5     &kp F6     &kp UNDER  &kp PLUS         &kp LBRC     &kp RBRC  &kp PIPE
 &trans     &kp F7    &kp F8   &kp F9    &kp F10   &kp F11    &kp F12    &kp HOME   &kp PAGE_DOWN    &kp PAGE_UP  &kp END   &kp INSERT
                               &trans    &trans    &trans     &trans     &trans     &trans
                         >;
                 };
 
-// |       | ENG  | LT   | RU     |      |      | ___ |       |      |     |     |     |     |   
+// |       | ENG  | LT   | RU     |      |      | ___ |       |      |     |     |     |     |
 // |       | WWW  | MAIL | CALC   |      |      | ___ |       |      |     |     |     |     |
 // |       | NUMB | CAPS | SCROLL |      |      | ___ |       |      |     |     |     |     |
 //                       |        | HELD |      | ___ |       | HELD |     |
