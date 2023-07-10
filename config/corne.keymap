@@ -169,9 +169,9 @@
         keymap {
                 compatible = "zmk,keymap";
 
-// | ESC      |  Q  |  W  |  E   |   R   |   T      | ___ |   Y       |   U   |  I  |  O  |  P  | BSPC      |
-// | TAB/NUMB |  A  |  S  |  D   |   F   |   G      | ___ |   H       |   J   |  K  |  L  |  :  |  '        |
-// | SHIFT    |  Z  |  X  |  C   |   V   |   B      | ___ |   N       |   M   |  ,  |  .  |  /  | SHIFT/TAB |
+// | ESC      |  Q  |  W  |  E   |   R   |   T      | ___ |   Y       |   U   |  I  |  O  |  P  | BSPC |
+// | TAB/NUMB |  A  |  S  |  D   |   F   |   G      | ___ |   H       |   J   |  K  |  L  |  :  |  '   |
+// | SHIFT    |  Z  |  X  |  C   |   V   |   B      | ___ |   N       |   M   |  ,  |  .  |  /  | TAB  |
 //                        | CTRL | LOWER | BSPC/ALT | ___ | ENTER/ALT | RAISE | GUI |
 
                 base_layer {
@@ -179,7 +179,7 @@
                         bindings = <
 &kp ESC         &kp Q     &kp W  &kp E      &kp R      &kp T           &kp Y           &kp U      &kp I      &kp O    &kp P     &kp BACKSPACE
 &lt NUMBER TAB  &kp A     &kp S  &kp D      &kp F      &kp G           &kp H           &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT       &kp Z     &kp X  &kp C      &kp V      &kp B           &kp N           &kp M      &kp COMMA  &kp DOT  &kp FSLH  &mt RSHIFT TAB
+&kp LSHFT       &kp Z     &kp X  &kp C      &kp V      &kp B           &kp N           &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp TAB
                                  &kp LCTRL  &mo LOWER  &mt LALT SPACE  &mt RALT ENTER  &mo RAISE  &kp LGUI
                         >;
                 };
@@ -270,7 +270,7 @@
 &lt NUMBER TAB  &kp Q  &kp W  &kp E      &kp R      &kp T           &kp Y      &kp U      &kp I      &kp O    &kp P     &kp BACKSPACE
 &kp LCTRL       &kp A  &kp S  &kp D      &kp F      &kp G           &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LSHFT       &kp Z  &kp X  &kp C      &kp V      &kp B           &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp LGUI
-                              &kp LALT   &mo LOWER  &mt SPACE       &kp ENTER  &mo RAISE  &kp RALT
+                              &kp LALT   &mo LOWER  &kp SPACE       &kp ENTER  &mo RAISE  &kp RALT
                         >;
                 };
 
