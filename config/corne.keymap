@@ -122,11 +122,11 @@
         
         combos {
                 compatible = "zmk,combos";
-                combo_esc {
-                timeout-ms = <50>;
-                key-positions = <1 2>
-                bindings = <&kp KP_NUMBER_1 &kp KP_NUMBER_1 &kp KP_NUMBER_1>;
-                };
+                        combo_esc {
+                        timeout-ms = <50>;
+                        key-positions = <0 1>
+                        bindings = <&kp KP_NUMBER_1>;
+                        };
         };
 
         keymap {
