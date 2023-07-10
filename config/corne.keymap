@@ -6,8 +6,7 @@
 #define LOWER 1
 #define RAISE 2
 #define ADJUST 3
-#define NUMBER 4
-#define CONNECT 5
+#define NUMB 4
 
 #define COMBO(NAME, BINDINGS, KEYPOS) \
         combo_##NAME { \
@@ -22,6 +21,7 @@
                 tab_prev: tab_prev {
                         label = "ZM_tab_prev";
                         compatible = "zmk,behavior-macro";
+
                         #binding-cells = <0>;
                         bindings
                                 = <&macro_press &kp LCTRL>
@@ -33,6 +33,7 @@
                 tab_next: tab_next {
                         label = "ZM_tab_next";
                         compatible = "zmk,behavior-macro";
+
                         #binding-cells = <0>;
                         bindings
                                 = <&macro_press &kp LCTRL>
@@ -45,6 +46,7 @@
                 tab_reload: tab_reload {
                         label = "ZM_tab_reload";
                         compatible = "zmk,behavior-macro";
+
                         #binding-cells = <0>;
                         bindings
                                 = <&macro_press &kp LCTRL>
@@ -56,6 +58,7 @@
                 tab_new: tab_new {
                         label = "ZM_tab_new";
                         compatible = "zmk,behavior-macro";
+
                         #binding-cells = <0>;
                         bindings
                                 = <&macro_press &kp LCTRL>
@@ -67,6 +70,7 @@
                 tab_close: tab_close {
                         label = "ZM_tab_close";
                         compatible = "zmk,behavior-macro";
+
                         #binding-cells = <0>;
                         bindings
                                 = <&macro_press &kp LCTRL>
@@ -78,6 +82,7 @@
                 lng_eng: lng_eng {
                         label = "ZM_lng_eng";
                         compatible = "zmk,behavior-macro";
+
                         #binding-cells = <0>;
                         bindings
                                 = <&macro_press &kp LCTRL &kp LSHFT>
@@ -89,6 +94,7 @@
                 lng_lt: lng_lt {
                         label = "ZM_lng_lt";
                         compatible = "zmk,behavior-macro";
+
                         #binding-cells = <0>;
                         bindings
                                 = <&macro_press &kp LCTRL &kp LSHFT>
@@ -100,6 +106,7 @@
                 lng_ru: lng_ru {
                         label = "ZM_lng_ru";
                         compatible = "zmk,behavior-macro";
+
                         #binding-cells = <0>;
                         bindings
                                 = <&macro_press &kp LCTRL &kp LSHFT>
@@ -111,6 +118,7 @@
                 key_summary: key_summary {
                         label = "ZM_key_summary";
                         compatible = "zmk,behavior-macro";
+
                         #binding-cells = <0>;
                         bindings
                                 = <&macro_press &kp LALT>
@@ -122,6 +130,7 @@
 
         conditional_layers {
                 compatible = "zmk,conditional-layers";
+
                 tri_layer {
                         if-layers = <1 2>;
                         then-layer = <3>;
@@ -130,14 +139,8 @@
 
         combos {
                 compatible = "zmk,combos";
-
-                combo_esc {
-                        timeout-ms = <50>;
-                        key-positions = <0 1>;
-                        bindings = <&kp ESC>;
-                };
                 
-                COMBO(one, &kp N1, 0 10)
+                COMBO(one, &kp ESC, 1 2)
                 COMBO(two, &kp N2, 1 11)
                 COMBO(three, &kp N3, 2 12)
                 COMBO(four, &kp N4, 3 13)
@@ -160,10 +163,10 @@
 //                        | CTRL |LOWER | BSPC/ALT | ___ | ENTER/ALT | RAISE | GUI |
 
                         bindings = <
-&lt CONNECT ESC  &kp Q     &kp W  &kp E      &kp R      &kp T           &kp Y           &kp U      &kp I      &kp O    &kp P     &kp BACKSPACE
-&lt NUMBER TAB   &kp A     &kp S  &kp D      &kp F      &kp G           &kp H           &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT        &kp Z     &kp X  &kp C      &kp V      &kp B           &kp N           &kp M      &kp COMMA  &kp DOT  &kp FSLH  &mt RSHIFT TAB
-                                  &kp LCTRL  &mo LOWER  &mt LALT SPACE  &mt RALT ENTER  &mo RAISE  &kp LGUI
+&lt ESC       &kp Q     &kp W  &kp E      &kp R      &kp T           &kp Y           &kp U      &kp I      &kp O    &kp P     &kp BACKSPACE
+&lt NUMB TAB  &kp A     &kp S  &kp D      &kp F      &kp G           &kp H           &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT     &kp Z     &kp X  &kp C      &kp V      &kp B           &kp N           &kp M      &kp COMMA  &kp DOT  &kp FSLH  &mt RSHIFT TAB
+                               &kp LCTRL  &mo LOWER  &mt LALT SPACE  &mt RALT ENTER  &mo RAISE  &kp LGUI
                         >;
                 };
 
@@ -205,14 +208,14 @@
 //                       |        | HELD |      | ___ |       | HELD |     |
 
                         bindings = <
-&none  &lng_eng        &lng_lt         &lng_ru              &none   &none  &none  &none   &none  &none  &none  &none    
-&none  &kp C_AC_HOME   &kp C_AL_EMAIL  &kp C_AL_CALCULATOR  &none   &none  &none  &none   &none  &none  &none  &none
-&none  &kp KP_NUMLOCK  &kp CAPSLOCK    &kp SCROLLLOCK       &none   &none  &none  &none   &none  &none  &none  &none
-                                       &none                &trans  &none  &none  &trans  &none
+&none  &lng_eng        &lng_lt         &lng_ru              &none   &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
+&none  &kp C_AC_HOME   &kp C_AL_EMAIL  &kp C_AL_CALCULATOR  &none   &none  &none         &none         &none         &none         &none         &none
+&none  &kp KP_NUMLOCK  &kp CAPSLOCK    &kp SCROLLLOCK       &none   &none  &none         &none         &none         &none         &none         &none
+                                       &none                &trans  &none  &none         &trans        &none
                         >;
                 };
 
-                number_layer {
+                numb_layer {
 
 // |      |  1  |  2  |  3  |  4  |  5   | ___ |   6   |  7  |  8  |  9  |  0  | BSPC |
 // | HELD |     |     |     |     |      | ___ |   -   |  4  |  5  |  6  |  /  |  =   |
@@ -224,21 +227,6 @@
 &none  &none           &none           &none           &none           &none           &kp KP_MINUS    &kp KP_NUMBER_4 &kp KP_NUMBER_5 &kp KP_NUMBER_6 &kp KP_DIVIDE   &key_summary
 &none  &none           &none           &none           &none           &none           &kp KP_PLUS     &kp KP_NUMBER_1 &kp KP_NUMBER_2 &kp KP_NUMBER_3 &kp KP_MULTIPLY &none
                                        &none           &none           &kp RALT        &trans          &kp KP_DOT      &kp KP_NUMBER_0
-                        >;
-                };
-
-                connect_layer {
-
-// |        | BT0 | BT1 | BT2 | BT3 | BT4 | ___ |     |     |     |     |     |      |
-// | BT_CLR |     |     |     |     |     | ___ |     |     |     |     |     |      |
-// |        |     |     |     |     |     | ___ |     |     |     |     |     |      |
-//                      |     |     |     | ___ |     |     |     |
-
-                        bindings = <
-&none       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none  &none  &none  &none  &none  &none
-&bt BT_CLR  &none         &none         &none         &none         &none         &none  &none  &none  &none  &none  &none
-&none       &none         &none         &none         &none         &none         &none  &none  &none  &none  &none  &none
-                          	        &none         &none         &none         &none  &none  &none
                         >;
                 };
         };
