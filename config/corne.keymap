@@ -142,13 +142,22 @@
         };
 
         behaviors {
-                td0: tap_dance_0 {
+                td_ctrl: tap_dance_0 {
                         label = "TAP_DANCE_0";
                         compatible = "zmk,behavior-tap-dance";
 
                         #binding-cells = <0>;
                         tapping-term-ms = <200>;
-                        bindings = <&kp LCTRL>, <&kp LCTRL>, <&mo NUMBER2>;
+                        bindings = <&kp LCTRL>, <&mo NUMBER2>;
+                };
+                
+                td_shft: tap_dance_1 {
+                        label = "TAP_DANCE_0";
+                        compatible = "zmk,behavior-tap-dance";
+
+                        #binding-cells = <0>;
+                        tapping-term-ms = <200>;
+                        bindings = <&kp LSHFT>, <&mo NUMBER2>;
                 };
         };
 
@@ -253,18 +262,18 @@
                         >;
                 };
 
-// | NUMBER/TAB | Q | W | E    | R      | T   | ___ | Y     | U      | I   | O | P | BSPC |
-// | CTRL       | A | S | D    | F      | G   | ___ | H     | J      | K   | L | : |  '   |
-// | SHIFT      | Z | X | C    | V      | B   | ___ | N     | M      | ,   | . | / | DEL  |
-//                      | LALT | LOWER2 | SPC | ___ | ENTER | RAISE2 | GUI |
+// | TAB      | Q | W | E    | R      | T   | ___ | Y     | U      | I   | O | P | BSPC |
+// | TD_CTRL  | A | S | D    | F      | G   | ___ | H     | J      | K   | L | : |  '   |
+// | TD_SHIFT | Z | X | C    | V      | B   | ___ | N     | M      | ,   | . | / | DEL  |
+//                    | LALT | LOWER2 | SPC | ___ | ENTER | RAISE2 | GUI |
 
                 base2_layer {
                         label = "BASE_2";
                         bindings = <
-&lt NUMBER2 TAB  &kp Q  &kp W  &kp E      &kp R       &kp T           &kp Y      &kp U       &kp I      &kp O    &kp P     &kp BACKSPACE
-&td0             &kp A  &kp S  &kp D      &kp F       &kp G           &kp H      &kp J       &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT        &kp Z  &kp X  &kp C      &kp V       &kp B           &kp N      &kp M       &kp COMMA  &kp DOT  &kp FSLH  &kp DELETE
-                               &kp LALT   &mo LOWER2  &kp SPACE       &kp ENTER  &mo RAISE2  &kp LGUI
+&lt TAB    &kp Q  &kp W  &kp E      &kp R       &kp T           &kp Y      &kp U       &kp I      &kp O    &kp P     &kp BACKSPACE
+&td_ctrl   &kp A  &kp S  &kp D      &kp F       &kp G           &kp H      &kp J       &kp K      &kp L    &kp SEMI  &kp SQT
+&td_shft   &kp Z  &kp X  &kp C      &kp V       &kp B           &kp N      &kp M       &kp COMMA  &kp DOT  &kp FSLH  &kp DELETE
+                         &kp LALT   &mo LOWER2  &kp SPACE       &kp ENTER  &mo RAISE2  &kp LGUI
                         >;
                 };
 
@@ -313,9 +322,9 @@
                         >;
                 };
 
-// | HELD | 7 | 8 | 9 | = | =   | ___ |       |      |      |    |       | BSPC |
-// |      | 4 | 5 | 6 | - | /   | ___ |       |      |      |    |       |      |
-// |      | 1 | 2 | 3 | + | *   | ___ |       | LEFT | DOWN | UP | RIGHT | DEL  |
+// |      | 7 | 8 | 9 | = | =   | ___ |       |      |      |    |       | BSPC |
+// | HELD | 4 | 5 | 6 | - | /   | ___ |       |      |      |    |       |      |
+// | HELD | 1 | 2 | 3 | + | *   | ___ |       | LEFT | DOWN | UP | RIGHT | DEL  |
 //                | 0 | , | SPC | ___ | ENTER |      | RALT |
 
                 number2_layer {
