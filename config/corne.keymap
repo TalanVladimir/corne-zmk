@@ -148,7 +148,7 @@
 
                         #binding-cells = <0>;
                         tapping-term-ms = <200>;
-                        bindings = <&kp LCTRL>, <&mo NUMBER2>;
+                        bindings = <&kp LCTRL>, <&mo NUMBER2>, <&mo NUMBER2>;
                 };
                 
                 td_shft: tap_dance_1 {
@@ -157,7 +157,7 @@
 
                         #binding-cells = <0>;
                         tapping-term-ms = <200>;
-                        bindings = <&kp LSHFT>, <&mo NUMBER2>;
+                        bindings = <&kp LSHFT>, <&mo NUMBER2>, <&mo NUMBER2>;
                 };
         };
 
