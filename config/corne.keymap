@@ -298,33 +298,33 @@
                         >;
                 };
 
-// |   | ENG  | LT   | RU     |      |      | ___ | BT0  | BT1   | BT2 | BT3 | BT4 | BT_CLR |
-// |   | WWW  | MAIL | CALC   |      |      | ___ | BASE | BASE2 |     |     |     |        |
-// |   | NUMB | CAPS | SCROLL |      |      | ___ |      |       |     |     |     |        |
-//                   |        | HELD |      | ___ |      | HELD  |     |
+// |   | ENG  | LT   | RU     |      |   | ___ | BT0  | BT1   | BT2 | BT3 | BT4 | BT_CLR |
+// |   | WWW  | MAIL | CALC   |      |   | ___ | BASE | BASE2 |     |     |     |        |
+// |   | NUMB | CAPS | SCROLL |      |   | ___ | BASE | BASE2 |     |     |     |        |
+//                   |        | HELD |   | ___ |      | HELD  |     |
 
                 adjust2_layer {
                         label = "ADJUST_2";
                         bindings = <
 &none  &lng_eng        &lng_lt         &lng_ru              &none       &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
 &none  &kp C_AC_HOME   &kp C_AL_EMAIL  &kp C_AL_CALCULATOR  &none       &none  &to BASE      &to BASE2     &none         &none         &none         &none
-&none  &kp KP_NUMLOCK  &kp CAPSLOCK    &kp SCROLLLOCK       &none       &none  &none         &none         &none         &none         &none         &none
+&none  &kp KP_NUMLOCK  &kp CAPSLOCK    &kp SCROLLLOCK       &none       &none  &to BASE      &to BASE2     &none         &none         &none         &none
                                        &none                &mo LOWER2  &none  &none         &mo RAISE2    &none
                         >;
                 };
 
-// | HELD | 1 | 2 | 3 | 4 | 5    | ___ |   6   | 7 | 8 | 9 | 0 | BSPC |
-// |      | 4 | 5 | 6 | - | /    | ___ |   -   | 4 | 5 | 6 | / |  =   |
-// |      | 7 | 8 | 9 | + | *    | ___ |   +   | 1 | 2 | 3 | * | DEL  |
-//                | 0 | , | RALT | ___ | ENTER | , | 0 |
+// | HELD | 7 | 8 | 9 | = | =   | ___ |       |      |      |    |       | BSPC |
+// |      | 4 | 5 | 6 | - | /   | ___ |       |      |      |    |       |      |
+// |      | 1 | 2 | 3 | + | *   | ___ |       | LEFT | DOWN | UP | RIGHT | DEL  |
+//                | 0 | , | SPC | ___ | ENTER |      | RALT |
 
                 number2_layer {
                         label = "NUMBER_2";
                         bindings = <
-&none  &kp KP_NUMBER_1 &kp KP_NUMBER_2 &kp KP_NUMBER_3 &kp KP_NUMBER_4 &kp KP_NUMBER_5 &kp KP_NUMBER_6 &kp KP_NUMBER_7 &kp KP_NUMBER_8 &kp KP_NUMBER_9 &kp KP_NUMBER_0 &kp BACKSPACE
-&none  &kp KP_NUMBER_4 &kp KP_NUMBER_5 &kp KP_NUMBER_6 &kp KP_MINUS    &kp KP_DIVIDE   &kp KP_MINUS    &kp KP_NUMBER_4 &kp KP_NUMBER_5 &kp KP_NUMBER_6 &kp KP_DIVIDE   &key_summary
-&none  &kp KP_NUMBER_7 &kp KP_NUMBER_8 &kp KP_NUMBER_9 &kp KP_PLUS     &kp KP_MULTIPLY &kp KP_PLUS     &kp KP_NUMBER_1 &kp KP_NUMBER_2 &kp KP_NUMBER_3 &kp KP_MULTIPLY &kp DELETE
-                                       &kp KP_NUMBER_0 &kp KP_DOT      &kp RALT        &kp ENTER       &kp KP_DOT      &kp KP_NUMBER_0
+&none  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &key_summary    &key_summary     &none      &none     &none     &none   &none      &kp BACKSPACE
+&none  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS    &kp KP_DIVIDE    &none      &none     &none     &none   &none      &none
+&none  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_PLUS     &kp KP_MULTIPLY  &none      &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp DELETE
+                                         &kp KP_NUMBER_0  &kp KP_DOT      &kp SPACE        &kp ENTER  &none     &kp RALT
                         >;
                 };
         };
