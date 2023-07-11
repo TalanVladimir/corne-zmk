@@ -173,7 +173,7 @@
                         label = "TAP_DANCE_1";
                         compatible = "zmk,behavior-tap-dance";
 
-                        #binding-cells = <1>;
+                        #binding-cells = <0>;
                         tapping-term-ms = <200>;
                         bindings = <&kp LCTRL>, <&mo NUMBER2>, <&mo NUMBER2>;
                 };
