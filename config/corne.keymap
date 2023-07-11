@@ -29,6 +29,24 @@
                 layers = <LAYERS>; \
         };
 
+// Behavior configuration
+// &mt {
+//     tapping-term-ms = <200>;
+//     quick_tap_ms = <0>;
+//     flavor = "tap-preferred";
+// };
+
+// &lt {
+//     tapping-term-ms = <200>;
+//     quick_tap_ms = <0>;
+//     flavor = "tap-preferred";
+// };
+
+// &sk {
+//     release-after-ms = <500>;
+//     quick-release;
+// };
+
 / {
         macros {
                 tab_prev: tab_prev {
@@ -148,7 +166,7 @@
 
                         #binding-cells = <0>;
                         tapping-term-ms = <200>;
-                        bindings = <&lt NUMBER2 LCTRL>, <&kp LCTRL>;
+                        bindings = <&kp LCTRL>, <&mo NUMBER2>, <&mo NUMBER2>;
                 };
 
                 td1: tap_dance_1 {
@@ -157,7 +175,7 @@
 
                         #binding-cells = <1>;
                         tapping-term-ms = <200>;
-                        bindings = <&lt NUMBER2 LCTRL>, <&kp LCTRL>;
+                        bindings = <&kp LCTRL>, <&mo NUMBER2>, <&mo NUMBER2>;
                 };
         };
 
