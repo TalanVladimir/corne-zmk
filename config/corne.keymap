@@ -177,7 +177,7 @@
                         #binding-cells = <0>;
                         tapping-term-ms = <200>;
                         // bindings = <&kp LCTRL>, <&mo NUMBER2>, <&mo NUMBER2>;
-                        bindings = <&kp LSHFT>, <&kp RA(NUMBER2)>;
+                        bindings = <&kp LSHFT>, <&kp LA(NUMBER2)>;
                 };
         };
 
