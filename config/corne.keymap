@@ -313,18 +313,18 @@
                         >;
                 };
 
-// | HELD | 1 | 2  | 3    | 4 | 5 | ___ |   6   | 7 | 8 | 9 | 0 | BSPC |
-// |      |   |    |      |   |   | ___ |   -   | 4 | 5 | 6 | / |  =   |
-// |      |   |    |      |   |   | ___ |   +   | 1 | 2 | 3 | * | DEL  |
-//                 | RALT |   |   | ___ | ENTER | , | 0 |
+// | HELD | 1 | 2 | 3 | 4 | 5    | ___ |   6   | 7 | 8 | 9 | 0 | BSPC |
+// |      | 4 | 5 | 6 | - | /    | ___ |   -   | 4 | 5 | 6 | / |  =   |
+// |      | 7 | 8 | 9 | + | *    | ___ |   +   | 1 | 2 | 3 | * | DEL  |
+//                | 0 | , | RALT | ___ | ENTER | , | 0 |
 
                 number2_layer {
                         label = "NUMBER_2";
                         bindings = <
 &none  &kp KP_NUMBER_1 &kp KP_NUMBER_2 &kp KP_NUMBER_3 &kp KP_NUMBER_4 &kp KP_NUMBER_5 &kp KP_NUMBER_6 &kp KP_NUMBER_7 &kp KP_NUMBER_8 &kp KP_NUMBER_9 &kp KP_NUMBER_0 &kp BACKSPACE
-&none  &none           &none           &none           &none           &none           &kp KP_MINUS    &kp KP_NUMBER_4 &kp KP_NUMBER_5 &kp KP_NUMBER_6 &kp KP_DIVIDE   &key_summary
-&none  &none           &none           &none           &none           &none           &kp KP_PLUS     &kp KP_NUMBER_1 &kp KP_NUMBER_2 &kp KP_NUMBER_3 &kp KP_MULTIPLY &kp DELETE
-                                       &kp RALT        &none           &none           &kp ENTER       &kp KP_DOT      &kp KP_NUMBER_0
+&none  &kp KP_NUMBER_4 &kp KP_NUMBER_5 &kp KP_NUMBER_6 &kp KP_MINUS    &kp KP_DIVIDE   &kp KP_MINUS    &kp KP_NUMBER_4 &kp KP_NUMBER_5 &kp KP_NUMBER_6 &kp KP_DIVIDE   &key_summary
+&none  &kp KP_NUMBER_7 &kp KP_NUMBER_8 &kp KP_NUMBER_9 &kp KP_PLUS     &kp KP_MULTIPLY &kp KP_PLUS     &kp KP_NUMBER_1 &kp KP_NUMBER_2 &kp KP_NUMBER_3 &kp KP_MULTIPLY &kp DELETE
+                                       &kp KP_NUMBER_0 &kp KP_DOT      &kp RALT        &kp ENTER       &kp KP_DOT      &kp KP_NUMBER_0
                         >;
                 };
         };
