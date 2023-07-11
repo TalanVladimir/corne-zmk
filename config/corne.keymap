@@ -177,7 +177,7 @@
                         #binding-cells = <0>;
                         tapping-term-ms = <200>;
                         // bindings = <&kp LCTRL>, <&mo NUMBER2>, <&mo NUMBER2>;
-                        bindings = <&kp LSHFT>, <&mo NUMBER2>;
+                        bindings = <&kp LSHFT>, <&kp RA(NUMBER2)>;
                 };
         };
 
@@ -342,10 +342,10 @@
                         >;
                 };
 
-// |      | 7 | 8 | 9 | = |  asd  | ___ |       |      |      |    |       | BSPC |
-// | HELD | 4 | 5 | 6 | - | /   | ___ |       |      |      |    |       |      |
-// | HELD | 1 | 2 | 3 | + | *   | ___ |       | LEFT | DOWN | UP | RIGHT | DEL  |
-//                | 0 | , | SPC | ___ | ENTER |      | RALT |
+// |      | 7 | 8 | 9 | = | RALT | ___ |       |      |      |    |       | BSPC |
+// | HELD | 4 | 5 | 6 | - | /    | ___ |       |      |      |    |       |      |
+// | HELD | 1 | 2 | 3 | + | *    | ___ |       | LEFT | DOWN | UP | RIGHT | DEL  |
+//                | 0 | , | SPC  | ___ | ENTER |      | RALT |
 
                 number2_layer {
                         label = "NUMBER_2";
