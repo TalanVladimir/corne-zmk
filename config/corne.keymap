@@ -148,7 +148,7 @@
 
                         #binding-cells = <0>;
                         tapping-term-ms = <200>;
-                        bindings = <&kp LCTRL>, <&mo NUMBER2>, <&mo NUMBER2>;
+                        bindings = <&kp LCTRL>, <&mo NUMBER2>, <&mo LCTRL>;
                 };
 
                 td1: tap_dance_1 {
@@ -157,7 +157,7 @@
 
                         #binding-cells = <0>;
                         tapping-term-ms = <200>;
-                        bindings = <&kp LSHFT>, <&mo NUMBER2>, <&mo NUMBER2>;
+                        bindings = <&kp LCTRL>, <&mo NUMBER2>, <&mo LCTRL>;
                 };
         };
 
@@ -180,7 +180,7 @@
                 compatible = "zmk,combos";
 
                 COMBO_ALL(one, &kp ESC, 1 2)
-                COMBO(two, &kp N2, 1 3, 5)
+                // COMBO(two, &kp N2, 1 3, 5)
                 // COMBO(three, &kp N3, 2 12)
         };
 
