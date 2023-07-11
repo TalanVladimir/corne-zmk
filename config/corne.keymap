@@ -177,7 +177,7 @@
                         #binding-cells = <0>;
                         tapping-term-ms = <200>;
                         // bindings = <&kp LCTRL>, <&mo NUMBER2>, <&mo NUMBER2>;
-                        bindings = <&kp LCTRL>, <&mo NUMBER2>;
+                        bindings = <&kp LSHFT>, <&mo NUMBER2>;
                 };
         };
 
@@ -254,7 +254,7 @@
 
 // |   | ENG  | LT   | RU     |      |   | ___ | BT0  | BT1   | BT2 | BT3 | BT4 | BT_CLR |
 // |   | WWW  | MAIL | CALC   |      |   | ___ | BASE | BASE2 |     |     |     |        |
-// |   | NUMB | CAPS | SCROLL |      |   | ___ |      |       |     |     |     |        |
+// |   | NUMB | CAPS | SCROLL |      |   | ___ | BASE | BASE2 |     |     |     |        |
 //                   |        | HELD |   | ___ |      | HELD  |     |
 
                 adjust_layer {
@@ -262,7 +262,7 @@
                         bindings = <
 &none  &lng_eng        &lng_lt         &lng_ru              &none   &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
 &none  &kp C_AC_HOME   &kp C_AL_EMAIL  &kp C_AL_CALCULATOR  &none   &none  &to BASE      &to BASE2     &none         &none         &none         &none
-&none  &kp KP_NUMLOCK  &kp CAPSLOCK    &kp SCROLLLOCK       &none   &none  &none         &none         &none         &none         &none         &none
+&none  &kp KP_NUMLOCK  &kp CAPSLOCK    &kp SCROLLLOCK       &none   &none  &to BASE      &to BASE2     &none         &none         &none         &none
                                        &none                &trans  &none  &none         &trans        &none
                         >;
                 };
@@ -342,7 +342,7 @@
                         >;
                 };
 
-// |      | 7 | 8 | 9 | = | =   | ___ |       |      |      |    |       | BSPC |
+// |      | 7 | 8 | 9 | = |  asd  | ___ |       |      |      |    |       | BSPC |
 // | HELD | 4 | 5 | 6 | - | /   | ___ |       |      |      |    |       |      |
 // | HELD | 1 | 2 | 3 | + | *   | ___ |       | LEFT | DOWN | UP | RIGHT | DEL  |
 //                | 0 | , | SPC | ___ | ENTER |      | RALT |
@@ -350,7 +350,7 @@
                 number2_layer {
                         label = "NUMBER_2";
                         bindings = <
-&none  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &key_summary  &key_summary     &none      &none     &none     &none   &none      &kp BACKSPACE
+&none  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &key_summary  &kp RALT         &none      &none     &none     &none   &none      &kp BACKSPACE
 &none  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS  &kp KP_DIVIDE    &none      &none     &none     &none   &none      &none
 &none  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_PLUS   &kp KP_MULTIPLY  &none      &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp DELETE
                                          &kp KP_NUMBER_0  &kp KP_DOT    &kp SPACE        &kp ENTER  &none     &kp RALT
