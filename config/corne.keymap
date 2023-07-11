@@ -148,16 +148,16 @@
 
                         #binding-cells = <0>;
                         tapping-term-ms = <200>;
-                        bindings = <&kp LCTRL>, <&mo NUMBER2>, <&mo LCTRL>;
+                        bindings = <&lt NUMBER2 LCTRL>, <&kp LCTRL>;
                 };
 
                 td1: tap_dance_1 {
                         label = "TAP_DANCE_1";
                         compatible = "zmk,behavior-tap-dance";
 
-                        #binding-cells = <0>;
+                        #binding-cells = <1>;
                         tapping-term-ms = <200>;
-                        bindings = <&kp LCTRL>, <&mo NUMBER2>, <&mo LCTRL>;
+                        bindings = <&lt NUMBER2 LCTRL>, <&kp LCTRL>;
                 };
         };
 
