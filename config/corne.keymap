@@ -142,8 +142,8 @@
         };
 
         behaviors {
-                td_ctrl: tap_dance_0 {
-                        label = "TAP_DANCE_0";
+                td_ctrl: tap_dance_ctrl {
+                        label = "TAP_DANCE_CTRL";
                         compatible = "zmk,behavior-tap-dance";
 
                         #binding-cells = <0>;
@@ -151,8 +151,8 @@
                         bindings = <&kp LCTRL>, <&mo NUMBER2>, <&mo NUMBER2>;
                 };
                 
-                td_shft: tap_dance_1 {
-                        label = "TAP_DANCE_0";
+                td_shft: tap_dance_shft {
+                        label = "TAP_DANCE_SHFT";
                         compatible = "zmk,behavior-tap-dance";
 
                         #binding-cells = <0>;
