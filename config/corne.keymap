@@ -163,7 +163,7 @@
 
                         #binding-cells = <0>;
                         tapping-term-ms = <200>;
-                        bindings = <&kp LCTRL>, <&mo NUM_ALT>;
+                        bindings = <&kp LALT>, <&mo NUM_ALT>;
                 };
 
                 td_ctrl: tap_dance_ctrl {
@@ -172,7 +172,7 @@
 
                         #binding-cells = <0>;
                         tapping-term-ms = <200>;
-                        bindings = <&kp LSHFT>, <&mo NUM_CTRL>;
+                        bindings = <&kp LCTRL>, <&mo NUM_CTRL>;
                 };
         };
 
