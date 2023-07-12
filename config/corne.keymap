@@ -13,6 +13,7 @@
 #define ADJUST2 8
 #define NUMBER2 9
 #define NUMBER3 10
+#define NUMBER4 11
 
 #define COMBO_ALL(NAME, BINDINGS, KEYPOS) \
         combo_##NAME { \
@@ -186,7 +187,7 @@
 
                         #binding-cells = <0>;
                         tapping-term-ms = <200>;
-                        bindings = <&kp LALT>, <&mo NUMBER3>;
+                        bindings = <&kp LALT>, <&mo NUMBER4>;
                 };
         };
 
@@ -380,9 +381,9 @@
                         >;
                 };
 
-// | HELD | 7 | 8 | 9 | = |     | ___ |       |      |      |    |       | BSPC |
-// | HELD | 4 | 5 | 6 | - | /   | ___ |       |      |      |    |       |      |
-// | HELD | 1 | 2 | 3 | + | *   | ___ |       | LEFT | DOWN | UP | RIGHT | DEL  |
+// |      | = | 7 | 8 | 9 | 0   | ___ |       |      |      |    |       | BSPC |
+// |      | - | 4 | 5 | 6 | /   | ___ |       |      |      |    |       |      |
+// |      | + | 1 | 2 | 3 | *   | ___ |       | LEFT | DOWN | UP | RIGHT | DEL  |
 //                | 0 | , | SPC | ___ | ENTER |      |      |
 
                 number4_layer {
