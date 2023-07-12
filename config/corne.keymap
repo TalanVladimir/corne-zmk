@@ -12,6 +12,7 @@
 #define RAISE2 7
 #define ADJUST2 8
 #define NUMBER2 9
+#define NUMBER3 10
 
 #define COMBO_ALL(NAME, BINDINGS, KEYPOS) \
         combo_##NAME { \
@@ -29,23 +30,24 @@
                 layers = <LAYERS>; \
         };
 
-// Behavior configuration
-// &mt {
-//     tapping-term-ms = <200>;
-//     quick_tap_ms = <0>;
-//     flavor = "tap-preferred";
-// };
+//Behavior configuration
 
-// &lt {
-//     tapping-term-ms = <200>;
-//     quick_tap_ms = <0>;
-//     flavor = "tap-preferred";
-// };
+&mt {
+    tapping-term-ms = <200>;
+    quick_tap_ms = <0>;
+    flavor = "tap-preferred";
+};
 
-// &sk {
-//     release-after-ms = <500>;
-//     quick-release;
-// };
+&lt {
+    tapping-term-ms = <200>;
+    quick_tap_ms = <0>;
+    flavor = "tap-preferred";
+};
+
+&sk {
+    release-after-ms = <500>;
+    quick-release;
+};
 
 / {
         macros {
@@ -166,7 +168,6 @@
 
                         #binding-cells = <0>;
                         tapping-term-ms = <200>;
-                        // bindings = <&kp LCTRL>, <&mo NUMBER2>, <&mo NUMBER2>;
                         bindings = <&kp LCTRL>, <&mo NUMBER2>;
                 };
 
@@ -176,8 +177,7 @@
 
                         #binding-cells = <0>;
                         tapping-term-ms = <200>;
-                        // bindings = <&kp LCTRL>, <&mo NUMBER2>, <&mo NUMBER2>;
-                        bindings = <&kp LSHFT>, <&kp LA(NUMBER2)>;
+                        bindings = <&kp LSHFT>, <&mo NUMBER2>;
                 };
         };
 
@@ -194,7 +194,6 @@
                         then-layer = <8>;
                 };
         };
-
 
         combos {
                 compatible = "zmk,combos";
@@ -290,7 +289,7 @@
                 base2_layer {
                         label = "BASE_2";
                         bindings = <
-&kp TAB  &kp Q  &kp W  &kp E      &kp R       &kp T           &kp Y      &kp U       &kp I      &kp O    &kp P     &kp BACKSPACE
+&lt NUMBER TAB  &kp Q  &kp W  &kp E      &kp R       &kp T           &kp Y      &kp U       &kp I      &kp O    &kp P     &kp BACKSPACE
 &td0     &kp A  &kp S  &kp D      &kp F       &kp G           &kp H      &kp J       &kp K      &kp L    &kp SEMI  &kp SQT
 &td1     &kp Z  &kp X  &kp C      &kp V       &kp B           &kp N      &kp M       &kp COMMA  &kp DOT  &kp FSLH  &kp DELETE
                        &kp LALT   &mo LOWER2  &kp SPACE       &kp ENTER  &mo RAISE2  &kp LGUI
@@ -342,7 +341,7 @@
                         >;
                 };
 
-// |      | 7 | 8 | 9 | = | RALT | ___ |       |      |      |    |       | BSPC |
+// | HELD | 7 | 8 | 9 | = | RALT | ___ |       |      |      |    |       | BSPC |
 // | HELD | 4 | 5 | 6 | - | /    | ___ |       |      |      |    |       |      |
 // | HELD | 1 | 2 | 3 | + | *    | ___ |       | LEFT | DOWN | UP | RIGHT | DEL  |
 //                | 0 | , | SPC  | ___ | ENTER |      | RALT |
@@ -354,6 +353,21 @@
 &none  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS  &kp KP_DIVIDE    &none      &none     &none     &none   &none      &none
 &none  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_PLUS   &kp KP_MULTIPLY  &none      &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp DELETE
                                          &kp KP_NUMBER_0  &kp KP_DOT    &kp SPACE        &kp ENTER  &none     &kp RALT
+                        >;
+                };
+
+// |      | 7 | 8 | 9 | = |     | ___ |       |      |      |    |       | BSPC |
+// | HELD | 4 | 5 | 6 | - | /   | ___ |       |      |      |    |       |      |
+// | HELD | 1 | 2 | 3 | + | *   | ___ |       | LEFT | DOWN | UP | RIGHT | DEL  |
+//                | 0 | , | SPC | ___ | ENTER |      |      |
+
+                number3_layer {
+                        label = "NUMBER_3";
+                        bindings = <
+&none  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &key_summary  &key_summary     &none      &none     &none     &none   &none      &kp BACKSPACE
+&none  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS  &kp KP_DIVIDE    &none      &none     &none     &none   &none      &none
+&none  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_PLUS   &kp KP_MULTIPLY  &none      &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp DELETE
+                                         &kp KP_NUMBER_0  &kp KP_DOT    &kp SPACE        &kp ENTER  &none     &none
                         >;
                 };
         };
