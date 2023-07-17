@@ -230,8 +230,8 @@
                 COMBO_ALL(set_lt, &lng_lt, 13 14 15)
                 COMBO_ALL(set_ru, &lng_ru, 25 26 27)
 
-                COMBO_ALL(lower_ralt, &kp RALT &mo LOWER, 37 38)
-                COMBO_ALL(rause_ralt, &kp RALT &mo RAISE, 39 40)
+                COMBO_ALL(lower_ralt, &mo LOWER(RALT), 37 38)
+                COMBO_ALL(rause_ralt, &mo RAISE(RALT), 39 40)
         };
 
         keymap {
