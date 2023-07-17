@@ -229,6 +229,8 @@
                 COMBO_ALL(set_eng, &lng_eng, 1 2 3)
                 COMBO_ALL(set_lt, &lng_lt, 13 14 15)
                 COMBO_ALL(set_ru, &lng_ru, 25 26 27)
+
+                COMBO_ALL(lower_ralt, &kp LOWER &kp RALT, 25 26 27)
         };
 
         keymap {
