@@ -230,16 +230,17 @@
                 COMBO_ALL(set_lt, &lng_lt, 13 14 15)
                 COMBO_ALL(set_ru, &lng_ru, 25 26 27)
 
-                COMBO_ALL(lower_ralt, &kp LOWER &kp RALT, 25 26 27)
+                COMBO_ALL(lower_ralt, &kp LOWER &kp RALT, 37 38)
+                COMBO_ALL(rause_ralt, &kp RAISE &kp RALT, 39 40)
         };
 
         keymap {
                 compatible = "zmk,keymap";
 
-// | TAB     | Q | W | E       | R      | T   | ___ | Y     | U      | I   | O | P | BSPC |
-// | TD_CTRL | A | S | D       | F      | G   | ___ | H     | J      | K   | L | : |  '   |
-// | SHIFT   | Z | X | C       | V      | B   | ___ | N     | M      | ,   | . | / | DEL  |
-//                   | TD_LALT | LOWER2 | SPC | ___ | ENTER | RAISE2 | GUI |
+// | TAB     | Q | W | E       | R      | T   | ___ | Y     | U     | I   | O | P | BSPC |
+// | TD_CTRL | A | S | D       | F      | G   | ___ | H     | J     | K   | L | : |  '   |
+// | SHIFT   | Z | X | C       | V      | B   | ___ | N     | M     | ,   | . | / | DEL  |
+//                   | TD_LALT | LOWER2 | SPC | ___ | ENTER | RAISE | GUI |
 
                 base_layer {
                         label = "BASE";
