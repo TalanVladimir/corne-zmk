@@ -208,6 +208,18 @@
                                 , <&macro_release &mo RAISE &kp RALT>
                                 ;
                 };
+
+                numalt_ralt: numalt_ralt {
+                        label = "ZM_numalt_ralt";
+                        compatible = "zmk,behavior-macro";
+
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &mo NUM_ALT &kp RALT>
+                                , <&macro_pause_for_release>
+                                , <&macro_release &mo NUM_ALT &kp RALT>
+                                ;
+                };
         };
 
         behaviors {
@@ -254,8 +266,9 @@
                 COMBO_ALL(set_lt, &lng_lt, 13 14 15)
                 COMBO_ALL(set_ru, &lng_ru, 25 26 27)
 
-                COMBO_ALL(lower_ralt, &lower_ralt)
-                COMBO_ALL(rause_ralt, &raise_ralt)
+                COMBO_ALL(lower_layer_ralt, &lower_ralt, 37 38)
+                COMBO_ALL(rause_layer_ralt, &raise_ralt, 39 40)
+                COMBO_ALL(numalt_layer_ralt, &numalt_ralt, 36 37)
         };
 
         keymap {
@@ -279,7 +292,7 @@
 // | `     | 1     | 2    | 3    | 4     | 5    | ___ | 6     | 7     | 8    | 9  | 0     | BSPC |
 // | CTRL  | TABCL | TABP | TABN | TABR  | TABN | ___ | INS   | -     | =    | [  | ]     | \    |
 // | SHIFT | PLAY  | PREV | NEXT | VDN   | VUP  | ___ | PRINT | LEFT  | DOWN | UP | RIGHT | DEL  |
-//                        | LALT | HELD  | RALT | ___ | RALT  | RAISE | GUI  |
+//                        | LALT | HELD  | SPC  | ___ | ENTER | RAISE | GUI  |
 
                 lower_layer {
                         label = "LOWER";
@@ -287,14 +300,14 @@
 &kp GRAVE  &kp N1            &kp N2      &kp N3      &kp N4        &kp N5            &kp N6      &kp N7     &kp N8     &kp N9    &kp N0     &kp BACKSPACE
 &kp LCTRL  &tab_close        &tab_prev   &tab_next   &tab_reload   &tab_new          &kp INSERT  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH
 &kp LSHFT  &kp C_PLAY_PAUSE  &kp C_PREV  &kp C_NEXT  &kp C_VOL_DN  &kp C_VOL_UP      &kp PSCRN   &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &kp DELETE
-                                         &kp LALT    &mo LOWER     &kp RALT          &kp RALT    &mo RAISE  &kp LGUI
+                                         &kp LALT    &mo LOWER     &kp SPACE         &kp ENTER   &mo RAISE  &kp LGUI
                         >;
                 };
 
-// | ~     | !  | @  | #    | $     | %    | ___ | ^    | &    | *    | (    | )   | BSPC |
-// | CTRL  | F1 | F2 | F3   | F4    | F5   | ___ | F6   | _    | +    | {    | }   | "|"  |
-// | SHIFT | F7 | F8 | F9   | F10   | F11  | ___ | F12  | HOME | PGDN | PGUP | END | DEL  |
-//                   | LALT | LOWER | RALT | ___ | RALT | HELD | GUI  |
+// | ~     | !  | @  | #    | $     | %   | ___ | ^     | &    | *    | (    | )   | BSPC |
+// | CTRL  | F1 | F2 | F3   | F4    | F5  | ___ | F6    | _    | +    | {    | }   | "|"  |
+// | SHIFT | F7 | F8 | F9   | F10   | F11 | ___ | F12   | HOME | PGDN | PGUP | END | DEL  |
+//                   | LALT | LOWER | SPC | ___ | ENTER | HELD | GUI  |
 
                 raise_layer {
                         label = "RAISE";
@@ -302,7 +315,7 @@
 &kp TILDE  &kp EXCL  &kp AT   &kp HASH  &kp DLLR   &kp PRCNT      &kp CARET  &kp AMPS   &kp ASTERISK   &kp LPAR     &kp RPAR  &kp BACKSPACE
 &kp LCTRL  &kp F1    &kp F2   &kp F3    &kp F4     &kp F5         &kp F6     &kp UNDER  &kp PLUS       &kp LBRC     &kp RBRC  &kp PIPE
 &kp LSHFT  &kp F7    &kp F8   &kp F9    &kp F10    &kp F11        &kp F12    &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP  &kp END   &kp DELETE
-                              &kp LALT  &mo LOWER  &kp RALT       &kp RALT   &mo RAISE  &kp LGUI
+                              &kp LALT  &mo LOWER  &kp SPACE      &kp ENTER  &mo RAISE  &kp LGUI
                         >;
                 };
 
