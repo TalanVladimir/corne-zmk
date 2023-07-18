@@ -171,15 +171,15 @@
                                 ;
                 };
 
-                number_ralt: number_ralt {
-                        label = "ZM_number_ralt";
+                number_lalt: number_lalt {
+                        label = "ZM_number_lalt";
                         compatible = "zmk,behavior-macro";
 
                         #binding-cells = <0>;
                         bindings
-                                = <&macro_press &mo NUMBER &kp RALT>
+                                = <&macro_press &mo NUMBER &kp LALT>
                                 , <&macro_pause_for_release>
-                                , <&macro_release &mo NUMBER &kp RALT>
+                                , <&macro_release &mo NUMBER &kp LALT>
                                 ;
                 };
         };
@@ -229,7 +229,7 @@
                 COMBO(scroll_lock, &kp SCROLLLOCK, 32 33 34, 0)
                 
                 COMBO(number_layer, &mo NUMBER, 12 37, 0)
-                COMBO(number_layer_ralt, &number_ralt, 24 37, 0)
+                COMBO(number_layer_lalt, &number_lalt, 24 37, 0)
 
                 COMBO(bt_0, &bt BT_SEL 0, 6 18 30, 0)
                 COMBO(bt_1, &bt BT_SEL 1, 7 19 31, 0)
