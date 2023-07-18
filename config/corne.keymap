@@ -283,10 +283,10 @@
                 raise_layer {
                         label = "RAISE";
                         bindings = <
-&kp TILDE  &kp EXCL  &kp AT   &kp HASH  &kp DLLR   &kp PRCNT      &kp CARET  &kp AMPS   &kp ASTERISK   &kp LPAR     &kp RPAR  &kp BACKSPACE
-&kp LCTRL  &kp F1    &kp F2   &kp F3    &kp F4     &kp F5         &kp F6     &kp UNDER  &kp PLUS       &kp LBRC     &kp RBRC  &kp PIPE
-&kp LSHFT  &kp F7    &kp F8   &kp F9    &kp F10    &kp F11        &kp F12    &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP  &kp END   &kp DELETE
-                              &kp LALT  &mo LOWER  &kp SPACE      &kp ENTER  &mo RAISE  &kp LGUI
+&kp TILDE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR   &kp PRCNT      &kp CARET  &kp AMPS   &kp ASTERISK   &kp LPAR     &kp RPAR  &kp BACKSPACE
+&kp LCTRL  &kp F1    &kp F2  &kp F3    &kp F4     &kp F5         &kp F6     &kp UNDER  &kp PLUS       &kp LBRC     &kp RBRC  &kp PIPE
+&kp LSHFT  &kp F7    &kp F8  &kp F9    &kp F10    &kp F11        &kp F12    &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP  &kp END   &kp DELETE
+                             &kp LALT  &mo LOWER  &kp SPACE      &kp ENTER  &mo RAISE  &kp LGUI
                         >;
                 };
 
@@ -305,18 +305,18 @@
                         >;
                 };
 
-// |      | 1 | 2 | 3 | 4    | 5   | ___ | 6     | 7 | 8 | 9 | 0 | BSPC |
-// | HELD |   |   |   |      |     | ___ | -     | 4 | 5 | 6 | / |      |
-// | HELD |   |   |   |      |     | ___ | +     | 1 | 2 | 3 | * | DEL  |
-//                |   | HELD | SPC | ___ | ENTER | , | 0 |
+// |       | 1 | 2 | 3    | 4    | 5    | ___ | 6     | 7 | 8 | 9 | 0 | BSPC |
+// | LCTRL |   |   |      | HELD | HELD | ___ | -     | 4 | 5 | 6 | / | =    |
+// | LSHFT |   |   |      |      |      | ___ | +     | 1 | 2 | 3 | * | DEL  |
+//                 | LALT | HELD | SPC  | ___ | ENTER | , | 0 |
 
                 number_layer {
                         label = "NUMBER";
                         bindings = <
-&none  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_N4   &kp KP_N5      &kp KP_N6     &kp KP_N7   &kp KP_N8  &kp KP_N9   &kp KP_N0        &kp BACKSPACE
-&none  &none      &none      &none      &none       &none          &kp KP_MINUS  &kp KP_N4   &kp KP_N5  &kp KP_N6   &kp KP_DIVIDE    &key_summary
-&none  &none      &none      &none      &none       &none          &kp KP_PLUS   &kp KP_N1   &kp KP_N2  &kp KP_N3   &kp KP_MULTIPLY  &kp DEL
-                             &none      &none       &kp SPACE      &kp ENTER     &kp KP_DOT  &kp KP_N0
+&none      &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_N4  &kp KP_N5      &kp KP_N6     &kp KP_N7   &kp KP_N8  &kp KP_N9  &kp KP_N0        &kp BACKSPACE
+&kp LCTRL  &none      &none      &none      &none      &none          &kp KP_MINUS  &kp KP_N4   &kp KP_N5  &kp KP_N6  &kp KP_DIVIDE    &key_summary
+&kp LSHFT  &none      &none      &none      &none      &none          &kp KP_PLUS   &kp KP_N1   &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY  &kp DEL
+                                 &kp LALT   &none      &kp SPACE      &kp ENTER     &kp KP_DOT  &kp KP_N0
                         >;
                 };
         };
