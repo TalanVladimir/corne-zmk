@@ -178,7 +178,7 @@
                 COMBO(bt_3, &bt BT_SEL 3, 9 10, 3)
                 COMBO(bt_4, &bt BT_SEL 4, 10 11, 3)
                 // BLUETOOTH CLEAR
-                COMBO(bt_clr, &bt BT_CLR, 7 8 9, 3)
+                COMBO(bt_clr, &bt BT_CLR, 24 25 34 35, 3)
                 // LT NUMBERS, SYMBOLS
                 COMBO(lower_layer_ralt, &lower_ralt, 36 37, 0)
                 COMBO(raise_layer_ralt, &raise_ralt, 40 41, 0)
