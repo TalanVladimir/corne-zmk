@@ -2,19 +2,14 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+// LAYERS NAMES
 #define BASE 0
 #define LOWER 1
 #define RAISE 2
 #define ADJUST 3
 #define NUMBER 4
-#define BASE2 5
-#define LOWER2 6
-#define RAISE2 7
-#define ADJUST2 8
-#define NUMBER2 9
-#define NUMBER3 10
-#define NUMBER4 11
 
+// COMBO FOR ALL LAYERS
 #define COMBO_ALL(NAME, BINDINGS, KEYPOS) \
         combo_##NAME { \
                 timeout-ms = <50>; \
@@ -23,6 +18,7 @@
                 layers = <0 1 2 3 4 5 6 7 8 9>; \
         };
 
+// COMBO FOR LAYERS
 #define COMBO(NAME, BINDINGS, KEYPOS, LAYERS) \
         combo_##NAME { \
                 timeout-ms = <50>; \
@@ -31,8 +27,7 @@
                 layers = <LAYERS>; \
         };
 
-//Behavior configuration
-
+//NUSTATYMAI
 &mt {
     tapping-term-ms = <200>;
     quick_tap_ms = <0>;
@@ -52,6 +47,7 @@
 
 / {
         macros {
+                // TAB: PREV
                 tab_prev: tab_prev {
                         label = "ZM_tab_prev";
                         compatible = "zmk,behavior-macro";
@@ -64,6 +60,7 @@
                                 ;
                 };
 
+                // TAB: NEXT
                 tab_next: tab_next {
                         label = "ZM_tab_next";
                         compatible = "zmk,behavior-macro";
@@ -76,43 +73,7 @@
                                 ;
                 };
 
-                
-                tab_reload: tab_reload {
-                        label = "ZM_tab_reload";
-                        compatible = "zmk,behavior-macro";
-
-                        #binding-cells = <0>;
-                        bindings
-                                = <&macro_press &kp LCTRL>
-                                , <&macro_tap &kp R>
-                                , <&macro_release &kp LCTRL>
-                                ;
-                };
-
-                tab_new: tab_new {
-                        label = "ZM_tab_new";
-                        compatible = "zmk,behavior-macro";
-
-                        #binding-cells = <0>;
-                        bindings
-                                = <&macro_press &kp LCTRL>
-                                , <&macro_tap &kp T>
-                                , <&macro_release &kp LCTRL>
-                                ;
-                };
-
-                tab_close: tab_close {
-                        label = "ZM_tab_close";
-                        compatible = "zmk,behavior-macro";
-
-                        #binding-cells = <0>;
-                        bindings
-                                = <&macro_press &kp LCTRL>
-                                , <&macro_tap &kp F4>
-                                , <&macro_release &kp LCTRL>
-                                ;
-                };
-
+                // LANGUAGE: ENG
                 lng_eng: lng_eng {
                         label = "ZM_lng_eng";
                         compatible = "zmk,behavior-macro";
@@ -125,6 +86,7 @@
                                 ;
                 };
 
+                // LANGUAGE: LT
                 lng_lt: lng_lt {
                         label = "ZM_lng_lt";
                         compatible = "zmk,behavior-macro";
@@ -137,6 +99,7 @@
                                 ;
                 };
 
+                // LANGUAGE: RU
                 lng_ru: lng_ru {
                         label = "ZM_lng_ru";
                         compatible = "zmk,behavior-macro";
@@ -149,6 +112,7 @@
                                 ;
                 };
 
+                // ALT CODE: =
                 key_summary: key_summary {
                         label = "ZM_key_summary";
                         compatible = "zmk,behavior-macro";
@@ -156,243 +120,186 @@
                         #binding-cells = <0>;
                         bindings
                                 = <&macro_press &kp LALT>
-                                , <&macro_tap &kp KP_NUMBER_6 &kp KP_NUMBER_1>
+                                , <&macro_tap &kp KP_N6 &kp KP_N1>
                                 , <&macro_release &kp LALT>
+                                ;
+                };
+
+                // LOWER WITH ALT (FOR LT)
+                lower_ralt: lower_ralt {
+                        label = "ZM_lower_ralt";
+                        compatible = "zmk,behavior-macro";
+
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &mo LOWER &kp RALT>
+                                , <&macro_pause_for_release>
+                                , <&macro_release &mo LOWER &kp RALT>
+                                ;
+                };
+
+                // RAISE WITH ALT (FOR LT)
+                raise_ralt: raise_ralt {
+                        label = "ZM_raise_ralt";
+                        compatible = "zmk,behavior-macro";
+
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &mo RAISE &kp RALT>
+                                , <&macro_pause_for_release>
+                                , <&macro_release &mo RAISE &kp RALT>
+                                ;
+                };
+
+                // NUMBER WITH ALT (FOR ALT CODES)
+                number_lalt: number_lalt {
+                        label = "ZM_number_lalt";
+                        compatible = "zmk,behavior-macro";
+
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &mo NUMBER &kp LALT>
+                                , <&macro_pause_for_release>
+                                , <&macro_release &mo NUMBER &kp LALT>
                                 ;
                 };
         };
 
         behaviors {
-                td0: tap_dance_0 {
-                        label = "TAP_DANCE_0";
+                // EXAMPLE (NOT USED)
+                td_alt: tab_dance_alt {
+                        label = "TAP_DANCE_ALT";
                         compatible = "zmk,behavior-tap-dance";
 
                         #binding-cells = <0>;
                         tapping-term-ms = <200>;
-                        bindings = <&kp LCTRL>, <&mo NUMBER2>;
-                };
-
-                td1: tap_dance_1 {
-                        label = "TAP_DANCE_1";
-                        compatible = "zmk,behavior-tap-dance";
-
-                        #binding-cells = <0>;
-                        tapping-term-ms = <200>;
-                        bindings = <&kp LSHFT>, <&mo NUMBER2>;
-                };
-
-                td2: tap_dance_2 {
-                        label = "TAP_DANCE_2";
-                        compatible = "zmk,behavior-tap-dance";
-
-                        #binding-cells = <0>;
-                        tapping-term-ms = <200>;
-                        bindings = <&kp LALT>, <&mo NUMBER4>;
+                        bindings = <&kp LALT>, <&mo NUMBER>;
                 };
         };
 
         conditional_layers {
                 compatible = "zmk,conditional-layers";
 
+                // ADJUST LAYER
                 base_adjust_layer {
                         if-layers = <1 2>;
                         then-layer = <3>;
-                };
-
-                base2_adjust_layer {
-                        if-layers = <6 7>;
-                        then-layer = <8>;
                 };
         };
 
         combos {
                 compatible = "zmk,combos";
 
-                COMBO_ALL(one, &kp ESC, 1 2)
-                // COMBO(two, &kp N2, 1 3, 5)
-                // COMBO(three, &kp N3, 2 12)
+// BUTTON INDEXES
+// | 0  | 1  | 2  | 3  | 4  | 5  | ___ | 6  | 7  | 8  | 9  | 10 | 11 |
+// | 12 | 13 | 14 | 15 | 16 | 17 | ___ | 18 | 19 | 20 | 21 | 22 | 23 |
+// | 24 | 25 | 26 | 27 | 28 | 29 | ___ | 30 | 31 | 32 | 33 | 34 | 35 |
+//                | 36 | 37 | 38 | ___ | 39 | 40 | 41 |
+
+                // ESC
+                COMBO_ALL(esc_one_two, &kp ESC, 0 1)
+                COMBO_ALL(esc_null_one, &kp ESC, 10 11)
+
+                // LANGUAGES
+                COMBO(set_eng, &lng_eng, 1 2 3, 1)
+                COMBO(set_lt, &lng_lt, 13 14 15, 1)
+                COMBO(set_ru, &lng_ru, 25 26 27, 1)
+
+                // APPS
+                COMBO(kp_home, &kp C_AC_HOME, 3 4 5, 1)
+                COMBO(kp_email, &kp C_AL_EMAIL, 15 16 17, 1)
+                COMBO(kp_calc, &kp C_AL_CALCULATOR, 27 28 29, 1)
+                
+                // LOCKS
+                COMBO(num_lock, &kp KP_NLCK, 8 9 10, 0)
+                COMBO(caps_lock, &kp CAPSLOCK, 20 21 22, 0)
+                COMBO(scroll_lock, &kp SCROLLLOCK, 32 33 34, 0)
+
+                // BLUETOOTH
+                COMBO(bt_0, &bt BT_SEL 0, 6 7, 3)
+                COMBO(bt_1, &bt BT_SEL 1, 7 8, 3)
+                COMBO(bt_2, &bt BT_SEL 2, 8 9, 3)
+                COMBO(bt_3, &bt BT_SEL 3, 9 10, 3)
+                COMBO(bt_4, &bt BT_SEL 4, 10 11, 3)
+
+                // BLUETOOTH CLEAR
+                COMBO(bt_clr, &bt BT_CLR, 7 8, 3)
+
+                // LT NUMBERS, SYMBOLS
+                COMBO(lower_layer_ralt, &lower_ralt, 36 37, 0)
+                COMBO(raise_layer_ralt, &raise_ralt, 40 41, 0)
         };
 
         keymap {
                 compatible = "zmk,keymap";
 
-// | ESC      | Q | W | E    | R     | T       | ___ | Y         | U     | I   | O | P | BSPC |
-// | TAB/NUMB | A | S | D    | F     | G       | ___ | H         | J     | K   | L | : |  '   |
-// | SHIFT    | Z | X | C    | V     | B       | ___ | N         | M     | ,   | . | / | TAB  |
-//                    | CTRL | LOWER | SPC/ALT | ___ | ENTER/ALT | RAISE | GUI |
-
                 base_layer {
                         label = "BASE";
+// | TAB   | Q | W | E   | R     | T   | ___ | Y     | U     | I   | O | P | BSPC |
+// | LCTRL | A | S | D   | F     | G   | ___ | H     | J     | K   | L | : |  '   |
+// | SHIFT | Z | X | C   | V     | B   | ___ | N     | M     | ,   | . | / | DEL  |
+//                 | LAT | LOWER | SPC | ___ | ENTER | RAISE | GUI |
                         bindings = <
-&kp ESC         &kp Q     &kp W  &kp E      &kp R      &kp T           &kp Y           &kp U      &kp I      &kp O    &kp P     &kp BACKSPACE
-&lt NUMBER TAB  &kp A     &kp S  &kp D      &kp F      &kp G           &kp H           &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT       &kp Z     &kp X  &kp C      &kp V      &kp B           &kp N           &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp TAB
-                                 &kp LCTRL  &mo LOWER  &mt LALT SPACE  &mt RALT ENTER  &mo RAISE  &kp LGUI
+&kp TAB    &kp Q  &kp W  &kp E     &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O    &kp P     &kp BACKSPACE
+&kp LCTRL  &kp A  &kp S  &kp D     &kp F      &kp G          &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z  &kp X  &kp C     &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp DELETE
+                         &kp LALT  &mo LOWER  &kp SPACE      &kp ENTER  &mo RAISE  &kp LGUI
                         >;
                 };
-
-// | `     | 1     | 2    | 3    | 4    | 5    | ___ | 6     | 7     | 8    | 9  | 0     | BSPC |
-// | DEL   | TABCL | TABP | TABN | TABR | TABN | ___ |       | -     | =    | [  | ]     | \    |
-// | SHIFT | PREV  | NEXT | PLAY | VDN  | VUP  | ___ |       | LEFT  | DOWN | UP | RIGHT | INS  |
-//                        | CTRL | HELD | SPC  | ___ | ENTER | RAISE | GUI  |
 
                 lower_layer {
                         label = "LOWER";
+// | `     | 1     | 2    | 3    | 4     | 5    | ___ | 6     | 7     | 8    | 9  | 0     | BSPC |
+// | CTRL  |       | TABP | TABN | ANUMB | NUMB | ___ | INS   | -     | =    | [  | ]     | \    |
+// | SHIFT | PLAY  | PREV | NEXT | VDN   | VUP  | ___ | PRINT | LEFT  | DOWN | UP | RIGHT | DEL  |
+//                        | LALT | HELD  | SPC  | ___ | ENTER | RAISE | GUI  |
                         bindings = <
-&kp GRAVE  &kp N1      &kp N2      &kp N3            &kp N4         &kp N5        &kp N6     &kp N7     &kp N8     &kp N9    &kp N0     &trans
-&kp DEL    &tab_close  &tab_prev   &tab_next         &tab_reload    &tab_new      &none      &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH
-&trans     &kp C_PREV  &kp C_NEXT  &kp C_PLAY_PAUSE  &kp C_VOL_DN   &kp C_VOL_UP  &none      &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &kp INSERT
-                                   &trans            &trans         &trans        &trans     &trans     &trans
+&kp GRAVE  &kp N1            &kp N2      &kp N3      &kp N4        &kp N5            &kp N6      &kp N7     &kp N8     &kp N9    &kp N0     &kp BACKSPACE
+&kp LCTRL  &none             &tab_prev   &tab_next   &number_lalt  &mo NUMBER        &kp INSERT  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH
+&kp LSHFT  &kp C_PLAY_PAUSE  &kp C_PREV  &kp C_NEXT  &kp C_VOL_DN  &kp C_VOL_UP      &kp PSCRN   &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &kp DELETE
+                                         &kp LALT    &mo LOWER     &kp SPACE         &kp ENTER   &mo RAISE  &kp LGUI
                         >;
                 };
-
-// | ~     | !  | @  | #    | $     | %   | ___ | ^     | &     | *    | (    | )   | BSPC |
-// | DEL   | F1 | F2 | F3   | F4    | F5  | ___ | F6    | _     | +    | {    | }   | "|"  |
-// | SHIFT | F7 | F8 | F9   | F10   | F11 | ___ | F12   | HOME  | PGDN | PGUP | END | INS  |
-//                   | CTRL | LOWER | SPC | ___ | ENTER | HELD  | GUI  |
 
                 raise_layer {
                         label = "RAISE";
+// | ~     | !  | @  | #    | $     | %   | ___ | ^     | &    | *    | (    | )   | BSPC |
+// | CTRL  | F1 | F2 | F3   | F4    | F5  | ___ | F6    | _    | +    | {    | }   | "|"  |
+// | SHIFT | F7 | F8 | F9   | F10   | F11 | ___ | F12   | HOME | PGDN | PGUP | END | DEL  |
+//                   | LALT | LOWER | SPC | ___ | ENTER | HELD | GUI  |
                         bindings = <
-&kp TILDE  &kp EXCL  &kp AT   &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR     &kp RPAR  &trans
-&kp DEL    &kp F1    &kp F2   &kp F3    &kp F4    &kp F5     &kp F6     &kp UNDER  &kp PLUS         &kp LBRC     &kp RBRC  &kp PIPE
-&trans     &kp F7    &kp F8   &kp F9    &kp F10   &kp F11    &kp F12    &kp HOME   &kp PAGE_DOWN    &kp PAGE_UP  &kp END   &kp INSERT
-                              &trans    &trans    &trans     &trans     &trans     &trans
+&kp TILDE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR   &kp PRCNT      &kp CARET  &kp AMPS   &kp ASTERISK   &kp LPAR     &kp RPAR  &kp BACKSPACE
+&kp LCTRL  &kp F1    &kp F2  &kp F3    &kp F4     &kp F5         &kp F6     &kp UNDER  &kp PLUS       &kp LBRC     &kp RBRC  &kp PIPE
+&kp LSHFT  &kp F7    &kp F8  &kp F9    &kp F10    &kp F11        &kp F12    &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP  &kp END   &kp DELETE
+                             &kp LALT  &mo LOWER  &kp SPACE      &kp ENTER  &mo RAISE  &kp LGUI
                         >;
                 };
-
-// |   | ENG  | LT   | RU     |      |   | ___ | BT0  | BT1   | BT2 | BT3 | BT4 | BT_CLR |
-// |   | WWW  | MAIL | CALC   |      |   | ___ | BASE | BASE2 |     |     |     |        |
-// |   | NUMB | CAPS | SCROLL |      |   | ___ | BASE | BASE2 |     |     |     |        |
-//                   |        | HELD |   | ___ |      | HELD  |     |
 
                 adjust_layer {
                         label = "ADJUST";
+// |   |   |   |   |      |   | ___ |   |       |   |   |   |   |
+// |   |   |   |   |      |   | ___ |   |       |   |   |   |   |
+// |   |   |   |   |      |   | ___ |   |       |   |   |   |   |
+//             |   | HELD |   | ___ |   | HELD  |   |
                         bindings = <
-&none  &lng_eng        &lng_lt         &lng_ru              &none   &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&none  &kp C_AC_HOME   &kp C_AL_EMAIL  &kp C_AL_CALCULATOR  &none   &none  &to BASE      &to BASE2     &none         &none         &none         &none
-&none  &kp KP_NUMLOCK  &kp CAPSLOCK    &kp SCROLLLOCK       &none   &none  &to BASE      &to BASE2     &none         &none         &none         &none
-                                       &none                &trans  &none  &none         &trans        &none
+&none  &none  &none  &none      &none  &none      &none      &none  &none  &none  &none  &none
+&none  &none  &none  &none      &none  &none      &none      &none  &none  &none  &none  &none
+&none  &none  &none  &none      &none  &none      &none      &none  &none  &none  &none  &none
+              &none  &mo LOWER  &none  &none      &mo RAISE  &none
                         >;
                 };
-
-// | HELD | 1 | 2  | 3    | 4 | 5 | ___ |   6   | 7 | 8 | 9 | 0 | BSPC |
-// |      |   |    |      |   |   | ___ |   -   | 4 | 5 | 6 | / |  =   |
-// |      |   |    |      |   |   | ___ |   +   | 1 | 2 | 3 | * |      |
-//                 | RALT |   |   | ___ | ENTER | , | 0 |
 
                 number_layer {
                         label = "NUMBER";
+// |       | 1 | 2 | 3    | 4    | 5    | ___ | 6     | 7 | 8 | 9 | 0 | BSPC |
+// | LCTRL |   |   |      | HELD | HELD | ___ | -     | 4 | 5 | 6 | / | =    |
+// | LSHFT |   |   |      |      |      | ___ | +     | 1 | 2 | 3 | * | DEL  |
+//                 | LALT | HELD | SPC  | ___ | ENTER | , | 0 |
                         bindings = <
-&none  &kp KP_NUMBER_1 &kp KP_NUMBER_2 &kp KP_NUMBER_3 &kp KP_NUMBER_4 &kp KP_NUMBER_5 &kp KP_NUMBER_6 &kp KP_NUMBER_7 &kp KP_NUMBER_8 &kp KP_NUMBER_9 &kp KP_NUMBER_0 &kp BACKSPACE
-&none  &none           &none           &none           &none           &none           &kp KP_MINUS    &kp KP_NUMBER_4 &kp KP_NUMBER_5 &kp KP_NUMBER_6 &kp KP_DIVIDE   &key_summary
-&none  &none           &none           &none           &none           &none           &kp KP_PLUS     &kp KP_NUMBER_1 &kp KP_NUMBER_2 &kp KP_NUMBER_3 &kp KP_MULTIPLY &none
-                                       &kp RALT        &none           &none           &trans          &kp KP_DOT      &kp KP_NUMBER_0
-                        >;
-                };
-
-// | TAB      | Q | W | E       | R      | T   | ___ | Y     | U      | I   | O | P | BSPC |
-// | TD_CTRL  | A | S | D       | F      | G   | ___ | H     | J      | K   | L | : |  '   |
-// | TD_SHIFT | Z | X | C       | V      | B   | ___ | N     | M      | ,   | . | / | DEL  |
-//                    | TD_LALT | LOWER2 | SPC | ___ | ENTER | RAISE2 | GUI |
-
-                base2_layer {
-                        label = "BASE_2";
-                        bindings = <
-&kp TAB  &kp Q  &kp W  &kp E  &kp R       &kp T           &kp Y      &kp U       &kp I      &kp O    &kp P     &kp BACKSPACE
-&td0     &kp A  &kp S  &kp D  &kp F       &kp G           &kp H      &kp J       &kp K      &kp L    &kp SEMI  &kp SQT
-&td1     &kp Z  &kp X  &kp C  &kp V       &kp B           &kp N      &kp M       &kp COMMA  &kp DOT  &kp FSLH  &kp DELETE
-                       &td2   &mo LOWER2  &kp SPACE       &kp ENTER  &mo RAISE2  &kp LGUI
-                        >;
-                };
-
-// | `     | 1     | 2    | 3    | 4     | 5    | ___ | 6     | 7      | 8    | 9  | 0     | BSPC |
-// | CTRL  | TABCL | TABP | TABN | TABR  | TABN | ___ | INS   | -      | =    | [  | ]     | \    |
-// | SHIFT | PREV  | NEXT | PLAY | VDN   | VUP  | ___ | RALT  | LEFT   | DOWN | UP | RIGHT | DEL  |
-//                        | LALT | HELD  | SPC  | ___ | ENTER | RAISE2 | GUI  |
-
-                lower2_layer {
-                        label = "LOWER_2";
-                        bindings = <
-&kp GRAVE  &kp N1      &kp N2      &kp N3            &kp N4         &kp N5        &kp N6         &kp N7      &kp N8     &kp N9    &kp N0     &kp BACKSPACE
-&kp LCTRL  &tab_close  &tab_prev   &tab_next         &tab_reload    &tab_new      &kp INSERT     &kp MINUS   &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH
-&kp LSHFT  &kp C_PREV  &kp C_NEXT  &kp C_PLAY_PAUSE  &kp C_VOL_DN   &kp C_VOL_UP  &kp RA(RSHFT)  &kp LEFT    &kp DOWN   &kp UP    &kp RIGHT  &kp DELETE
-                                   &kp LALT          &mo LOWER2     &kp SPACE     &kp ENTER      &mo RAISE2  &kp LGUI
-                        >;
-                };
-
-// | ~     | !  | @  | #    | $      | %   | ___ | ^     | &    | *    | (    | )   | BSPC |
-// | CTRL  | F1 | F2 | F3   | F4     | F5  | ___ | F6    | _    | +    | {    | }   | "|"  |
-// | SHIFT | F7 | F8 | F9   | F10    | F11 | ___ | F12   | HOME | PGDN | PGUP | END | DEL  |
-//                   | LALT | LOWER2 | SPC | ___ | ENTER | HELD | GUI  |
-
-                raise2_layer {
-                        label = "RAISE_2";
-                        bindings = <
-&kp TILDE  &kp EXCL  &kp AT   &kp HASH  &kp DLLR    &kp PRCNT  &kp CARET  &kp AMPS    &kp KP_MULTIPLY  &kp LPAR     &kp RPAR  &kp BACKSPACE
-&kp LCTRL  &kp F1    &kp F2   &kp F3    &kp F4      &kp F5     &kp F6     &kp UNDER   &kp PLUS         &kp LBRC     &kp RBRC  &kp PIPE
-&kp LSHFT  &kp F7    &kp F8   &kp F9    &kp F10     &kp F11    &kp F12    &kp HOME    &kp PAGE_DOWN    &kp PAGE_UP  &kp END   &kp DELETE
-                              &kp LALT  &mo LOWER2  &kp SPACE  &kp ENTER  &mo RAISE2  &kp LGUI
-                        >;
-                };
-
-// |   | ENG  | LT   | RU     |      |   | ___ | BT0  | BT1   | BT2 | BT3 | BT4 | BT_CLR |
-// |   | WWW  | MAIL | CALC   |      |   | ___ | BASE | BASE2 |     |     |     |        |
-// |   | NUMB | CAPS | SCROLL |      |   | ___ | BASE | BASE2 |     |     |     |        |
-//                   |        | HELD |   | ___ |      | HELD  |     |
-
-                adjust2_layer {
-                        label = "ADJUST_2";
-                        bindings = <
-&none  &lng_eng        &lng_lt         &lng_ru              &none       &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&none  &kp C_AC_HOME   &kp C_AL_EMAIL  &kp C_AL_CALCULATOR  &none       &none  &to BASE      &to BASE2     &none         &none         &none         &none
-&none  &kp KP_NUMLOCK  &kp CAPSLOCK    &kp SCROLLLOCK       &none       &none  &to BASE      &to BASE2     &none         &none         &none         &none
-                                       &none                &mo LOWER2  &none  &none         &mo RAISE2    &none
-                        >;
-                };
-
-// | HELD | 7 | 8 | 9 | = | RALT | ___ |       |      |      |    |       | BSPC |
-// | HELD | 4 | 5 | 6 | - | /    | ___ |       |      |      |    |       |      |
-// | HELD | 1 | 2 | 3 | + | *    | ___ |       | LEFT | DOWN | UP | RIGHT | DEL  |
-//                | 0 | , | SPC  | ___ | ENTER |      | RALT |
-
-                number2_layer {
-                        label = "NUMBER_2";
-                        bindings = <
-&none  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &key_summary  &kp RALT         &none      &none     &none     &none   &none      &kp BACKSPACE
-&none  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS  &kp KP_DIVIDE    &none      &none     &none     &none   &none      &none
-&none  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_PLUS   &kp KP_MULTIPLY  &none      &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp DELETE
-                                         &kp KP_NUMBER_0  &kp KP_DOT    &kp SPACE        &kp ENTER  &none     &kp RALT
-                        >;
-                };
-
-// | HELD | 7 | 8 | 9 | = |     | ___ |       |      |      |    |       | BSPC |
-// | HELD | 4 | 5 | 6 | - | /   | ___ |       |      |      |    |       |      |
-// | HELD | 1 | 2 | 3 | + | *   | ___ |       | LEFT | DOWN | UP | RIGHT | DEL  |
-//                | 0 | , | SPC | ___ | ENTER |      |      |
-
-                number3_layer {
-                        label = "NUMBER_3";
-                        bindings = <
-&none  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &key_summary  &key_summary     &none      &none     &none     &none   &none      &kp BACKSPACE
-&none  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS  &kp KP_DIVIDE    &none      &none     &none     &none   &none      &none
-&none  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_PLUS   &kp KP_MULTIPLY  &none      &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp DELETE
-                                         &kp KP_NUMBER_0  &kp KP_DOT    &kp SPACE        &kp ENTER  &none     &none
-                        >;
-                };
-
-// |      | = | 7 | 8 | 9 | 0   | ___ |       |      |      |    |       | BSPC |
-// |      | - | 4 | 5 | 6 | /   | ___ |       |      |      |    |       |      |
-// |      | + | 1 | 2 | 3 | *   | ___ |       | LEFT | DOWN | UP | RIGHT | DEL  |
-//                | 0 | , | SPC | ___ | ENTER |      |      |
-
-                number4_layer {
-                        label = "NUMBER_4";
-                        bindings = <
-&none  &key_summary  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &none      &none     &none     &none   &none      &kp BACKSPACE
-&none  &kp KP_MINUS  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DIVIDE    &none      &none     &none     &none   &none      &none
-&none  &kp KP_PLUS   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MULTIPLY  &none      &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp DELETE
-                                      &none            &kp KP_DOT       &kp SPACE        &kp ENTER  &none     &none
+&none      &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_N4  &kp KP_N5      &kp KP_N6     &kp KP_N7   &kp KP_N8  &kp KP_N9  &kp KP_N0        &kp BACKSPACE
+&kp LCTRL  &none      &none      &none      &none      &none          &kp KP_MINUS  &kp KP_N4   &kp KP_N5  &kp KP_N6  &kp KP_DIVIDE    &key_summary
+&kp LSHFT  &none      &none      &none      &none      &none          &kp KP_PLUS   &kp KP_N1   &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY  &kp DEL
+                                 &kp LALT   &none      &kp SPACE      &kp ENTER     &kp KP_DOT  &kp KP_N0
                         >;
                 };
         };
