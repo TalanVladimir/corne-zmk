@@ -160,19 +160,9 @@
                 COMBO_ALL(esc_one_two, &kp ESC, 0 1)
                 COMBO(esc_null_one, &kp ESC, 10 11, 0)
                 // LANGUAGES
-                COMBO(set_eng, &lng_eng, 1 2 3, 1)
-                COMBO(set_lt, &lng_lt, 13 14 15, 1)
-                COMBO(set_ru, &lng_ru, 25 26 27, 1)
-                // LOCKS
-                COMBO(num_lock, &kp KP_NLCK, 3 4 5, 1)
-                COMBO(caps_lock, &kp CAPSLOCK, 15 16 17, 1)
-                COMBO(scroll_lock, &kp SCROLLLOCK, 27 28 29, 1)
-                // BLUETOOTH
-                COMBO(bt_0, &bt BT_SEL 0, 6 7, 3)
-                COMBO(bt_1, &bt BT_SEL 1, 7 8, 3)
-                COMBO(bt_2, &bt BT_SEL 2, 8 9, 3)
-                COMBO(bt_3, &bt BT_SEL 3, 9 10, 3)
-                COMBO(bt_4, &bt BT_SEL 4, 10 11, 3)
+                COMBO(set_eng, &lng_eng, 2 3 4, 1)
+                COMBO(set_lt, &lng_lt, 14 15 16, 1)
+                COMBO(set_ru, &lng_ru, 26 27 28, 1)
                 // BLUETOOTH CLEAR
                 COMBO(bt_clr, &bt BT_CLR, 24 25 34 35, 3)
                 // LT NUMBERS, SYMBOLS
@@ -183,10 +173,10 @@
                 compatible = "zmk,keymap";
                 base_layer {
                         label = "BASE";
-                        // | TAB   | Q | W | E   | R     | T   | /**/ | Y     | U     | I   | O | P | BSPC |
-                        // | LCTRL | A | S | D   | F     | G   | /**/ | H     | J     | K   | L | : | '    |
-                        // | SHIFT | Z | X | C   | V     | B   | /**/ | N     | M     | ,   | . | / | DEL  |
-                        //                 | LAT | LOWER | SPC | /**/ | ENTER | RAISE | GUI |
+                        // | TAB   | Q | W | E    | R     | T   | /**/ | Y     | U     | I   | O | P | BSPC |
+                        // | LCTRL | A | S | D    | F     | G   | /**/ | H     | J     | K   | L | : | '    |
+                        // | SHIFT | Z | X | C    | V     | B   | /**/ | N     | M     | ,   | . | / | DEL  |
+                        //                 | LALT | LOWER | SPC | /**/ | ENTER | RAISE | GUI |
                         bindings = <
 &kp TAB    &kp Q  &kp W  &kp E     &kp R      &kp T     /**/ &kp Y      &kp U      &kp I      &kp O    &kp P     &kp BSPC
 &kp LCTRL  &kp A  &kp S  &kp D     &kp F      &kp G     /**/ &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
@@ -222,15 +212,15 @@
                 };
                 adjust_layer {
                         label = "ADJUST";
-                        // |   |   |   | ENG | LT   | RU | /**/ | HOME | EMAIL |   |   |   |   |
-                        // |   |   |   |     |      |    | /**/ |      |       |   |   |   |   |
-                        // |   |   |   |     |      |    | /**/ |      |       |   |   |   |   |
-                        //             |     | HELD |    | /**/ |      | HELD  |   |
+                        // |       |       |     |    |      |    | /**/ | BT1 | BT2  | BT3  | BT4 | BT5 |   |
+                        // | CLOCK | SLOCK | ENG | LT | RU   |    | /**/ |     | HOME |EMAIL |     |     |   |
+                        // |       |       |     |    |      |    | /**/ |     |      |      |     |     |   |
+                        //                       |    | HELD |    | /**/ |     | HELD |      |
                         bindings = <
-&none  &none  &none  &lng_eng   &lng_lt  &lng_ru /**/ &kp C_AC_HOME  &kp C_AL_EMAIL  &lng_ru  &none  &none  &none
-&none  &none  &none  &none      &none    &none   /**/ &none          &none           &none    &none  &none  &none
-&none  &none  &none  &none      &none    &none   /**/ &none          &none           &none    &none  &none  &none
-              &none  &mo LOWER  &none    &none   /**/ &mo RAISE      &none
+&none         &none           &none     &none      &none    &none /**/ &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4  &none
+&kp CAPSLOCK  &kp SCROLLLOCK  &lng_eng  &lng_lt    &lng_ru  &none /**/ &none         &kp C_AC_HOME  &kp C_AL_EMAIL  &none         &none         &none
+&none         &none           &none     &none      &none    &none /**/ &none         &none          &none           &none         &none         &none
+                              &none     &mo LOWER  &none    &none /**/ &mo RAISE     &none
                         >;
                 };
                 number_layer {
