@@ -157,8 +157,8 @@
                 // | 24 | 25 | 26 | 27 | 28 | 29 | ___ | 30 | 31 | 32 | 33 | 34 | 35 |
                 //                | 36 | 37 | 38 | ___ | 39 | 40 | 41 |
                 // ESC
-                COMBO_ALL(esc_one_two, &kp ESC, 0 1)
-                COMBO(esc_null_one, &kp ESC, 10 11, 0)
+                COMBO_ALL(esc_one_two, &kp ESC, 1 2)
+                COMBO_ALL(esc_null_one, &kp ESC, 9 10)
                 // LANGUAGES
                 COMBO(set_eng, &lng_eng, 2 3 4, 1)
                 COMBO(set_lt, &lng_lt, 14 15 16, 1)
