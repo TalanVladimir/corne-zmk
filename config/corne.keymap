@@ -171,8 +171,7 @@
         };
         keymap {
                 compatible = "zmk,keymap";
-                base_layer {
-                        label = "BASE";
+                base_layer { label = "BASE";
                         // | TAB   | Q | W | E    | R     | T   | /**/ | Y     | U     | I   | O | P | BSPC |
                         // | LCTRL | A | S | D    | F     | G   | /**/ | H     | J     | K   | L | : | '    |
                         // | SHIFT | Z | X | C    | V     | B   | /**/ | N     | M     | ,   | . | / | DEL  |
@@ -184,8 +183,7 @@
                          &kp LALT  &mo LOWER  &kp SPACE /**/ &kp ENTER  &mo RAISE  &kp LGUI
                         >;
                 };
-                lower_layer {
-                        label = "LOWER";
+                lower_layer { label = "LOWER";
                         // | `     | 1    | 2    | 3    | 4     | 5    | /**/ | 6     | 7     | 8    | 9  | 0     | BSPC |
                         // | CTRL  |      | TABP | TABN | ANUMB | NUMB | /**/ | INS   | -     | =    | [  | ]     | \    |
                         // | SHIFT | PLAY | PREV | NEXT | VDN   | VUP  | /**/ | PRINT | LEFT  | DOWN | UP | RIGHT | DEL  |
@@ -197,8 +195,7 @@
                                          &kp LALT    &mo LOWER     &kp SPACE    /**/ &kp ENTER  &mo RAISE  &kp LGUI
                         >;
                 };
-                raise_layer {
-                        label = "RAISE";
+                raise_layer { label = "RAISE";
                         // | ~     | !  | @  | #    | $     | %   | /**/ | ^     | &    | *    | (    | )   | BSPC |
                         // | CTRL  | F1 | F2 | F3   | F4    | F5  | /**/ | F6    | _    | +    | {    | }   | "|"  |
                         // | SHIFT | F7 | F8 | F9   | F10   | F11 | /**/ | F12   | HOME | PGDN | PGUP | END | DEL  |
@@ -210,12 +207,11 @@
                              &kp LALT  &mo LOWER  &kp SPACE /**/ &kp ENTER  &mo RAISE  &kp LGUI
                         >;
                 };
-                adjust_layer {
-                        label = "ADJUST";
-                        // |       |       |     |    |      |    | /**/ | BT1 | BT2  | BT3  | BT4 | BT5 |   |
-                        // | CLOCK | SLOCK | ENG | LT | RU   |    | /**/ |     | HOME |EMAIL |     |     |   |
-                        // |       |       |     |    |      |    | /**/ |     |      |      |     |     |   |
-                        //                       |    | HELD |    | /**/ |     | HELD |      |
+                adjust_layer { label = "ADJUST";
+                        // |       |       |     |    |      |    | /**/ | BT1 | BT2  | BT3   | BT4 | BT5 |   |
+                        // | CLOCK | SLOCK | ENG | LT | RU   |    | /**/ |     | HOME | EMAIL |     |     |   |
+                        // |       |       |     |    |      |    | /**/ |     |      |       |     |     |   |
+                        //                       |    | HELD |    | /**/ |     | HELD |       |
                         bindings = <
 &none         &none           &none     &none      &none    &none /**/ &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4  &none
 &kp CAPSLOCK  &kp SCROLLLOCK  &lng_eng  &lng_lt    &lng_ru  &none /**/ &none         &kp C_AC_HOME  &kp C_AL_EMAIL  &none         &none         &none
@@ -223,8 +219,7 @@
                               &none     &mo LOWER  &none    &none /**/ &mo RAISE     &none
                         >;
                 };
-                number_layer {
-                        label = "NUMBER";
+                number_layer { label = "NUMBER";
                         // | NLOCK | 1 | 2 | 3    | 4    | 5    | /**/ | 6     | 7 | 8 | 9 | 0 | BSPC |
                         // | LCTRL | = | - | /    | HELD | HELD | /**/ | -     | 4 | 5 | 6 | / | =    |
                         // | LSHFT |   | + | *    |      | CALC | /**/ | +     | 1 | 2 | 3 | * | DEL  |
