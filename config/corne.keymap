@@ -1,28 +1,13 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include "keymap_define.h"
 // LAYERS NAMES
 #define BASE 0
 #define LOWER 1
 #define RAISE 2
 #define ADJUST 3
 #define NUMBER 4
-// COMBO FOR ALL LAYERS
-#define COMBO_ALL(NAME, BINDINGS, KEYPOS) \
-        combo_##NAME { \
-                timeout-ms = <50>; \
-                bindings = <BINDINGS>; \
-                key-positions = <KEYPOS>; \
-                layers = <0 1 2 3 4 5 6 7 8 9>; \
-        };
-// COMBO FOR LAYERS
-#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS) \
-        combo_##NAME { \
-                timeout-ms = <50>; \
-                bindings = <BINDINGS>; \
-                key-positions = <KEYPOS>; \
-                layers = <LAYERS>; \
-        };
 // PRESS OPTIONS
 &mt {
     tapping-term-ms = <200>;
