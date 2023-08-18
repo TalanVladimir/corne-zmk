@@ -132,15 +132,11 @@
                 // ESC
                 COMBO_ALL(esc_one_two, &kp ESC, 1 2)
                 COMBO_ALL(esc_null_one, &kp ESC, 9 10)
-                // LANGUAGES
-                COMBO(set_eng, &lng_eng, 2 3 4, 1)
-                COMBO(set_lt, &lng_lt, 14 15 16, 1)
-                COMBO(set_ru, &lng_ru, 26 27 28, 1)
                 // BLUETOOTH CLEAR
                 COMBO(bt_clr, &bt BT_CLR, 24 25 34 35, 3)
                 // LT NUMBERS, SYMBOLS
-                COMBO(lower_layer_ralt, &lower_ralt, 36 37, 0)
-                COMBO(raise_layer_ralt, &raise_ralt, 40 41, 0)
+                COMBO(lower_layer_ralt, &lower_ralt, 36 37, 0 1)
+                COMBO(raise_layer_ralt, &raise_ralt, 40 41, 0 1)
         };
         keymap {
                 compatible = "zmk,keymap";
