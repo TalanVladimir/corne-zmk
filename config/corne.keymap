@@ -8,7 +8,9 @@
 #define LOWER 1
 #define RAISE 2
 #define ADJUST 3
-#define NUMBER 4
+#define EXTRA 4
+#define UBER 5
+#define NUMBER 6
 // PRESS OPTIONS
 &mt {
     tapping-term-ms = <200>;
@@ -106,16 +108,6 @@
                                 , <&macro_pause_for_release>
                                 , <&macro_release &mo RAISE &kp RALT>;
                 };
-                // NUMBER WITH ALT (FOR ALT CODES)
-                number_lalt: number_lalt {
-                        label = "ZM_number_lalt";
-                        compatible = "zmk,behavior-macro";
-                        #binding-cells = <0>;
-                        bindings
-                                = <&macro_press &mo NUMBER &kp LALT>
-                                , <&macro_pause_for_release>
-                                , <&macro_release &mo NUMBER &kp LALT>;
-                };
         };
         behaviors {
                 // EXAMPLE (NOT USED)
@@ -163,7 +155,7 @@
                 lower_layer { label = "LOWER";
                         bindings = <
 &kp GRAVE  &kp N1            &kp N2      &kp N3      &kp N4        &kp N5       /**/ &kp N6     &kp N7     &kp N8     &kp N9    &kp N0     &kp BSPC
-&kp LCTRL  &none             &tab_prev   &tab_next   &number_lalt  &mo NUMBER   /**/ &kp INS    &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH
+&kp LCTRL  &mo EXTRA         &tab_prev   &tab_next   &mo UBER      &mo NUMBER   /**/ &kp INS    &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH
 &kp LSHFT  &kp C_PLAY_PAUSE  &kp C_PREV  &kp C_NEXT  &kp C_VOL_DN  &kp C_VOL_UP /**/ &kp PSCRN  &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &kp DEL
                                          &kp LALT    &mo LOWER     &kp SPACE    /**/ &kp ENTER  &mo RAISE  &kp LGUI
                         >;
@@ -178,16 +170,32 @@
                 };
                 adjust_layer { label = "ADJUST";
                         bindings = <
-&none         &none           &none     &none      &none    &none /**/ &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4     &none
-&kp CAPSLOCK  &kp SCROLLLOCK  &lng_eng  &lng_lt    &lng_ru  &none /**/ &none         &kp C_AC_HOME  &kp C_AL_EMAIL  &none         &none            &none
-&none         &none           &none     &none      &none    &none /**/ &none         &none          &none           &none         &rgb_ug RGB_HUD  &rgb_ug RGB_HUI
+&none         &none           &none     &none      &none    &none /**/ &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4  &none
+&kp CAPSLOCK  &kp SCROLLLOCK  &lng_eng  &lng_lt    &lng_ru  &none /**/ &none         &kp C_AC_HOME  &kp C_AL_EMAIL  &none         &none         &none
+&none         &none           &none     &none      &none    &none /**/ &none         &none          &none           &none         &none         &none
                               &none     &mo LOWER  &none    &none /**/ &mo RAISE     &none
+                        >;
+                };
+                extra_layer { label = "EXTRA";
+                        bindings = <
+&none  &none  &none     &none      &none    &none /**/ &none      &none  &none  &none  &none  &none
+&none  &none  &lng_eng  &lng_lt    &lng_ru  &none /**/ &none      &none  &none  &none  &none  &none
+&none  &none  &none     &none      &none    &none /**/ &none      &none  &none  &none  &none  &none
+              &none     &mo LOWER  &none    &none /**/ &mo RAISE  &none
+                        >;
+                };
+                extra_layer { label = "UBER";
+                        bindings = <
+&none  &none  &none  &none      &none  &none /**/ &none      &none  &none  &none  &none  &none
+&none  &none  &none  &none      &none  &none /**/ &none      &none  &none  &none  &none  &none
+&none  &none  &none  &none      &none  &none /**/ &none      &none  &none  &none  &none  &none
+              &none  &mo LOWER  &none  &none /**/ &mo RAISE  &none
                         >;
                 };
                 number_layer { label = "NUMBER";
                         bindings = <
 &kp KP_NLCK  &kp KP_N1     &kp KP_N2     &kp KP_N3        &kp KP_N4            &kp KP_N5 /**/ &kp KP_N6     &kp KP_N7   &kp KP_N8  &kp KP_N9  &kp KP_N0        &kp BSPC
-&kp LCTRL    &key_summary  &kp KP_MINUS  &kp KP_DIVIDE    &none                &none     /**/ &kp KP_MINUS  &kp KP_N4   &kp KP_N5  &kp KP_N6  &kp KP_DIVIDE    &key_summary
+&kp LCTRL    &key_summary  &kp KP_MINUS  &kp KP_DIVIDE    &kp LALT             &none     /**/ &kp KP_MINUS  &kp KP_N4   &kp KP_N5  &kp KP_N6  &kp KP_DIVIDE    &key_summary
 &kp LSHFT    &none         &kp KP_PLUS   &kp KP_MULTIPLY  &kp C_AL_CALCULATOR  &none     /**/ &kp KP_PLUS   &kp KP_N1   &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY  &kp DEL
                                          &kp LALT         &none                &kp SPACE /**/ &kp ENTER     &kp KP_DOT  &kp KP_N0
                         >;
