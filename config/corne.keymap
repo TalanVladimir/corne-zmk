@@ -184,7 +184,7 @@
               &none     &mo LOWER  &none    &none /**/ &mo RAISE  &none
                         >;
                 };
-                extra_layer { label = "UBER";
+                uber_layer { label = "UBER";
                         bindings = <
 &none  &none  &none  &none      &none  &none /**/ &none      &none  &none  &none  &none  &none
 &none  &none  &none  &none      &none  &none /**/ &none      &none  &none  &none  &none  &none
