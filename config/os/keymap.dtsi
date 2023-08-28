@@ -1,0 +1,97 @@
+base_layer { label = "BASE";
+
+// | TAB   | Q | W | E    | R     | T   | /**/ | Y     | U     | I   | O | P | BSPC |
+// | LCTRL | A | S | D    | F     | G   | /**/ | H     | J     | K   | L | : | '    |
+// | SHIFT | Z | X | C    | V     | B   | /**/ | N     | M     | ,   | . | / | DEL  |
+//                 | LALT | LOWER | SPC | /**/ | ENTER | RAISE | GUI |
+
+bindings = <
+    &kp TAB    &kp Q  &kp W  &kp E     &kp R      &kp T     /**/ &kp Y      &kp U      &kp I      &kp O    &kp P     &kp BSPC
+    &kp LCTRL  &kp A  &kp S  &kp D     &kp F      &kp G     /**/ &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+    &kp LSHFT  &kp Z  &kp X  &kp C     &kp V      &kp B     /**/ &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp DEL
+                             &kp LALT  &mo LOWER  &kp SPACE /**/ &kp ENTER  &mo RAISE  &kp LGUI
+>;};
+
+lower_layer { label = "LOWER";
+
+// | `     | 1     | 2    | 3    | 4    | 5    | /**/ | 6     | 7     | 8    | 9  | 0     | BSPC |
+// | CTRL  | EXTRA | TABP | TABN | UBER | NUMB | /**/ | INS   | -     | =    | [  | ]     | \    |
+// | SHIFT | PLAY  | PREV | NEXT | VDN  | VUP  | /**/ | PRINT | LEFT  | DOWN | UP | RIGHT | DEL  |
+//                        | LALT | HELD | SPC  | /**/ | ENTER | RAISE | GUI  |
+
+bindings = <
+    &kp GRAVE  &kp N1            &kp N2      &kp N3      &kp N4        &kp N5       /**/ &kp N6     &kp N7     &kp N8     &kp N9    &kp N0     &kp BSPC
+    &kp LCTRL  &mo EXTRA         &tab_prev   &tab_next   &mo UBER      &mo NUMBER   /**/ &kp INS    &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH
+    &kp LSHFT  &kp C_PLAY_PAUSE  &kp C_PREV  &kp C_NEXT  &kp C_VOL_DN  &kp C_VOL_UP /**/ &kp PSCRN  &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &kp DEL
+                                             &kp LALT    &mo LOWER     &kp SPACE    /**/ &kp ENTER  &mo RAISE  &kp LGUI
+>;};
+
+raise_layer { label = "RAISE";
+
+// | ~     | !  | @  | #    | $     | %   | /**/ | ^     | &    | *    | (    | )   | BSPC |
+// | CTRL  | F1 | F2 | F3   | F4    | F5  | /**/ | F6    | _    | +    | {    | }   | "|"  |
+// | SHIFT | F7 | F8 | F9   | F10   | F11 | /**/ | F12   | HOME | PGDN | PGUP | END | DEL  |
+//                   | LALT | LOWER | SPC | /**/ | ENTER | HELD | GUI  |
+
+bindings = <
+    &kp TILDE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR   &kp PRCNT /**/ &kp CARET  &kp AMPS   &kp ASTERISK   &kp LPAR     &kp RPAR  &kp BSPC
+    &kp LCTRL  &kp F1    &kp F2  &kp F3    &kp F4     &kp F5    /**/ &kp F6     &kp UNDER  &kp PLUS       &kp LBRC     &kp RBRC  &kp PIPE
+    &kp LSHFT  &kp F7    &kp F8  &kp F9    &kp F10    &kp F11   /**/ &kp F12    &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP  &kp END   &kp DEL
+                                 &kp LALT  &mo LOWER  &kp SPACE /**/ &kp ENTER  &mo RAISE  &kp LGUI
+>;};
+
+adjust_layer { label = "ADJUST";
+
+// |   |   |   |   |      |    | /**/ |   |      |   |   |   |   |
+// |   |   |   |   |      |    | /**/ |   |      |   |   |   |   |
+// |   |   |   |   |      |    | /**/ |   |      |   |   |   |   |
+//             |   | HELD |    | /**/ |   | HELD |   |
+
+bindings = <
+    &none  &none  &none  &none  &none      &none /**/ &none  &none      &none  &none  &none  &none
+    &none  &none  &none  &none  &none      &none /**/ &none  &none      &none  &none  &none  &none
+    &none  &none  &none  &none  &none      &none /**/ &none  &none      &none  &none  &none  &none
+                         &none  &mo LOWER  &none /**/ &none  &mo RAISE  &none
+>;};
+
+extra_layer { label = "EXTRA";
+
+// |   |      | CAPS | SCROL |    | BT_N | /**/ |   |   |   |   |   |   |
+// |   | HELD | ENG  | LT    | RU | BT_P | /**/ |   |   |   |   |   |   |
+// |   |      | HOME | EMAIL |    |      | /**/ |   |   |   |   |   |   |
+//                   |       |    |      | /**/ |   |   |   |
+
+bindings = <
+    &none  &none      &kp CAPSLOCK   &kp SCROLLLOCK  &none    &bt BT_NXT /**/ &none  &none  &none  &none  &none  &none
+    &none  &mo EXTRA  &lng_eng       &lng_lt         &lng_ru  &bt BT_PRV /**/ &none  &none  &none  &none  &none  &none
+    &none  &none      &kp C_AC_HOME  &kp C_AL_EMAIL  &none    &none      /**/ &none  &none  &none  &none  &none  &none
+                      &none          &none           &none    &none      /**/ &none  &none
+>;};
+
+uber_layer { label = "UBER";
+
+// | BT_N |     | CAPS | SCROL |      |   | /**/ |   |   |   |   |   |   |
+// | BT_P | ENG | LT   | RU    | HELD |   | /**/ |   |   |   |   |   |   |
+// |      |     | HOME | EMAIL |      |   | /**/ |   |   |   |   |   |   |
+//                     |       |      |   | /**/ |   |   |   |
+
+bindings = <
+    &bt BT_NXT  &none     &kp CAPSLOCK   &kp SCROLLLOCK  &none     &none /**/ &none  &none  &none  &none  &none  &none
+    &bt BT_PRV  &lng_eng  &lng_lt        &lng_ru         &mo UBER  &none /**/ &none  &none  &none  &none  &none  &none
+    &none       &none     &kp C_AC_HOME  &kp C_AL_EMAIL  &none     &none /**/ &none  &none  &none  &none  &none  &none
+                          &none          &none           &none     &none /**/ &none  &none
+>;};
+
+number_layer { label = "NUMBER";
+
+// | NLOCK | 1 | 2 | 3    | 4    | 5    | /**/ | 6     | 7 | 8 | 9 | 0 | BSPC |
+// | LCTRL | = | - | /    | LALT | HELD | /**/ | -     | 4 | 5 | 6 | / | =    |
+// | LSHFT |   | + | *    | CALC |      | /**/ | +     | 1 | 2 | 3 | * | DEL  |
+//                 | LALT | HELD | SPC  | /**/ | ENTER | , | 0 |
+
+bindings = <
+    &kp KP_NLCK  &kp KP_N1     &kp KP_N2     &kp KP_N3        &kp KP_N4            &kp KP_N5 /**/ &kp KP_N6     &kp KP_N7   &kp KP_N8  &kp KP_N9  &kp KP_N0        &kp BSPC
+    &kp LCTRL    &key_summary  &kp KP_MINUS  &kp KP_DIVIDE    &kp LALT             &none     /**/ &kp KP_MINUS  &kp KP_N4   &kp KP_N5  &kp KP_N6  &kp KP_DIVIDE    &key_summary
+    &kp LSHFT    &none         &kp KP_PLUS   &kp KP_MULTIPLY  &kp C_AL_CALCULATOR  &none     /**/ &kp KP_PLUS   &kp KP_N1   &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY  &kp DEL
+                                             &kp LALT         &none                &kp SPACE /**/ &kp ENTER     &kp KP_DOT  &kp KP_N0
+>;};
