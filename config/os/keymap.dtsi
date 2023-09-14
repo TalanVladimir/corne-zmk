@@ -54,20 +54,6 @@ bindings = <
                          &none  &mo LOWER  &none /**/ &none  &mo RAISE  &none
 >;};
 
-// extra_layer { label = "EXTRA";
-
-// // |   |      | CAPS | SCROL |    | BT_N | /**/ |   |   |   |   |   |   |
-// // |   | HELD | ENG  | LT    | RU | BT_P | /**/ |   |   |   |   |   |   |
-// // |   |      | HOME | EMAIL |    |      | /**/ |   |   |   |   |   |   |
-// //                   |       |    |      | /**/ |   |   |   |
-
-// bindings = <
-//     &none  &none      &kp CAPSLOCK   &kp SCROLLLOCK  &none    &bt BT_NXT /**/ &none  &none  &none  &none  &none  &none
-//     &none  &mo EXTRA  &lng_eng       &lng_lt         &lng_ru  &bt BT_PRV /**/ &none  &none  &none  &none  &none  &none
-//     &none  &none      &kp C_AC_HOME  &kp C_AL_EMAIL  &none    &none      /**/ &none  &none  &none  &none  &none  &none
-//                       &none          &none           &none    &none      /**/ &none  &none
-// >;};
-
 number_layer { label = "EXTRA";
 
 // | NLOCK | /    | 7 | 8 | 9 | *   | /**/ |       |   |   |   |   | BSPC |
