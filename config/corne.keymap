@@ -13,7 +13,7 @@
 #include "os/layers.dtsi"
 
 &led_strip {
-    chain-length = <21>;
+    chain-length = <42>;
 };
 
 // KEYBOARD
