@@ -48,10 +48,10 @@ adjust_layer { label = "ADJUST";
 //             |   | HELD |    | /**/ |   | HELD |   |
 
 bindings = <
-    &none  &none  &none  &none  &none      &none /**/ &none  &none      &none  &none  &none  &none
-    &none  &none  &none  &none  &none      &none /**/ &none  &none      &none  &none  &none  &none
-    &none  &none  &none  &none  &none      &none /**/ &none  &none      &none  &none  &none  &none
-                         &none  &mo LOWER  &none /**/ &none  &mo RAISE  &none
+    &rgb_ug RGB_ON   &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &rgb_ug RGB_EFF /**/ &none  &none      &none  &none  &none  &none
+    &rgb_ug RGB_OFF  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &rgb_ug RGB_EFR /**/ &none  &none      &none  &none  &none  &none
+    &none            &none            &none            &none            &none            &none           /**/ &none  &none      &none  &none  &none  &none
+                                                       &none            &mo LOWER        &none           /**/ &none  &mo RAISE  &none
 >;};
 
 extra_layer { label = "EXTRA";
