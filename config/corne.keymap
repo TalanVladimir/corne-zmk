@@ -12,6 +12,10 @@
 // LAYERS
 #include "os/layers.dtsi"
 
+&led_strip {
+    chain-length = <21>;
+};
+
 // KEYBOARD
 / {
         macros {
