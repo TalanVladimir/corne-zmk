@@ -42,10 +42,10 @@ bindings = <
 
 adjust_layer { label = "ADJUST";
 
-// |   |   |   |   |      |    | /**/ |   |      |   |   |   |   |
-// |   |   |   |   |      |    | /**/ |   |      |   |   |   |   |
-// |   |   |   |   |      |    | /**/ |   |      |   |   |   |   |
-//             |   | HELD |    | /**/ |   | HELD |   |
+// | RGB_ON  | RGB_HUI | RGB_SAI | RGB_BRI | RGB_SPI | RGB_EFF | /**/ |   |      |   |   |   |   |
+// | RGB_OFF | RGB_HUD | RGB_SAD | RGB_BRD | RGB_SPD | RGB_EFR | /**/ |   |      |   |   |   |   |
+// |         |         |         |         |         |         | /**/ |   |      |   |   |   |   |
+//                               |         | HELD    |         | /**/ |   | HELD |   |
 
 bindings = <
     &rgb_ug RGB_ON   &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &rgb_ug RGB_EFF /**/ &none  &none      &none  &none  &none  &none

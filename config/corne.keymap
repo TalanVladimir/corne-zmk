@@ -4,40 +4,39 @@
 #include <dt-bindings/zmk/rgb.h>
 
 // HELPERS
-#include "helpers/combos.dtsi"
+#include "helpers/combos.keymap"
 
 // PRESS SETTINGS
-#include "settings/press.dtsi"
+#include "settings/press.keymap"
 
 // LAYERS
-#include "os/layers.dtsi"
+#include "os/layers.keymap"
 
-&led_strip {
-    chain-length = <27>;
-};
+// Nice View
+#include "settings/led.keymap"
 
 // KEYBOARD
 / {
         macros {
-                #include "os/macros.dtsi"
+                #include "os/macros.keymap"
         };
 
         behaviors {
-                #include "os/tap_dance.dtsi"
+                #include "os/tap_dance.keymap"
         };
 
         conditional_layers {
                 compatible = "zmk,conditional-layers";
-                #include "os/conditional.dtsi"
+                #include "os/conditional.keymap"
         };
 
         combos {
                 compatible = "zmk,combos";
-                #include "os/combos.dtsi"
+                #include "os/combos.keymap"
         };
 
         keymap {
                 compatible = "zmk,keymap";
-                #include "os/keymap.dtsi"
+                #include "os/keymap.keymap"
         };
 };
