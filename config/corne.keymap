@@ -37,6 +37,12 @@
 
         keymap {
                 compatible = "zmk,keymap";
-                #include "os/keymap.keymap"
+                #include "keymap/0_base.keymap"
+                #include "keymap/1_lower.keymap"
+                #include "keymap/2_upper.keymap"
+                #include "keymap/3_adjust.keymap"
+                #include "keymap/4_extra.keymap"
+                #include "keymap/5_uber.keymap"
+                #include "keymap/6_number.keymap"
         };
 };
