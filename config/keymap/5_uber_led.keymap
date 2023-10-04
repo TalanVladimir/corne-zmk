@@ -1,0 +1,13 @@
+adjust_layer { label = "UBER";
+
+// | RGB_ON  | RGB_OFF | RGB_EFF | RGB_EFR |   |      | /**/ |   |   |   |   |   |   |
+// | RGB_HUI | RGB_HUD | RGB_SPI | RGB_BRD |   | HELD | /**/ |   |   |   |   |   |   |
+// | RGB_SAI | RGB_SAD | RGB_BRI | RGB_SPD |   |      | /**/ |   |   |   |   |   |   |
+//                               |         |   |      | /**/ |   |   |   |
+
+bindings = <
+    &rgb_ug RGB_ON   &rgb_ug RGB_OFF  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &none  &none /**/ &none  &none  &none  &none  &none  &none
+    &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_SPI  &rgb_ug RGB_SPD  &none  &none /**/ &none  &none  &none  &none  &none  &none
+    &rgb_ug RGB_SAI  &rgb_ug RGB_SAD  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &none  &none /**/ &none  &none  &none  &none  &none  &none
+                                                       &none            &none  &none /**/ &none  &none  &none
+>;};

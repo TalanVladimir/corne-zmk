@@ -1,13 +1,13 @@
-extra_layer { label = "EXTRA";
+uber_layer { label = "EXTRA";
 
-// | NLOCK | /    | 7 | 8 | 9 | *   | /**/ |       |      |      |    |       | BSPC |
-// | CTRL  | HELD | 4 | 5 | 6 | -   | /**/ |       |      |      |    |       |      |
-// | LALT  | =    | 1 | 2 | 3 | +   | /**/ |       | LEFT | DOWN | UP | RIGHT | DEL  |
-//                    | 0 | , | SPC | /**/ | ENTER |      |      |
+// | BT_N |     | CAPS | SCROL |      |   | /**/ |   |   |   |   |   |   |
+// | BT_P | ENG | LT   | RU    | HELD |   | /**/ |   |   |   |   |   |   |
+// |      |     | HOME | EMAIL |      |   | /**/ |   |   |   |   |   |   |
+//                     |       |      |   | /**/ |   |   |   |
 
 bindings = <
-    &kp KP_NLCK  &kp KP_DIVIDE  &kp KP_N7  &kp KP_N8  &kp KP_N9   &kp KP_MULTIPLY /**/ &none      &none     &none     &none   &none      &kp BSPC
-    &kp LCTRL    &none          &kp KP_N4  &kp KP_N5  &kp KP_N6   &kp KP_MINUS    /**/ &none      &none     &none     &none   &none      &none
-    &kp LALT     &key_summary   &kp KP_N1  &kp KP_N2  &kp KP_N3   &kp KP_PLUS     /**/ &none      &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp DEL
-                                           &kp KP_N0  &kp KP_DOT  &kp SPACE       /**/ &kp ENTER  &none     &none
+    &bt BT_NXT  &none     &kp CAPSLOCK   &kp SCROLLLOCK  &none     &none /**/ &none  &none  &none  &none  &none  &none
+    &bt BT_PRV  &lng_eng  &lng_lt        &lng_ru         &mo UBER  &none /**/ &none  &none  &none  &none  &none  &none
+    &none       &none     &kp C_AC_HOME  &kp C_AL_EMAIL  &none     &none /**/ &none  &none  &none  &none  &none  &none
+                          &none          &none           &none     &none /**/ &none  &none
 >;};
