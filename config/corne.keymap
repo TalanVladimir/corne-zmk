@@ -25,12 +25,12 @@
         };
 
         behaviors {
-                #include "os/tap_dance.keymap"
+                // #include "os/tap_dance.keymap"
         };
 
         conditional_layers {
-                compatible = "zmk,conditional-layers";
-                #include "os/conditional.keymap"
+                // compatible = "zmk,conditional-layers";
+                // #include "os/conditional.keymap"
         };
 
         combos {

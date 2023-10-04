@@ -1,4 +1,4 @@
-extra_layer { label = "NUMBER";
+number_layer { label = "NUMBER";
 
 // | NLOCK | /    | 7 | 8 | 9 | *   | /**/ |       |      |      |    |       | BSPC |
 // | CTRL  | HELD | 4 | 5 | 6 | -   | /**/ |       |      |      |    |       |      |
