@@ -72,7 +72,7 @@ alt_quote_start: alt_quote_start {
                 = <&macro_press &kp LALT>
                 , <&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N3 &kp KP_N2>
                 , <&macro_release &kp LALT>;
-}
+};
 
 // ALT CODE: “
 alt_quote_end: alt_quote_end {
@@ -83,7 +83,7 @@ alt_quote_end: alt_quote_end {
                 = <&macro_press &kp LALT>
                 , <&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N4 &kp KP_N7>
                 , <&macro_release &kp LALT>;
-}
+};
 
 // LOWER WITH ALT (FOR LT)
 lower_ralt: lower_ralt {
