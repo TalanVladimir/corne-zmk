@@ -3,11 +3,11 @@
 #include <dt-bindings/zmk/bt.h>
 
 // LED CONFIG --- CHOOSE
-// #include <dt-bindings/zmk/rgb.h>
-// #include "settings/led.keymap"
+#include <dt-bindings/zmk/rgb.h>
+#include "settings/led.keymap"
 
 // NICE!VIEW CONFIG --- CHOOSE
-#include "settings/nice_view.keymap"
+// #include "settings/nice_view.keymap"
 
 // HELPERS
 #include "helpers/combos.keymap"
@@ -47,9 +47,9 @@
                 #include "keymap/4_extra.keymap"
 
                 // LED CONFIG --- CHOOSE
-                // #include "keymap/5_uber_led.keymap"
+                #include "keymap/5_uber_led.keymap"
                 
                 // NICE!VIEW CONFIG --- CHOOSE
-                #include "keymap/5_uber_zmk.keymap"
+                // #include "keymap/5_uber_zmk.keymap"
         };
 };
