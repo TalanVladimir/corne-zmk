@@ -5,3 +5,4 @@
 #define NUMBER 3
 #define EXTRA 4
 #define UBER 5
+#define PLAYER 6

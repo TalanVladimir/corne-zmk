@@ -52,5 +52,7 @@
                 
                 // NICE!VIEW CONFIG --- CHOOSE
                 #include "keymap/5_uber_zmk.keymap"
+
+                #include "keymap/6_player.keymap"
         };
 };
