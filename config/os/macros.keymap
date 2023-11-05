@@ -1,3 +1,4 @@
+#include <dt-bindings/zmk/keys.h>
  // TAB: PREV
 tab_prev: tab_prev {
         label = "ZM_tab_prev";
@@ -83,6 +84,17 @@ alt_quote_end: alt_quote_end {
                 = <&macro_press &kp LALT>
                 , <&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N4 &kp KP_N7>
                 , <&macro_release &kp LALT>;
+};
+
+// LOG OFF
+log_off: log_off {
+        label = "ZM_log_off";
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings
+                = <&macro_press &kp LWIN>
+                , <&macro_tap &kp L>
+                , <&macro_release &kp LWIN>;
 };
 
 // LOWER WITH ALT (FOR LT)
