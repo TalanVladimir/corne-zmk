@@ -1,13 +1,13 @@
-uber_layer { label = "UBER";
-
-// |   |   |   |   |   |    | /**/ |   |   |   |   |   |   |
-// |   |   |   |   |   |    | /**/ |   |   |   |   |   |   |
-// |   |   |   |   |   |    | /**/ |   |   |   |   |   |   |
-//             |   |   |    | /**/ |   |   |   |
+uber_layer { label = "UBER_VIEW";
 
 bindings = <
-    &none  &none  &none  &none  &none  &none /**/ &none  &none  &none  &none  &none  &none
-    &none  &none  &none  &none  &none  &none /**/ &none  &none  &none  &none  &none  &none
-    &none  &none  &none  &none  &none  &none /**/ &none  &none  &none  &none  &none  &none
-                         &none  &none  &none /**/ &none  &none  &none
+// ╭───────┬───────┬───────┬───────┬───────┬───────╮  ╭───────┬───────┬───────┬───────┬───────┬───────╮
+     &none   &none   &none   &none   &none   &none      &none   &none   &none   &none   &none   &none
+// ├───────┼───────┼───────┼───────┼───────┼───────┤  ├───────┼───────┼───────┼───────┼───────┼───────┤
+     &none   &none   &none   &none   &none   &none      &none   &none   &none   &none   &none   &none
+// ├───────┼───────┼───────┼───────┼───────┼───────┤  ├───────┼───────┼───────┼───────┼───────┼───────┤
+     &none   &none   &none   &none   &none   &none      &none   &none   &none   &none   &none   &none
+// ╰───────┴───────┴───────┼───────┼───────┼───────┤  ├───────┼───────┼───────┼───────┴───────┴───────╯
+                             &none   &none   &none      &none   &none   &none
+//                         ╰───────┴───────┴───────╯  ╰───────┴───────┴───────╯
 >;};
