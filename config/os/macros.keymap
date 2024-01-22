@@ -1,5 +1,5 @@
 #include <dt-bindings/zmk/keys.h>
-#include <behaviors.dtsi>
+
  // TAB: PREV
 tab_prev: tab_prev {
         label = "ZM_tab_prev";
@@ -120,22 +120,22 @@ raise_ralt: raise_ralt {
                 , <&macro_release &mo RAISE &kp RALT>;
 };
 
-// use_reserve: use_reserve {
-//         label = "ZM_use_rezerve";
-//         compatible = "zmk,behavior-macro";
-//         #binding-cells = <0>;
-//         bindings
-//                 = <&macro_press &kp LCTRL &kp LSHFT &kp C>
-//                 , <&macro_wait_time 500>
-//                 , <&macro_press &kp UP>
-//                 , <&macro_wait_time 500>
-//                 , <&macro_press &kp LCTRL &kp LSHFT &kp V>
-//                 , <&macro_wait_time 500>
-//                 , <&macro_press &kp LCTRL &kp LSHFT &kp C>
-//                 , <&macro_wait_time 500>
-//                 , <&macro_press &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT>
-//                 , <&macro_wait_time 500>
-//                 , <&macro_press &kp LCTRL &kp LSHFT &kp V>
-//                 , <&macro_wait_time 500>
-//                 , <&macro_press &kp LCTRL &kp LSHFT &kp R>;
-// };
+use_reserve: use_reserve {
+        label = "ZM_use_rezerve";
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings
+                = <&macro_press &kp LCTRL &kp LSHFT &kp C>
+                , <&macro_wait_time 500>
+                , <&macro_press &kp UP>
+                , <&macro_wait_time 500>
+                , <&macro_press &kp LCTRL &kp LSHFT &kp V>
+                , <&macro_wait_time 500>
+                , <&macro_press &kp LCTRL &kp LSHFT &kp C>
+                , <&macro_wait_time 500>
+                , <&macro_press &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT>
+                , <&macro_wait_time 500>
+                , <&macro_press &kp LCTRL &kp LSHFT &kp V>
+                , <&macro_wait_time 500>
+                , <&macro_press &kp LCTRL &kp LSHFT &kp R>;
+};
