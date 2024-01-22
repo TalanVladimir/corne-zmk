@@ -120,7 +120,7 @@ raise_ralt: raise_ralt {
                 , <&macro_release &mo RAISE &kp RALT>;
 };
 
-use_reserve: use_reserve{
+use_reserve: use_reserve {
         label = "ZM_use_rezerve";
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
@@ -130,8 +130,6 @@ use_reserve: use_reserve{
                 , <&macro_press &kp UP>
                 , <&macro_wait_time 500>
                 , <&macro_press &kp LC(LS(V))>
-                , <&macro_wait_time 500>
-                , <&macro_press &kp LC(LS(R))>
                 , <&macro_wait_time 500>
                 , <&macro_press &kp LC(LS(C))>
                 , <&macro_wait_time 500>
