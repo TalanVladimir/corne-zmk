@@ -19,6 +19,10 @@
 // LAYERS
 #include "os/layers.keymap"
 
+// KEYS
+
+#include "os/keys.keymap"
+
 // KEYBOARD
 / {
         macros {
