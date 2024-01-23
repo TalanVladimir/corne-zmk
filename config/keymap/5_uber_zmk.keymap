@@ -2,7 +2,7 @@ uber_layer { label = "UBER_VIEW";
 
 bindings = <
 // ╭───────┬───────┬───────┬───────┬──────────────┬───────╮  ╭───────┬───────┬───────┬───────┬───────┬───────╮
-     &none   &none   &none   &none   &use_reserve   &none      &none   &none   &none   &none   &none   &none
+     &none   &none   &none   &none   &use_reserve   &none      &none   &none   &none   &none   n   n
 // ├───────┼───────┼───────┼───────┼──────────────┼───────┤  ├───────┼───────┼───────┼───────┼───────┼───────┤
      &none   &none   &none   &none   &none          &none      &none   &none   &none   &none   &none   &none
 // ├───────┼───────┼───────┼───────┼──────────────┼───────┤  ├───────┼───────┼───────┼───────┼───────┼───────┤
