@@ -125,17 +125,17 @@ use_reserve: use_reserve {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         bindings
-                = <&amcro_tap &kp LC(LS(C))>
+                = <&macro_tap &kp LC(LS(C))>
                 , <&macro_wait_time 100>
-                , <&amcro_tap &kp UP>
+                , <&macro_tap &kp UP>
                 , <&macro_wait_time 100>
-                , <&amcro_tap &kp LC(LS(V))>
+                , <&macro_tap &kp LC(LS(V))>
                 , <&macro_wait_time 100>
-                , <&amcro_tap &kp LC(LS(C))>
+                , <&macro_tap &kp LC(LS(C))>
                 , <&macro_wait_time 100>
-                , <&amcro_tap &kp LEFT &kp LEFT &kp LEFT &kp LEFT>
+                , <&macro_tap &kp LEFT &kp LEFT &kp LEFT &kp LEFT>
                 , <&macro_wait_time 100>
-                , <&amcro_tap &kp LC(LS(V))>
+                , <&macro_tap &kp LC(LS(V))>
                 , <&macro_wait_time 100>
-                , <&amcro_tap &kp LC(LS(R))>;
+                , <&macro_tap &kp LC(LS(R))>;
 };
