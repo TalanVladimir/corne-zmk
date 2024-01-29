@@ -129,9 +129,9 @@ use_reserve: use_reserve {
                 , <&macro_wait_time 100>
                 , <&macro_press &kp UP>
                 , <&macro_wait_time 100>
-                = <&macro_press &kp LC(LS(V))>
+                , <&macro_press &kp LC(LS(V))>
                 , <&macro_wait_time 100>
-                = <&macro_press &kp LC(LS(C))>
+                , <&macro_press &kp LC(LS(C))>
                 , <&macro_wait_time 100>
                 , <&macro_press &kp LEFT>
                 , <&macro_press &kp LEFT>
@@ -139,7 +139,7 @@ use_reserve: use_reserve {
                 , <&macro_press &kp LEFT>
                 , <&macro_press &kp LEFT>
                 , <&macro_wait_time 100>
-                = <&macro_press &kp LC(LS(V))>
+                , <&macro_press &kp LC(LS(V))>
                 , <&macro_wait_time 100>
                 = <&macro_press &kp LC(LS(R))>;
 };
