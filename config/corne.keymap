@@ -52,10 +52,10 @@
                 #include "keymap/4_extra.keymap"
 
                 // LED CONFIG --- CHOOSE
-                // #include "keymap/5_uber_led.keymap"
+                // #include "keymap/5_led.keymap"
                 
                 // NICE!VIEW CONFIG --- CHOOSE
-                #include "keymap/5_uber_zmk.keymap"
+                #include "keymap/5_view.keymap"
 
                 #include "keymap/6_player.keymap"
         };

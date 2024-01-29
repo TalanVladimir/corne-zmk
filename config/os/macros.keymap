@@ -125,17 +125,21 @@ use_reserve: use_reserve {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         bindings
-                = <&macro_press &kp LCTRL &kp LSHFT &kp C>
-                , <&macro_wait_time 500>
+                = <&macro_press &kp LC(LS(C))>
+                , <&macro_wait_time 100>
                 , <&macro_press &kp UP>
-                , <&macro_wait_time 500>
-                , <&macro_press &kp LCTRL &kp LSHFT &kp V>
-                , <&macro_wait_time 500>
-                , <&macro_press &kp LCTRL &kp LSHFT &kp C>
-                , <&macro_wait_time 500>
-                , <&macro_press &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT>
-                , <&macro_wait_time 500>
-                , <&macro_press &kp LCTRL &kp LSHFT &kp V>
-                , <&macro_wait_time 500>
-                , <&macro_press &kp LCTRL &kp LSHFT &kp R>;
+                , <&macro_wait_time 100>
+                = <&macro_press &kp LC(LS(V))>
+                , <&macro_wait_time 100>
+                = <&macro_press &kp LC(LS(C))>
+                , <&macro_wait_time 100>
+                , <&macro_press &kp LEFT>
+                , <&macro_press &kp LEFT>
+                , <&macro_press &kp LEFT>
+                , <&macro_press &kp LEFT>
+                , <&macro_press &kp LEFT>
+                , <&macro_wait_time 100>
+                = <&macro_press &kp LC(LS(V))>
+                , <&macro_wait_time 100>
+                = <&macro_press &kp LC(LS(R))>;
 };
