@@ -141,5 +141,5 @@ use_reserve: use_reserve {
                 , <&macro_wait_time 100>
                 , <&macro_press &kp LC(LS(V))>
                 , <&macro_wait_time 100>
-                = <&macro_press &kp LC(LS(R))>;
+                , <&macro_press &kp LC(LS(R))>;
 };
