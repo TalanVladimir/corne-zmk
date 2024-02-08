@@ -1,6 +1,3 @@
-#include <dt-bindings/zmk/keys.h>
-#include <behaviors.dtsi>
-
  // TAB: PREV
 tab_prev: tab_prev {
         label = "ZM_tab_prev";
@@ -106,13 +103,13 @@ shutdown_now: shutdown_now {
         #binding-cells = <0>;
         bindings
                 = <&macro_tap &kp LC(LS(T))> // ctrl shift t // shutdown -P // 30 // now
-                // , <&macro_wait_time 500>
-                // , <&macro_tap &kp S &kp H &kp U &kp T &kp D &kp O &kp W &kp N &kp SPACE &kp MINUS>
-                // , <&macro_wait_time 100>
-                // , <&macro_tap &kp LS(P)>
-                // , <&macro_wait_time 100>
-                // , <&macro_tap &kp SPACE &kp N &kp O &kp W>
-                // , <&macro_wait_time 100>
+                , <&macro_wait_time 500>
+                , <&macro_tap &kp S &kp H &kp U &kp T &kp D &kp O &kp W &kp N &kp SPACE &kp MINUS>
+                , <&macro_wait_time 100>
+                , <&macro_tap &kp LS(P)>
+                , <&macro_wait_time 100>
+                , <&macro_tap &kp SPACE &kp N &kp O &kp W>
+                , <&macro_wait_time 100>
                 , <&macro_press &kp ENTER>;
 };
 
@@ -122,13 +119,13 @@ shutdown_30: shutdown_30 {
         #binding-cells = <0>;
         bindings
                 = <&macro_tap &kp LC(LS(T))> // ctrl shift t // shutdown -P // 30 // now
-                // , <&macro_wait_time 500>
-                // , <&macro_tap &kp S &kp H &kp U &kp T &kp D &kp O &kp W &kp N &kp SPACE &kp MINUS>
-                // , <&macro_wait_time 100>
-                // , <&macro_tap &kp LS(P)>
-                // , <&macro_wait_time 100>
-                // , <&macro_tap &kp SPACE &kp KP_NUMBER_3 &kp KP_NUMBER_0>
-                // , <&macro_wait_time 100>
+                , <&macro_wait_time 500>
+                , <&macro_tap &kp S &kp H &kp U &kp T &kp D &kp O &kp W &kp N &kp SPACE &kp MINUS>
+                , <&macro_wait_time 100>
+                , <&macro_tap &kp LS(P)>
+                , <&macro_wait_time 100>
+                , <&macro_tap &kp SPACE &kp KP_NUMBER_3 &kp KP_NUMBER_0>
+                , <&macro_wait_time 100>
                 , <&macro_press &kp ENTER>;
 };
 
