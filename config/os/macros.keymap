@@ -1,11 +1,13 @@
 #include <dt-bindings/zmk/keys.h>
+#include <behaviors.dtsi>
 
  // TAB: PREV
 tab_prev: tab_prev {
         label = "ZM_tab_prev";
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        bindings = <&macro_press &kp LCTRL>
+        bindings
+                = <&macro_press &kp LCTRL>
                 , <&macro_tap &kp PAGE_UP>
                 , <&macro_release &kp LCTRL>;
 };
@@ -98,14 +100,36 @@ log_off: log_off {
                 , <&macro_release &kp LEFT_WIN>;
 };
 
-shutdown: shutdown {
+shutdown_now: shutdown_now {
         label = "ZM_log_off";
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         bindings
-                = <&macro_press &kp LEFT_WIN>
-                , <&macro_tap &kp L>
-                , <&macro_release &kp LEFT_WIN>;
+                = <&macro_tap &kp LC(LS(T))> // ctrl shift t // shutdown -P // 30 // now
+                , <&macro_wait_time 500>
+                , <&macro_tap &kp S &kp H &kp U &kp T &kp D &kp O &kp W &kp N &kp SPACE &kp MINUS>
+                , <&macro_wait_time 100>
+                , <&macro_tap &kp LS(P)>
+                , <&macro_wait_time 100>
+                , <&macro_tap &kp SPACE &kp N &kp O &kp W>
+                , <&macro_wait_time 100>
+                , <&macro_release &kp ENTER>;
+};
+
+shutdown_30: shutdown_30 {
+        label = "ZM_log_off";
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings
+                = <&macro_tap &kp LC(LS(T))> // ctrl shift t // shutdown -P // 30 // now
+                , <&macro_wait_time 500>
+                , <&macro_tap &kp S &kp H &kp U &kp T &kp D &kp O &kp W &kp N &kp SPACE &kp MINUS>
+                , <&macro_wait_time 100>
+                , <&macro_tap &kp LS(P)>
+                , <&macro_wait_time 100>
+                , <&macro_tap &kp SPACE &kp KP_NUMBER_3 &kp KP_NUMBER_0>
+                , <&macro_wait_time 100>
+                , <&macro_release &kp ENTER>;
 };
 
 // LOWER WITH ALT (FOR LT)
@@ -148,17 +172,4 @@ use_reserve: use_reserve {
                 , <&macro_tap &kp LC(V)>
                 , <&macro_wait_time 100>
                 , <&macro_tap &kp LC(R)>;
-                // = <&macro_tap &kp LC(LS(C))>
-                // , <&macro_wait_time 100>
-                // , <&macro_tap &kp UP>
-                // , <&macro_wait_time 100>
-                // , <&macro_tap &kp LC(LS(V))>
-                // , <&macro_wait_time 100>
-                // , <&macro_tap &kp LC(LS(C))>
-                // , <&macro_wait_time 100>
-                // , <&macro_tap &kp LEFT &kp LEFT &kp LEFT &kp LEFT>
-                // , <&macro_wait_time 100>
-                // , <&macro_tap &kp LC(LS(V))>
-                // , <&macro_wait_time 100>
-                // , <&macro_tap &kp LC(LS(R))>;
 };
