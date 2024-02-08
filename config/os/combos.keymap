@@ -2,11 +2,8 @@
 COMBO_ALL(esc_one_two, &kp ESC, 1 2)
 COMBO_ALL(esc_null_one, &kp ESC, 9 10)
 
-// NUMBER LAYER
-COMBO(bt_number, &mo NUMBER, 13 37, 0)
-
 // BLUETOOTH CLEAR
-COMBO(bt_clr, &bt BT_CLR, 24 35, 4)
+COMBO(bt_clr, &bt BT_CLR, 24 29, 4)
 
 // BASE KEYMAP
 COMBO(to_base, &to 6, 0 36 37 38, 0)
