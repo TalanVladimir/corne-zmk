@@ -1,3 +1,4 @@
+#include <dt-bindings/zmk/keys.h>
  // TAB: PREV
 tab_prev: tab_prev {
         label = "ZM_tab_prev";
@@ -102,7 +103,7 @@ shutdown_c: shutdown_c {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         bindings
-                = <&macro_tap &kp LC(LS(T))>
+                = <&macro_tap &kp LC(LA(T))>
                 , <&macro_wait_time 500>
                 , <&macro_tap &kp S &kp H &kp U &kp T &kp D &kp O &kp W &kp N &kp SPACE &kp MINUS &kp C>
                 , <&macro_wait_time 500>
@@ -114,7 +115,7 @@ shutdown_1: shutdown_1 {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         bindings
-                = <&macro_tap &kp LC(LS(T))>
+                = <&macro_tap &kp LC(LA(T))>
                 , <&macro_wait_time 500>
                 , <&macro_tap &kp S &kp H &kp U &kp T &kp D &kp O &kp W &kp N &kp SPACE &kp MINUS>
                 , <&macro_wait_time 100>
@@ -130,7 +131,7 @@ shutdown_30: shutdown_30 {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         bindings
-                = <&macro_tap &kp LC(LS(T))> // ctrl shift t // shutdown -P // 30 // now
+                = <&macro_tap &kp LC(LA(T))> // ctrl shift t // shutdown -P // 30 // now
                 , <&macro_wait_time 500>
                 , <&macro_tap &kp S &kp H &kp U &kp T &kp D &kp O &kp W &kp N &kp SPACE &kp MINUS>
                 , <&macro_wait_time 100>
