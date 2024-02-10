@@ -126,8 +126,18 @@ shutdown_30: shutdown_30 {
         #binding-cells = <0>;
         bindings
                 = <&macro_tap &kp LC(LA(T))>
-                , <&macro_wait_time 1500>
-                , <&macro_tap &kp S &kp H &kp U &kp T &kp D &kp O &kp W &kp N &kp SPACE &kp MINUS>
+                , <&macro_wait_time 500>
+                , <&macro_tap &kp SPACE>
+                , <&macro_tap &kp S>
+                , <&macro_tap &kp H>
+                , <&macro_tap &kp U>
+                , <&macro_tap &kp T>
+                , <&macro_tap &kp D>
+                , <&macro_tap &kp O>
+                , <&macro_tap &kp W>
+                , <&macro_tap &kp N>
+                , <&macro_tap &kp SPACE>
+                , <&macro_tap &kp MINUS>
                 , <&macro_wait_time 300>
                 , <&macro_tap &kp LS(P)>
                 , <&macro_wait_time 300>
