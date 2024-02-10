@@ -1,3 +1,5 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
 tab_prev: tab_prev {
         label = "ZM_tab_prev";
         compatible = "zmk,behavior-macro";
@@ -97,7 +99,9 @@ shutdown_c: shutdown_c {
                 , <&macro_wait_time 1500>
                 , <&macro_tap &kp S &kp H &kp U &kp T &kp D &kp O &kp W &kp N &kp SPACE &kp MINUS &kp C>
                 , <&macro_wait_time 300>
-                , <&macro_tap &kp ENTER>;
+                , <&macro_tap &kp ENTER>
+                , <&macro_wait_time 300>
+                , <&macro_tap &kp AMPERSAND &kp AMPERSAND &kp SPACE &kp E &kp X &kp I &kp T>;
 };
 
 shutdown_1: shutdown_1 {
@@ -113,7 +117,9 @@ shutdown_1: shutdown_1 {
                 , <&macro_wait_time 300>
                 , <&macro_tap &kp SPACE &kp KP_NUMBER_1>
                 , <&macro_wait_time 300>
-                , <&macro_tap &kp ENTER>;
+                , <&macro_tap &kp ENTER>
+                , <&macro_wait_time 300>
+                , <&macro_tap &kp AMPERSAND &kp AMPERSAND &kp SPACE &kp E &kp X &kp I &kp T>;
 };
 
 shutdown_30: shutdown_30 {
@@ -129,7 +135,9 @@ shutdown_30: shutdown_30 {
                 , <&macro_wait_time 300>
                 , <&macro_tap &kp SPACE &kp KP_NUMBER_3 &kp KP_NUMBER_0>
                 , <&macro_wait_time 300>
-                , <&macro_tap &kp ENTER>;
+                , <&macro_tap &kp ENTER>
+                , <&macro_wait_time 300>
+                , <&macro_tap &kp AMPERSAND &kp AMPERSAND &kp SPACE &kp E &kp X &kp I &kp T>;
 };
 
 lower_ralt: lower_ralt {
