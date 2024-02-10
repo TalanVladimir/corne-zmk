@@ -1,4 +1,3 @@
- // TAB: PREV
 tab_prev: tab_prev {
         label = "ZM_tab_prev";
         compatible = "zmk,behavior-macro";
@@ -9,7 +8,6 @@ tab_prev: tab_prev {
                 , <&macro_release &kp LCTRL>;
 };
 
-// TAB: NEXT
 tab_next: tab_next {
         label = "ZM_tab_next";
         compatible = "zmk,behavior-macro";
@@ -20,7 +18,6 @@ tab_next: tab_next {
                 , <&macro_release &kp LCTRL>;
 };
 
-// LANGUAGE: ENG
 lng_eng: lng_eng {
         label = "ZM_lng_eng";
         compatible = "zmk,behavior-macro";
@@ -31,7 +28,6 @@ lng_eng: lng_eng {
                 , <&macro_release &kp LCTRL &kp LSHFT>;
 };
 
-// LANGUAGE: LT
 lng_lt: lng_lt {
         label = "ZM_lng_lt";
         compatible = "zmk,behavior-macro";
@@ -42,7 +38,6 @@ lng_lt: lng_lt {
                 , <&macro_release &kp LCTRL &kp LSHFT>;
 };
 
-// LANGUAGE: RU
 lng_ru: lng_ru {
         label = "ZM_lng_ru";
         compatible = "zmk,behavior-macro";
@@ -53,7 +48,6 @@ lng_ru: lng_ru {
                 , <&macro_release &kp LCTRL &kp LSHFT>;
 };
 
-// ALT CODE: =
 alt_summary: key_summary {
         label = "ZM_key_summary";
         compatible = "zmk,behavior-macro";
@@ -64,7 +58,6 @@ alt_summary: key_summary {
                 , <&macro_release &kp LALT>;
 };
 
-// ALT CODE: „
 alt_quote_start: alt_quote_start {
         label = "ZM_alt_quote_start";
         compatible = "zmk,behavior-macro";
@@ -75,7 +68,6 @@ alt_quote_start: alt_quote_start {
                 , <&macro_release &kp LALT>;
 };
 
-// ALT CODE: “
 alt_quote_end: alt_quote_end {
         label = "ZM_alt_quote_end";
         compatible = "zmk,behavior-macro";
@@ -86,7 +78,6 @@ alt_quote_end: alt_quote_end {
                 , <&macro_release &kp LALT>;
 };
 
-// LOG OFF
 log_off: log_off {
         label = "ZM_log_off";
         compatible = "zmk,behavior-macro";
@@ -98,7 +89,7 @@ log_off: log_off {
 };
 
 shutdown_c: shutdown_c {
-        label = "ZM_log_off";
+        label = "ZM_shutdown_c";
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         bindings
@@ -110,7 +101,7 @@ shutdown_c: shutdown_c {
 };
 
 shutdown_1: shutdown_1 {
-        label = "ZM_log_off";
+        label = "ZM_shutdown_1";
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         bindings
@@ -126,7 +117,7 @@ shutdown_1: shutdown_1 {
 };
 
 shutdown_30: shutdown_30 {
-        label = "ZM_log_off";
+        label = "ZM_shutdown_30";
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         bindings
@@ -141,7 +132,6 @@ shutdown_30: shutdown_30 {
                 , <&macro_press &kp ENTER>;
 };
 
-// LOWER WITH ALT (FOR LT)
 lower_ralt: lower_ralt {
         label = "ZM_lower_ralt";
         compatible = "zmk,behavior-macro";
@@ -152,7 +142,6 @@ lower_ralt: lower_ralt {
                 , <&macro_release &mo LOWER &kp RALT>;
 };
 
-// RAISE WITH ALT (FOR LT)
 raise_ralt: raise_ralt {
         label = "ZM_raise_ralt";
         compatible = "zmk,behavior-macro";
