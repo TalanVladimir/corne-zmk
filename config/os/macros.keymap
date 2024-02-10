@@ -1,5 +1,3 @@
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 tab_prev: tab_prev {
         label = "ZM_tab_prev";
         compatible = "zmk,behavior-macro";
