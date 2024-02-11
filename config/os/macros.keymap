@@ -1,3 +1,5 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
 tab_prev: tab_prev {
         label = "ZM_tab_prev";
         compatible = "zmk,behavior-macro";
@@ -94,23 +96,8 @@ shutdown_c: shutdown_c {
         #binding-cells = <0>;
         bindings
                 = <&macro_tap &kp LC(LA(T))>
-                , <&macro_wait_time 500>
-                , <&macro_tap &kp SPACE>
-                , <&macro_tap &kp S>
-                , <&macro_tap &kp H>
-                , <&macro_tap &kp U>
-                , <&macro_tap &kp T>
-                , <&macro_tap &kp D>
-                , <&macro_tap &kp O>
-                , <&macro_tap &kp W>
-                , <&macro_tap &kp N>
-                , <&macro_tap &kp SPACE>
-                , <&macro_tap &kp MINUS>
-                , <&macro_tap &kp C>
-                , <&macro_wait_time 300>
-                , <&macro_tap &kp ENTER>
-                , <&macro_wait_time 300>
-                , <&macro_tap &kp AMPERSAND &kp AMPERSAND &kp SPACE &kp E &kp X &kp I &kp T>;
+                , <&macro_tap &kp SPACE &kp S &kp H &kp U &kp T &kp D &kp O &kp W &kp N &kp SPACE &kp MINUS &kp C &kp AMPERSAND &kp AMPERSAND &kp SPACE &kp E &kp X &kp I &kp T>
+                , <&macro_tap &kp ENTER>;
 };
 
 shutdown_1: shutdown_1 {
@@ -119,26 +106,8 @@ shutdown_1: shutdown_1 {
         #binding-cells = <0>;
         bindings
                 = <&macro_tap &kp LC(LA(T))>
-                , <&macro_wait_time 500>
-                , <&macro_tap &kp SPACE>
-                , <&macro_tap &kp S>
-                , <&macro_tap &kp H>
-                , <&macro_tap &kp U>
-                , <&macro_tap &kp T>
-                , <&macro_tap &kp D>
-                , <&macro_tap &kp O>
-                , <&macro_tap &kp W>
-                , <&macro_tap &kp N>
-                , <&macro_tap &kp SPACE>
-                , <&macro_tap &kp MINUS>
-                , <&macro_wait_time 300>
-                , <&macro_tap &kp LS(P)>
-                , <&macro_wait_time 300>
-                , <&macro_tap &kp SPACE &kp KP_NUMBER_1>
-                , <&macro_wait_time 300>
-                , <&macro_tap &kp ENTER>
-                , <&macro_wait_time 300>
-                , <&macro_tap &kp AMPERSAND &kp AMPERSAND &kp SPACE &kp E &kp X &kp I &kp T>;
+                , <&macro_tap &kp SPACE &kp S &kp H &kp U &kp T &kp D &kp O &kp W &kp N &kp SPACE &kp MINUS &kp LS(P) &kp SPACE &kp KP_NUMBER_1 &kp SPACE &kp AMPERSAND &kp AMPERSAND &kp SPACE &kp E &kp X &kp I &kp T>
+                , <&macro_tap &kp ENTER>;
 };
 
 shutdown_30: shutdown_30 {
@@ -147,26 +116,8 @@ shutdown_30: shutdown_30 {
         #binding-cells = <0>;
         bindings
                 = <&macro_tap &kp LC(LA(T))>
-                , <&macro_wait_time 500>
-                , <&macro_tap &kp SPACE>
-                , <&macro_tap &kp S>
-                , <&macro_tap &kp H>
-                , <&macro_tap &kp U>
-                , <&macro_tap &kp T>
-                , <&macro_tap &kp D>
-                , <&macro_tap &kp O>
-                , <&macro_tap &kp W>
-                , <&macro_tap &kp N>
-                , <&macro_tap &kp SPACE>
-                , <&macro_tap &kp MINUS>
-                , <&macro_wait_time 300>
-                , <&macro_tap &kp LS(P)>
-                , <&macro_wait_time 300>
-                , <&macro_tap &kp SPACE &kp KP_NUMBER_3 &kp KP_NUMBER_0>
-                , <&macro_wait_time 300>
-                , <&macro_tap &kp ENTER>
-                , <&macro_wait_time 300>
-                , <&macro_tap &kp AMPERSAND &kp AMPERSAND &kp SPACE &kp E &kp X &kp I &kp T>;
+                , <&macro_tap &kp SPACE &kp S &kp H &kp U &kp T &kp D &kp O &kp W &kp N &kp SPACE &kp MINUS &kp LS(P) &kp SPACE &kp KP_NUMBER_3 &kp KP_NUMBER_0 &kp SPACE &kp AMPERSAND &kp AMPERSAND &kp SPACE &kp E &kp X &kp I &kp T>
+                , <&macro_tap &kp ENTER>;
 };
 
 lower_ralt: lower_ralt {
