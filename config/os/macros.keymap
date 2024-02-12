@@ -116,7 +116,7 @@ number_layer: number_layer {
                 = <&macro_press &mo NUMBER>
                 , <&macro_pause_for_release>
                 , <&macro_release &mo NUMBER>;
-}
+};
 
 use_reserve: use_reserve {
         label = "ZM_use_reserve";
