@@ -1,5 +1,3 @@
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 tab_prev: tab_prev {
         label = "ZM_tab_prev";
         compatible = "zmk,behavior-macro";
@@ -90,36 +88,6 @@ log_off: log_off {
                 , <&macro_release &kp LEFT_WIN>;
 };
 
-shutdown_c: shutdown_c {
-        label = "ZM_shutdown_c";
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings
-                = <&macro_tap &kp LC(LA(T))>
-                , <&macro_tap &kp SPACE &kp S &kp H &kp U &kp T &kp D &kp O &kp W &kp N &kp SPACE &kp MINUS &kp C &kp AMPERSAND &kp AMPERSAND &kp SPACE &kp E &kp X &kp I &kp T>
-                , <&macro_tap &kp ENTER>;
-};
-
-shutdown_1: shutdown_1 {
-        label = "ZM_shutdown_1";
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings
-                = <&macro_tap &kp LC(LA(T))>
-                , <&macro_tap &kp SPACE &kp S &kp H &kp U &kp T &kp D &kp O &kp W &kp N &kp SPACE &kp MINUS &kp LS(P) &kp SPACE &kp KP_NUMBER_1 &kp SPACE &kp AMPERSAND &kp AMPERSAND &kp SPACE &kp E &kp X &kp I &kp T>
-                , <&macro_tap &kp ENTER>;
-};
-
-shutdown_30: shutdown_30 {
-        label = "ZM_shutdown_30";
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings
-                = <&macro_tap &kp LC(LA(T))>
-                , <&macro_tap &kp SPACE &kp S &kp H &kp U &kp T &kp D &kp O &kp W &kp N &kp SPACE &kp MINUS &kp LS(P) &kp SPACE &kp KP_NUMBER_3 &kp KP_NUMBER_0 &kp SPACE &kp AMPERSAND &kp AMPERSAND &kp SPACE &kp E &kp X &kp I &kp T>
-                , <&macro_tap &kp ENTER>;
-};
-
 lower_ralt: lower_ralt {
         label = "ZM_lower_ralt";
         compatible = "zmk,behavior-macro";
@@ -139,6 +107,16 @@ raise_ralt: raise_ralt {
                 , <&macro_pause_for_release>
                 , <&macro_release &mo RAISE &kp RALT>;
 };
+
+number_layer: number_layer {
+        label = "ZMK_number_layer";
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings
+                = <&macro_press &mo NUMBER>
+                , <&macro_pause_for_release>
+                , <&macro_release &mo NUMBER>;
+}
 
 use_reserve: use_reserve {
         label = "ZM_use_rezerve";
