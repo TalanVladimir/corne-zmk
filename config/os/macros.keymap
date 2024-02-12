@@ -119,7 +119,7 @@ number_layer: number_layer {
 }
 
 use_reserve: use_reserve {
-        label = "ZM_use_rezerve";
+        label = "ZM_use_reserve";
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         bindings
