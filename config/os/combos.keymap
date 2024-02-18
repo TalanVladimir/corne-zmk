@@ -5,12 +5,12 @@ COMBO_ALL(esc_null_one, &kp ESC, 9 10)
 // BLUETOOTH CLEAR
 COMBO(bt_clr, &bt BT_CLR, 24 29, 4)
 
-// BASE KEYMAP
-COMBO(to_base, &to 6, 0 36 37 38, 0)
+// TO PLAYER KEYMAP
+COMBO(to_player, &to 6, 36 37 38, 0)
 
-// PLAYER KEYMAP
-COMBO(to_player, &to 0, 0 36 37 38, 6)
-
+// TO BASE KEYMAP
+COMBO(to_base, &to 0, 36 37 38, 6)
+    
 // NUMBER KEYMAP
 COMBO(to_number, &to NUMBER, 13 37, 0)
 
