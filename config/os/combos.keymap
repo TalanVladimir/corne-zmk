@@ -10,9 +10,6 @@ COMBO(to_player, &to 6, 36 37 38, 0)
 
 // TO BASE KEYMAP
 COMBO(to_base, &to 0, 36 37 38, 6)
-    
-// NUMBER KEYMAP
-COMBO(to_number, &to NUMBER, 13 37, 0)
 
 // LT NUMBERS, SYMBOLS
 // COMBO(lower_layer_ralt, &lower_ralt, 36 37, 0 1)
