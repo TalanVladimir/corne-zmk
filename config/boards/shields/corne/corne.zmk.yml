@@ -1,4 +1,4 @@
-file_format: "1"
+file_format: '1'
 id: corne
 name: Corne
 type: shield
@@ -10,5 +10,6 @@ features:
   - display
   - underglow
 siblings:
+  - corne_dongle
   - corne_left
   - corne_right
