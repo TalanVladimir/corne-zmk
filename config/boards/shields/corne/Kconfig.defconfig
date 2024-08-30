@@ -1,25 +1,34 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
+config ZMK_BLE
+	default y
+
+config ZMK_USB
+	default y
+
 if SHIELD_CORNE_DONGLE
 
-	config ZMK_KEYBOARD_NAME
-		default "Corne-Dongle"
-
-	config ZMK_SPLIT_BLE_ROLE_CENTRAL
-		default y
-		
-	config ZMK_USB
-		default y
+config ZMK_KEYBOARD_NAME
+	default "The CORNE Dongle"
 
 endif
 
-if SHIELD_CORNE_LEFT || SHIELD_CORNE_RIGHT || SHIELD_CORNE_DONGLE 
+if SHIELD_CORNE_LEFT || SHIELD_CORNE_RIGHT
 
-	config ZMK_SPLIT
-		default y
+config ZMK_SPLIT
+	default y
 
-	config ZMK_BLE
-		default y
-	
+endif
+
+
+
+if SHIELD_CORNE_DONGLE 
+
+config ZMK_SPLIT
+	default y
+
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
+	default y
+
 endif
