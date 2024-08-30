@@ -3,26 +3,23 @@
 
 if SHIELD_CORNE_DONGLE
 
-config ZMK_KEYBOARD_NAME
-	default "Corne-Dongle"
-	
-confit ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
-	default y
+	config ZMK_KEYBOARD_NAME
+		default "Corne-Dongle"
 
-config ZMK_SPLIT_BLE_ROLE_CENTRAL
-	default y
-	
-config ZMK_USB
-	default y
+	config ZMK_SPLIT_BLE_ROLE_CENTRAL
+		default y
+		
+	config ZMK_USB
+		default y
 
 endif
 
 if SHIELD_CORNE_LEFT || SHIELD_CORNE_RIGHT || SHIELD_CORNE_DONGLE 
 
-config ZMK_SPLIT
-	default y
+	config ZMK_SPLIT
+		default y
 
-config ZMK_BLE
-	default y
+	config ZMK_BLE
+		default y
 	
 endif
