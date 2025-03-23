@@ -3,34 +3,27 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
-// LED CONFIG --- CHOOSE
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 2000  // default: 600	
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 60    // default: 10		
+#include <dt-bindings/zmk/pointing.h>
+
+#include "helpers/combos.keymap"
+#include "os/layers.keymap"
+
+#include "settings/press.keymap"
+#include "settings/mouse.keymap"
+
+#include "settings/nice_view.keymap"
 // #include <dt-bindings/zmk/rgb.h>
 // #include "settings/led.keymap"
 
-// NICE!VIEW CONFIG --- CHOOSE
-#include "settings/nice_view.keymap"
-
-// HELPERS
-#include "helpers/combos.keymap"
-
-// PRESS SETTINGS
-#include "settings/press.keymap"
-
-// LAYERS
-#include "os/layers.keymap"
-
-// KEYS
-
-#include "os/keys.keymap"
-
-// KEYBOARD
 / {
         macros {
                 #include "os/macros.keymap"
         };
 
         behaviors {
-                // #include "os/tap_dance.keymap"
+                #include "os/tap_dance.keymap"
         };
 
         conditional_layers {
@@ -50,13 +43,9 @@
                 #include "keymap/2_raise.keymap"
                 #include "keymap/3_number.keymap"
                 #include "keymap/4_extra.keymap"
-
-                // LED CONFIG --- CHOOSE
-                // #include "keymap/5_led.keymap"
-                
-                // NICE!VIEW CONFIG --- CHOOSE
-                #include "keymap/5_view.keymap"
-
-                #include "keymap/6_player.keymap"
+                #include "keymap/5_uber.keymap"
+                #include "keymap/6_mouse.keymap"
+                #include "keymap/7_player.keymap"
+                // #include "keymap/7_player_led.keymap"
         };
 };

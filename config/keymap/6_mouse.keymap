@@ -1,16 +1,26 @@
-number_layer {
-    label = "NUMBER";
-    display-name = "NUMBER";
+#define SC_L SCRL_LEFT
+#define SC_D SCRL_DOWN
+#define SC_U SCRL_UP
+#define SC_R SCRL_RIGHT
+
+#define MV_L MOVE_LEFT
+#define MV_D MOVE_DOWN
+#define MV_U MOVE_UP
+#define MV_R MOVE_RIGHT
+
+maus_layer {
+    label = "MAUS";
+    display-name = "MAUS";
 
     bindings = <
     //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮  ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        &kp KP_NLCK   &kp KP_DIVIDE &kp KP_N7     &kp KP_N8     &kp KP_N9     &kp KP_MULTIPLY  &none         &none         &none         &none         &none         &kp BSPC
+        &none         &none         &none         &none         &none         &none            &none         &none         &none         &none         &none         &none
     //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &kp LCTRL     &none         &kp KP_N4     &kp KP_N5     &kp KP_N6     &kp KP_MINUS     &none         &none         &none         &none         &none         &none
+        &kp LCTRL     &none         &none         &none         &none         &none            &none         &none         &msc SC_U     &msc SC_L     &mmv MV_U     &msc SC_R
     //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &kp LALT      &none         &kp KP_N1     &kp KP_N2     &kp KP_N3     &kp KP_PLUS      &none         &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &kp DEL
+        &kp LSHFT     &none         &none         &none         &none         &none            &mkp MB5      &mkp MB4      &msc SC_D     &mmv MV_L     &mmv MV_D     &mmv MV_R
     //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                  &kp KP_N0     &kp KP_DOT    &kp SPACE        &kp ENTER     &none         &none
+                                                  &mkp MB1      &mkp MB2      &mkp MB3         &mkp MB3      &mkp MB1      &mkp MB2
     //                                          ╰─────────────┴─────────────┴─────────────╯  ╰─────────────┴─────────────┴─────────────╯
     >;
 };
