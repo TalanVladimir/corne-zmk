@@ -13,9 +13,9 @@
 #include "settings/press.keymap"
 #include "settings/mouse.keymap"
 
-// #include "settings/nice_view.keymap"
-#include <dt-bindings/zmk/rgb.h>
-#include "settings/led.keymap"
+#include "settings/nice_view.keymap" // NICE VIEW
+// #include <dt-bindings/zmk/rgb.h> // LED
+// #include "settings/led.keymap" // LED
 
 / {
         macros {
@@ -42,8 +42,8 @@
                 #include "keymap/1_lower.keymap"
                 #include "keymap/2_raise.keymap"
                 #include "keymap/3_number.keymap"
-                // #include "keymap/4_extra_nano.keymap" // NICE VIEW version
-                #include "keymap/4_extra_led.keymap" // LED version
+                #include "keymap/4_extra_nano.keymap" // NICE VIEW
+                // #include "keymap/4_extra_led.keymap" // LED
                 #include "keymap/5_uber.keymap"
                 #include "keymap/6_player.keymap"
         };
