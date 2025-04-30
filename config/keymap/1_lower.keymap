@@ -1,7 +1,3 @@
-#define PP C_PLAY_PAUSE
-#define SCR_D SCRL_DOWN
-#define SCR_U SCRL_UP
-
 lower_layer {
     label = "LOWER";
     display-name = "LOWER";
@@ -12,7 +8,7 @@ lower_layer {
     //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         &kp LCTRL     &mo NUMBER    &tab_prev     &tab_next     &mo EXTRA     &mo UBER         &kp INS       &kp MINUS     &kp EQUAL     &kp LBKT      &kp RBKT      &kp BSLH
     //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &kp LSHFT     &none         &msc SCR_D    &msc SCR_U    &mo MAUS      &lt PLAYER PP    &none         &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &kp DEL
+        &kp LSHFT     &msc SC_L     &msc SC_D     &msc SC_U     &msc SC_R     &lt PLAYER PP    &none         &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &kp DEL
     //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                   &kp LALT      &mo LOWER     &kp SPACE        &kp ENTER     &kp RALT      &kp LGUI
     //                                          ╰─────────────┴─────────────┴─────────────╯  ╰─────────────┴─────────────┴─────────────╯
