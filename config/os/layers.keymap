@@ -1,8 +1,0 @@
-#define BASE 0
-#define LOWER 1
-#define RAISE 2
-#define NUMBER 3
-#define EXTRA 4
-#define UBER 5
-#define MAUS 6
-#define PLAYER 7

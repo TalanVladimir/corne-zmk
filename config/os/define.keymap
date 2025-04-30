@@ -1,0 +1,19 @@
+#define BASE 0
+#define LOWER 1
+#define RAISE 2
+#define NUMBER 3
+#define EXTRA 4
+#define UBER 5
+#define PLAYER 6
+
+#define SC_L SCRL_LEFT
+#define SC_D SCRL_DOWN
+#define SC_U SCRL_UP
+#define SC_R SCRL_RIGHT
+
+#define MV_L MOVE_LEFT
+#define MV_D MOVE_DOWN
+#define MV_U MOVE_UP
+#define MV_R MOVE_RIGHT
+
+#define PP C_PLAY_PAUSE

@@ -8,7 +8,7 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #include "helpers/combos.keymap"
-#include "os/layers.keymap"
+#include "os/define.keymap"
 
 #include "settings/press.keymap"
 #include "settings/mouse.keymap"
@@ -42,10 +42,9 @@
                 #include "keymap/1_lower.keymap"
                 #include "keymap/2_raise.keymap"
                 #include "keymap/3_number.keymap"
-                #include "keymap/4_extra.keymap"
+                // #include "keymap/4_extra_nano.keymap" // NICE VIEW version
+                #include "keymap/4_extra_led.keymap" // LED version
                 #include "keymap/5_uber.keymap"
-                #include "keymap/6_mouse.keymap"
-                // #include "keymap/7_player.keymap"
-                #include "keymap/7_player_led.keymap"
+                #include "keymap/6_player.keymap"
         };
 };
